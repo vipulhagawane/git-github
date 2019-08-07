@@ -130,11 +130,11 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <div class="control-sidebar-bg"></div>
   </div>
   <!-- ./wrapper -->
-
+<jsp:include page="addVideosLink.jsp"></jsp:include>
   <!--Modal edit View Article-->
-  <div class="modal fade" id="editAddVideoModal" role="dialog">
+  <!-- <div class="modal fade" id="editAddVideoModal" role="dialog">
     <div class="modal-dialog">
-      <!-- Modal content-->
+      Modal content
       <div class="modal-content">
         <form action="/action_page.php">
           <div class="modal-header">
@@ -171,7 +171,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
         </form>
       </div>
     </div>
-  </div>
+  </div> -->
   <!-- REQUIRED JS SCRIPTS -->
   <!-- jQuery 3 -->
   <script src="lib/jquery/jquery.min.js"></script>

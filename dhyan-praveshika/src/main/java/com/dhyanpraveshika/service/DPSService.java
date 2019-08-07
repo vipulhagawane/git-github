@@ -38,5 +38,12 @@ public class DPSService{
 		
 		return checkUser;
 	}
+	
+	
+	public boolean addvideoUrl(HttpServletRequest request)
+	{
+		return false;
+		
+	}
 
 }

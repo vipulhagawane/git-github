@@ -33,6 +33,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
     <!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper">
+    <form action = "/addBlog">
       <!-- Content Header (Page header) -->
       <section class="content-header">
         <h1>
@@ -49,16 +50,16 @@ scratch. This page gets rid of all links and provides the needed markup only.
         <div class="box">
           <!-- /.box-header -->
           <div class="box-body">
-            <table id="example" class="table table-bordered table-striped table-hover">
+            <table id="article" class="table table-bordered table-striped table-hover">
               <thead>
                 <tr>
                   <th>Name Of Article</th>
                   <th>Date</th>
-                  <th>Created&nbsp;By</th>
+                  <th>Created By</th>
                   <th>Category</th>
                   <th style="width:80px">Actions</th>
                 </tr>
-              </thead>
+            <!--   </thead>
               <tbody>
                 <tr>
                   <td>Sanatana Dharma, it’s Origins and Philosophy</td>
@@ -93,13 +94,12 @@ scratch. This page gets rid of all links and provides the needed markup only.
                     <a class="btn btn-danger tblBtn"><i class="fa fa-trash"></i></a>
                   </td>
                 </tr>
-              </tbody>
+              </tbody> -->
             </table>
           </div>
         </div>
         <div class="text-right clearfix">
-          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#editViewArticleModal">Add New
-            Article</button>
+          <input type = "submit" class="btn btn-primary" value = "Add New Article"/>
         </div>
       </section>
       <!-- /.content -->
