@@ -13,14 +13,23 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.dhyanpraveshika.model.Blog;
+import com.dhyanpraveshika.model.DPSEvent;
+import com.dhyanpraveshika.model.DPSVideo;
+import com.dhyanpraveshika.model.Donation;
+import com.dhyanpraveshika.model.User;
 import com.dhyanpraveshika.service.BlogService;
 import com.dhyanpraveshika.service.DPSService;
+import com.dhyanpraveshika.service.UserService;
+import com.dhyanpraveshika.service.DPSVideoService;
+import com.dhyanpraveshika.service.DonationService;
+import com.dhyanpraveshika.service.EventService;
 
 @Controller
 
@@ -32,7 +41,19 @@ public class DPSController {
 	private DPSService DPSService;
 	
 	@Autowired
-	private  BlogService blogService ;
+	private  BlogService blogService;
+	
+	@Autowired
+	private UserService userService;
+	
+	@Autowired
+	private DPSVideoService videoService;
+	
+	@Autowired
+	private DonationService donationService;
+	
+	@Autowired
+	private EventService eventService;
 
 
 	//@RequestMapping(value = "/", method = RequestMethod.GET)
@@ -70,11 +91,8 @@ public class DPSController {
 	@RequestMapping("/addArticles")
 	public String addArticles() 
 	{
-		
-
 		return "home";
 	}
-	
 
 	@RequestMapping("/videos")
 	public String VideosContrller() {
@@ -82,16 +100,14 @@ public class DPSController {
 		return "videos";
 	}
 	
-	@RequestMapping("/addVideosLink")
-	public String addVideosContrller() {
-
-		return "addVideosLink";
+	@PostMapping("/addVideo")
+	public String addVideo(HttpServletRequest request) {
+		
+		boolean result = videoService.addVideo(request);
+		logger.info("add video:{}",result);
+		return "videos";
 	}
 	
-	
-	
-	
-
 	@RequestMapping("/userManagement")
 	public String userManagementContrller() {
 
@@ -102,6 +118,12 @@ public class DPSController {
 	public String donationListContrller() {
 
 		return "donationList";
+	}
+	
+	@RequestMapping("/events")
+	public String events() {
+
+		return "events";
 	}
 	
 	
@@ -125,6 +147,63 @@ public class DPSController {
 		return "home";
 	}
 	
+	@GetMapping("/getUsers")
+	public ResponseEntity<List<User>> getUsers(HttpServletResponse res)
+	{
+		logger.info("at controller getUsers:{}");
+		
+		List<User> users = userService.getUsers();
+		return new ResponseEntity<List<User>>(users,HttpStatus.OK);
+	}
 	
+	@GetMapping("/getVideoes")
+	public ResponseEntity<List<DPSVideo>> getVideoes(HttpServletResponse res)
+	{
+		logger.info("at controller getVideoes");
+		List<DPSVideo> dps_videoes = videoService.getVideoes();
+		return new ResponseEntity<List<DPSVideo>>(dps_videoes,HttpStatus.OK);
+	}
+	
+	@GetMapping("/getDonations")
+	public ResponseEntity<List<Donation>> getDonations(HttpServletResponse res)
+	{
+		logger.info("at controller getDonations");
+		List<Donation> donations = donationService.getDonations();
+		return new ResponseEntity<List<Donation>>(donations,HttpStatus.OK);
+	}
+	
+	
+	@PostMapping("/addEvent")
+	public String addEvent(HttpServletRequest request) 
+	{
+		logger.info("at controller addEvent :{}");
+		
+		boolean result = eventService.addEvent(request);
+		logger.info("result of add event{}", result);
+		
+		return "events";
+	}
+	
+	@GetMapping("/getEvents")
+	public ResponseEntity<List<DPSEvent>> getEvents(HttpServletResponse res)
+	{
+		logger.info("at controller getEvents");
+		List<DPSEvent> events = eventService.getEvents();
+		return new ResponseEntity<List<DPSEvent>>(events,HttpStatus.OK);
+	}
+	
+	@RequestMapping("/getArticle")
+	public String getArticle(HttpServletRequest request)
+	{
+		logger.info("at controller getArticle:");
+		
+		Long id = Long.parseLong(request.getParameter("id"));
+		Blog blog = blogService.getBlog(id);
+		if(blog != null)
+		{
+			return "addArticle";
+		}
+		return "home";
+	}
 	
 }

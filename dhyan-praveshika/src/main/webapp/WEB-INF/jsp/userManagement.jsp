@@ -63,7 +63,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
         <ul class="sidebar-menu" data-widget="tree">
           <li class="header">HEADER</li>
           <li><a href="/getArticles"><i class="fa fa-list-alt"></i> <span>Articles</span></a></li>
-          <li><a href="/events.html"><i class="fa fa-calendar"></i> <span>Events</span></a></li>
+          <li><a href="/events"><i class="fa fa-calendar"></i> <span>Events</span></a></li>
           <li><a href="/videos"><i class="fa fa-play"></i> <span>Videos</span></a></li>
           <li class="active"><a href="/userManagement"><i class="fa fa-user"></i> <span>User Management</span></a>
           </li>
@@ -90,7 +90,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
         <div class="box">
           <!-- /.box-header -->
           <div class="box-body">
-            <table id="example" class="table table-bordered table-striped table-hover">
+            <table id="users" class="table table-bordered table-striped table-hover">
               <thead>
                 <tr>
                   <th>User Name</th>
@@ -101,44 +101,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                   <th style="width:60px">Actions</th>
                 </tr>
               </thead>
-              <tbody>
-                <tr>
-                  <td>Ravindra Vishwakarma</td>
-                  <td>Registered</td>
-                  <td>ravivishwakarma@gmail.com</td>
-                  <td>8275209011</td>
-                  <td>**********</td>
-                  <td>
-                    <a class="btn btn-info tblBtn" data-toggle="modal" data-target="#editUserDetails"><i
-                        class="fa fa-pencil"></i></a>
-                    <a class="btn btn-danger tblBtn"><i class="fa fa-trash"></i></a>
-                  </td>
-                </tr>
-                <tr>
-                  <td>Rahul Fadnis</td>
-                  <td>Registered</td>
-                  <td>rahulfadnis@gmail.com</td>
-                  <td>7520908211</td>
-                  <td>**********</td>
-                  <td>
-                    <a class="btn btn-info tblBtn" data-toggle="modal" data-target="#editUserDetails"><i
-                        class="fa fa-pencil"></i></a>
-                    <a class="btn btn-danger tblBtn"><i class="fa fa-trash"></i></a>
-                  </td>
-                </tr>
-                <tr>
-                  <td>Vikas Tripathi</td>
-                  <td>Registered</td>
-                  <td>vikastripathi@gmail.com</td>
-                  <td>9011827520</td>
-                  <td>**********</td>
-                  <td>
-                    <a class="btn btn-info tblBtn" data-toggle="modal" data-target="#editUserDetails"><i
-                        class="fa fa-pencil"></i></a>
-                    <a class="btn btn-danger tblBtn"><i class="fa fa-trash"></i></a>
-                  </td>
-                </tr>
-              </tbody>
+              
             </table>
           </div>
         </div>

@@ -8,8 +8,8 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "dps_blog")
-public class Blog {
+@Table(name = "dps_event")
+public class DPSEvent {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -22,15 +22,17 @@ public class Blog {
 	@Column(name = "description")
 	private String description;
 	
-	@Column(name = "author")
-	private String author;
+	@Column(name = "path")
+	private String path;
 	
 	@Column(name = "date")
 	private String date;
 	
-	@Column(name = "category")
-	private String category;
-	
+	@Column(name = "time")
+	private String time;
+
+	@Column(name = "location")
+	private String location;
 
 	public Long getId() {
 		return id;
@@ -56,12 +58,12 @@ public class Blog {
 		this.description = description;
 	}
 
-	public String getAuthor() {
-		return author;
+	public String getPath() {
+		return path;
 	}
 
-	public void setAuthor(String author) {
-		this.author = author;
+	public void setPath(String path) {
+		this.path = path;
 	}
 
 	public String getDate() {
@@ -71,19 +73,28 @@ public class Blog {
 	public void setDate(String date) {
 		this.date = date;
 	}
-	
-	public String getCategory() {
-		return category;
+
+	public String getTime() {
+		return time;
 	}
 
-	public void setCategory(String category) {
-		this.category = category;
+	public void setTime(String time) {
+		this.time = time;
+	}
+
+	public String getLocation() {
+		return location;
+	}
+
+	public void setLocation(String location) {
+		this.location = location;
 	}
 
 	@Override
 	public String toString() {
-		return "Blog [id=" + id + ", title=" + title + ", description=" + description + ", author=" + author + ", date="
-				+ date + ", category=" + category + "]";
+		return "Event [id=" + id + ", title=" + title + ", description=" + description + ", path=" + path + ", date="
+				+ date + ", time=" + time + ", location=" + location + "]";
 	}
+	
 
 }

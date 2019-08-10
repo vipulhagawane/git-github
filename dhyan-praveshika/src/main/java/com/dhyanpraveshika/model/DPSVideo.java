@@ -8,9 +8,10 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "dps_blog")
-public class Blog {
+@Table(name = "dps_video")
+public class DPSVideo {
 	
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "id")
@@ -19,18 +20,14 @@ public class Blog {
 	@Column(name = "title")
 	private String title;
 	
-	@Column(name = "description")
-	private String description;
-	
-	@Column(name = "author")
-	private String author;
-	
-	@Column(name = "date")
-	private String date;
-	
 	@Column(name = "category")
 	private String category;
 	
+	@Column(name = "path")
+	private String path;
+	
+	@Column(name = "date")
+	private String date;
 
 	public Long getId() {
 		return id;
@@ -48,20 +45,20 @@ public class Blog {
 		this.title = title;
 	}
 
-	public String getDescription() {
-		return description;
+	public String getCategory() {
+		return category;
 	}
 
-	public void setDescription(String description) {
-		this.description = description;
+	public void setCategory(String category) {
+		this.category = category;
 	}
 
-	public String getAuthor() {
-		return author;
+	public String getPath() {
+		return path;
 	}
 
-	public void setAuthor(String author) {
-		this.author = author;
+	public void setPath(String path) {
+		this.path = path;
 	}
 
 	public String getDate() {
@@ -71,19 +68,13 @@ public class Blog {
 	public void setDate(String date) {
 		this.date = date;
 	}
-	
-	public String getCategory() {
-		return category;
-	}
-
-	public void setCategory(String category) {
-		this.category = category;
-	}
 
 	@Override
 	public String toString() {
-		return "Blog [id=" + id + ", title=" + title + ", description=" + description + ", author=" + author + ", date="
-				+ date + ", category=" + category + "]";
+		return "Video [id=" + id + ", title=" + title + ", category=" + category + ", path=" + path + ", date=" + date
+				+ "]";
 	}
+	
+	
 
 }

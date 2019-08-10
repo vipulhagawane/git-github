@@ -88,7 +88,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
         <ul class="sidebar-menu" data-widget="tree">
           <li class="header">HEADER</li>
           <li><a href="/getArticles"><i class="fa fa-list-alt"></i> <span>Articles</span></a></li>
-          <li class="active"><a href="/events.html"><i class="fa fa-calendar"></i> <span>Events</span></a></li>
+          <li class="active"><a href="/events"><i class="fa fa-calendar"></i> <span>Events</span></a></li>
           <li><a href="/videos"><i class="fa fa-play"></i> <span>Videos</span></a></li>
           <li><a href="/userManagement"><i class="fa fa-user"></i> <span>User Management</span></a>
           </li>
@@ -115,36 +115,23 @@ scratch. This page gets rid of all links and provides the needed markup only.
         <div class="box">
           <!-- /.box-header -->
           <div class="box-body">
-            <table id="example" class="table table-bordered table-striped table-hover">
+            <table id="events" class="table table-bordered table-striped table-hover">
               <thead>
                 <tr>
-                  <th>Event&nbsp;Name</th>
+                  <th>Title</th>
                   <th>Description</th>
-                  <th>Date And Time</th>
+                  <th>Date</th>
+                  <th>Time</th>
                   <th>Location</th>
                   <th style="width:60px">Actions</th>
                 </tr>
               </thead>
-              <tbody>
-                <tr>
-                  <td>Event 1</td>
-                  <td>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
-                    the industry's standard dummy text ever since the 1500s</td>
-                  <td>16-08-2019 at 04:00pm</td>
-                  <td>Viman nagar pune</td>
-                  <td>
-                    <a class="btn btn-info tblBtn" data-toggle="modal" data-target="#editAddEventModal"><i
-                        class="fa fa-pencil"></i></a>
-                    <a class="btn btn-danger tblBtn"><i class="fa fa-trash"></i></a>
-                  </td>
-                </tr>
-              </tbody>
+              
             </table>
           </div>
         </div>
         <div class="text-right clearfix">
-          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#editAddEventModal"> Add New
-            Event</button>
+          <input type="submit" class="btn btn-primary" data-toggle="modal" data-target="#editAddEventModal" value="Add New Event"/> 
         </div>
       </section>
       <!-- /.content -->
@@ -164,74 +151,9 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <!-- Add the sidebar's background. This div must be placed
   immediately after the control sidebar -->
     <div class="control-sidebar-bg"></div>
-  </div>
   <!-- ./wrapper -->
 
-  <!--Modal edit View Article-->
-  <div class="modal fade" id="editAddEventModal" role="dialog">
-    <div class="modal-dialog">
-
-      <!-- Modal content-->
-      <div class="modal-content">
-        <form action="/action_page.php">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal">&times;</button>
-            <h4 class="modal-title">Add/Edit Event</h4>
-          </div>
-          <div class="modal-body">
-
-            <div class="form-group">
-              <label>Event Title</label>
-              <input type="text" rows="4" class="form-control">
-            </div>
-
-            <div class="form-group">
-              <label>Event Image</label>
-              <div class="input-group">
-                <input id="hiddenFileOpner" class="hidden" type="file" class="form-control"
-                  placeholder="Select Iamage...">
-                <input id="imageNameShowBox" type="text" class="form-control" placeholder="Select Iamage..." readonly>
-                <span class="input-group-btn" id="eventSelectImage">
-                  <button class="btn btn-default" type="button">Browse</button>
-                </span>
-              </div><!-- /input-group -->
-            </div>
-
-            <div class="form-group">
-              <label>Description</label>
-              <textarea type="text" rows="3" class="form-control"></textarea>
-            </div>
-
-            <div class="row">
-              <div class="col-sm-6">
-                <div class="form-group">
-                  <label>Event Date</label>
-                  <input type="date" class="form-control">
-                </div>
-              </div>
-              <div class="col-sm-6">
-                <div class="form-group">
-                  <label>Event Time</label>
-                  <input type="time" class="form-control">
-                </div>
-              </div>
-            </div>
-
-            <div class="form-group">
-              <label>Location</label>
-              <input type="text" class="form-control">
-            </div>
-
-          </div>
-
-          <div class="modal-footer">
-            <button type="button" class="btn btn-primary" data-dismiss="modal">Save</button>
-            <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-          </div>
-        </form>
-      </div>
-    </div>
-  </div>
+  <jsp:include page="addEvent.jsp"></jsp:include>
   <!-- REQUIRED JS SCRIPTS -->
   <!-- jQuery 3 -->
   <script src="lib/jquery/jquery.min.js"></script>

@@ -63,7 +63,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
         <ul class="sidebar-menu" data-widget="tree">
           <li class="header">HEADER</li>
           <li><a href="/getArticles"><i class="fa fa-list-alt"></i> <span>Articles</span></a></li>
-          <li><a href="/events.html"><i class="fa fa-calendar"></i> <span>Events</span></a></li>
+          <li><a href="/events"><i class="fa fa-calendar"></i> <span>Events</span></a></li>
           <li class="active"><a href="/videos"><i class="fa fa-play"></i> <span>Videos</span></a></li>
           <li><a href="/userManagement"><i class="fa fa-user"></i> <span>User Management</span></a>
           </li>
@@ -90,26 +90,16 @@ scratch. This page gets rid of all links and provides the needed markup only.
         <div class="box">
           <!-- /.box-header -->
           <div class="box-body">
-            <table id="example" class="table table-bordered table-striped table-hover">
+            <table id="videoes" class="table table-bordered table-striped table-hover">
               <thead>
                 <tr>
-                  <th>Video&nbsp;Name</th>
+                  <th>Video Name</th>
                   <th>Video Url</th>
                   <th style="width:60px">Actions</th>
                 </tr>
               </thead>
-              <tbody>
-                <tr>
-                  <td>Vishweshwaranand Ji in discussion by the banks of Shipra River, Ujjain at Simhasth Kumbh Mahaparv
-                    - 2016. </td>
-                  <td>https://www.youtube.com/embed/t4jUxnT5YjU</td>
-                  <td>
-                    <a class="btn btn-info tblBtn" data-toggle="modal" data-target="#editAddVideoModal"><i
-                        class="fa fa-pencil"></i></a>
-                    <a class="btn btn-danger tblBtn"><i class="fa fa-trash"></i></a>
-                  </td>
-                </tr>
-              </tbody>
+              
+              
             </table>
           </div>
         </div>
@@ -128,50 +118,9 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <!-- Add the sidebar's background. This div must be placed
   immediately after the control sidebar -->
     <div class="control-sidebar-bg"></div>
-  </div>
   <!-- ./wrapper -->
 <jsp:include page="addVideosLink.jsp"></jsp:include>
-  <!--Modal edit View Article-->
-  <!-- <div class="modal fade" id="editAddVideoModal" role="dialog">
-    <div class="modal-dialog">
-      Modal content
-      <div class="modal-content">
-        <form action="/action_page.php">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal">&times;</button>
-            <h4 class="modal-title">Add/Edit Video</h4>
-          </div>
-          <div class="modal-body">
-
-            <div class="form-group">
-              <label>Video Title</label>
-              <input type="text" class="form-control">
-            </div>
-
-            <div class="form-group">
-              <label>Video Category</label>
-              <select class="form-control" id="sel1">
-                <option>Genaral</option>
-                <option>Meditation</option>
-              </select>
-            </div>
-
-
-            <div class="form-group">
-              <label>Video Embaded URL</label>
-              <input type="text" class="form-control">
-            </div>
-
-          </div>
-
-          <div class="modal-footer">
-            <button type="button" class="btn btn-primary" data-dismiss="modal">Save</button>
-            <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-          </div>
-        </form>
-      </div>
-    </div>
-  </div> -->
+  
   <!-- REQUIRED JS SCRIPTS -->
   <!-- jQuery 3 -->
   <script src="lib/jquery/jquery.min.js"></script>

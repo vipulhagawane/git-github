@@ -10,7 +10,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "dps_video")
-public class addVideosLink 
+public class AddVideosLink 
 {
 
 	@Id

@@ -12,8 +12,6 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-
-import com.dhyanpraveshika.controller.DPSController;
 import com.dhyanpraveshika.database.BlogDAO;
 import com.dhyanpraveshika.model.Blog;
 
@@ -64,6 +62,16 @@ public class BlogServiceImpl implements BlogService{
 		}
 		logger.info("blog list");
 		return null;
+	}
+
+	@Override
+	public Blog getBlog(Long id) {
+		logger.info("fetching blog details by id");
+		
+		Blog blog = blogDAO.findOne(id);
+		logger.info("blog details :{}",blog.toString());
+		
+		return blog;
 	}
 
 }

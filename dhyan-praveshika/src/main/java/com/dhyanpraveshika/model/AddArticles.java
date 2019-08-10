@@ -10,7 +10,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "dps_blog")
-public class addArticles 
+public class AddArticles 
 {
 
 	@Id

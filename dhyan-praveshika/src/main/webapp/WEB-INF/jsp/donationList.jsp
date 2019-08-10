@@ -63,7 +63,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
         <ul class="sidebar-menu" data-widget="tree">
           <li class="header">HEADER</li>
           <li><a href="/getArticles"><i class="fa fa-list-alt"></i> <span>Articles</span></a></li>
-          <li><a href="/events.html"><i class="fa fa-calendar"></i> <span>Events</span></a></li>
+          <li><a href="/events"><i class="fa fa-calendar"></i> <span>Events</span></a></li>
           <li><a href="/videos"><i class="fa fa-play"></i> <span>Videos</span></a></li>
           <li><a href="/userManagement"><i class="fa fa-user"></i> <span>User Management</span></a>
           </li>
@@ -90,39 +90,17 @@ scratch. This page gets rid of all links and provides the needed markup only.
         <div class="box">
           <!-- /.box-header -->
           <div class="box-body">
-            <table id="example" class="table table-bordered table-striped table-hover">
+            <table id="donations" class="table table-bordered table-striped table-hover">
               <thead>
                 <tr>
-                  <th>User Name</th>
+                  <th>Donar Name</th>
                   <th>Email</th>
-                  <th>Trancaction Date</th>
-                  <th>Trancaction ID</th>
+                  <th>Transaction Date</th>
+                  <th>Transaction ID</th>
                   <th>Amount</th>
                 </tr>
               </thead>
-              <tbody>
-                <tr>
-                  <td>Ravindra Vishwakarma</td>
-                  <td>ravivishwakarma@gmail.com</td>
-                  <td>24-07-2019</td>
-                  <td>78946612184331</td>
-                  <td>$5000</td>
-                </tr>
-                <tr>
-                  <td>Rahul Fadnis</td>
-                  <td>rahulfadnis@gmail.com</td>
-                  <td>26-07-2019</td>
-                  <td>94661218784331</td>
-                  <td>$9000</td>
-                </tr>
-                <tr>
-                  <td>Vikas Tripathi</td>
-                  <td>vikastripathi@gmail.com</td>
-                  <td>29-07-2019</td>
-                  <td>21843317894661</td>
-                  <td>$6000</td>
-                </tr>
-              </tbody>
+              
               <tfoot>
                 <tr>
                   <td colspan="4" class="text-right"><b>Total</b></td>

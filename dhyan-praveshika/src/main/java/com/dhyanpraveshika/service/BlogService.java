@@ -12,4 +12,6 @@ public interface BlogService {
 
 	List<Blog> getBlogs();
 
+	Blog getBlog(Long id);
+
 }
