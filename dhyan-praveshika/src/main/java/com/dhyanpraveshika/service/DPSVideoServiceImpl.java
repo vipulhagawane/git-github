@@ -4,6 +4,7 @@ import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
+import java.util.Optional;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -14,6 +15,8 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.dhyanpraveshika.database.DPSVideoDAO;
+import com.dhyanpraveshika.dto.BlogDTO;
+import com.dhyanpraveshika.dto.VideosDTO;
 import com.dhyanpraveshika.model.DPSVideo;
 
 @Service
@@ -59,6 +62,29 @@ public class DPSVideoServiceImpl implements DPSVideoService {
 		logger.info("List of videoes :{}",dps_videoes);
 		
 		return dps_videoes;
+	}
+
+	@Override
+	public VideosDTO getVideo(HttpServletRequest request) {
+		logger.info("fetching videoes");
+		
+		Long id = Long.parseLong(request.getParameter("id"));
+		
+		DPSVideo video = videoDAO.findOne(id);
+		
+		VideosDTO dto=null;
+		if(video != null)
+		{
+			dto = new VideosDTO();
+			
+			
+			 dto.setId(Optional.ofNullable(video.getId()).orElse((long) 0));
+			 dto.setPath(Optional.ofNullable(video.getPath()).orElse("unavailable"));
+			 dto.setCategory(Optional.ofNullable(video.getCategory()).orElse("unavailable"));
+			 dto.setTitle(Optional.ofNullable(video.getTitle()).orElse("unavailable"));
+		}
+		
+		return dto;
 	}
 
 }

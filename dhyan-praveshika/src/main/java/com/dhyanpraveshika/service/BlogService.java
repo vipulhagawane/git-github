@@ -4,6 +4,7 @@ import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
 
+import com.dhyanpraveshika.dto.BlogDTO;
 import com.dhyanpraveshika.model.Blog;
 
 public interface BlogService {
@@ -12,6 +13,8 @@ public interface BlogService {
 
 	List<Blog> getBlogs();
 
-	Blog getBlog(Long id);
+	BlogDTO getBlog(Long id);
+	
+	 
 
 }

@@ -15,12 +15,12 @@
 
             <div class="form-group">
               <label>Video Title</label>
-              <input type="text"  name="title" class="form-control">
+              <input type="text" id="title" name="title" class="form-control">
             </div>
 
             <div class="form-group">
               <label>Video Category</label>
-              <select class="form-control" id="sel1" name="category">
+              <select class="form-control" id="category" name="category">
                 <option>Genaral</option>
                 <option>Meditation</option>
               </select>
@@ -29,7 +29,7 @@
 
             <div class="form-group">
               <label>Video Embaded URL</label>
-              <input type="text" class="form-control" name="path">
+              <input type="text" id="path" class="form-control" name="path">
             </div>
 
           </div>

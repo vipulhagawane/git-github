@@ -13,6 +13,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import com.dhyanpraveshika.database.BlogDAO;
+import com.dhyanpraveshika.dto.BlogDTO;
 import com.dhyanpraveshika.model.Blog;
 
 @Service
@@ -27,24 +28,37 @@ public class BlogServiceImpl implements BlogService{
 	@Override
 	public boolean createBlog(HttpServletRequest request) {
 	
+		Blog blog ;
+		
+		if(request.getParameter("id").isEmpty())
+		{
+			logger.info("creating new blog");
+			blog = new Blog();
+		}
+		else
+		{
+			Long id  = Long.parseLong(request.getParameter("id"));
+			logger.info("updating blog of id :{}",id);
+			blog = blogDAO.findOne(id);
+		}
 		String title = request.getParameter("articleTital");
 		String description = request.getParameter("articleDescription");
 		String author = request.getParameter("authorName");
 		String category = request.getParameter("category");
 		
-		logger.info("creating new blog{}",title + " " + description + " " + author);
-
+		logger.info("blog from request:{}",title + " " + description + " " + author);
+		
 		if (title != null && description != null && author != null) {
 			Date date = new Date();
 			DateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy kk:mm:ss");
 			String newdate = dateFormat.format(date);
-			Blog blog = new Blog();
+			
 			blog.setTitle(Optional.ofNullable(title).orElse("unavailable"));
 			blog.setDescription(Optional.ofNullable(description).orElse("unavailable"));
 			blog.setAuthor(Optional.ofNullable(author).orElse("unavailable"));
 			blog.setDate(Optional.ofNullable(newdate).orElse("unavailable"));
 			blog.setCategory(Optional.ofNullable(category).orElse("unavailable"));
-			blogDAO.save(blog);
+			blogDAO.saveOrUpdate(blog);
 			
 			return true;
 		}
@@ -65,13 +79,24 @@ public class BlogServiceImpl implements BlogService{
 	}
 
 	@Override
-	public Blog getBlog(Long id) {
+	public BlogDTO getBlog(Long id) {
 		logger.info("fetching blog details by id");
 		
 		Blog blog = blogDAO.findOne(id);
 		logger.info("blog details :{}",blog.toString());
 		
-		return blog;
+		BlogDTO dto = null;
+		if(blog != null)
+		{
+			dto =  new BlogDTO();
+			dto.setId(Optional.ofNullable(blog.getId()).orElse((long) 0));
+			dto.setTitle(Optional.ofNullable(blog.getTitle()).orElse("unavailable"));
+			dto.setDescription(Optional.ofNullable(blog.getDescription()).orElse("unavailable"));
+			dto.setAuthor(Optional.ofNullable(blog.getAuthor()).orElse("unavailable"));
+			dto.setCategory(Optional.ofNullable(blog.getCategory()).orElse("unavailable"));
+		}
+		
+		return dto;
 	}
 
 }

@@ -11,6 +11,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.dhyanpraveshika.database.UserDAO;
+import com.dhyanpraveshika.dto.VideosDTO;
 import com.dhyanpraveshika.model.User;
 
 @Service
@@ -44,6 +45,12 @@ public class DPSService{
 	{
 		return false;
 		
+	}
+
+
+	public VideosDTO getVideo(HttpServletRequest request) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }

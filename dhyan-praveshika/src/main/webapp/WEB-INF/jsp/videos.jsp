@@ -95,7 +95,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 <tr>
                   <th>Video Name</th>
                   <th>Video Url</th>
-                  <th style="width:60px">Actions</th>
+                  
+                  <th style="width:80px">Actions</th>
                 </tr>
               </thead>
               

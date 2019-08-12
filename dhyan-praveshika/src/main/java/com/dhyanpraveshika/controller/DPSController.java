@@ -18,7 +18,10 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 
+import com.dhyanpraveshika.dto.BlogDTO;
+import com.dhyanpraveshika.dto.VideosDTO;
 import com.dhyanpraveshika.model.Blog;
 import com.dhyanpraveshika.model.DPSEvent;
 import com.dhyanpraveshika.model.DPSVideo;
@@ -99,7 +102,15 @@ public class DPSController {
 
 		return "videos";
 	}
-	
+
+	/*
+	 * @RequestMapping("/getVideos") public String getVideos(HttpServletRequest
+	 * request, ModelMap model) {
+	 * 
+	 * return "videos";
+	 * 
+	 * }
+	 */
 	@PostMapping("/addVideo")
 	public String addVideo(HttpServletRequest request) {
 		
@@ -141,9 +152,8 @@ public class DPSController {
 	@PostMapping("/addArticle")
 	public String addArticles(HttpServletRequest request) 
 	{
-		logger.info("at add article",request.getParameter("articleTital"));
 		boolean result = blogService.createBlog(request);
-		logger.info("result",result);
+		logger.info("result:{}",result);
 		return "home";
 	}
 	
@@ -192,18 +202,35 @@ public class DPSController {
 		return new ResponseEntity<List<DPSEvent>>(events,HttpStatus.OK);
 	}
 	
+	@ResponseBody
 	@RequestMapping("/getArticle")
-	public String getArticle(HttpServletRequest request)
+	public BlogDTO getArticle(HttpServletRequest request)
 	{
 		logger.info("at controller getArticle:");
 		
 		Long id = Long.parseLong(request.getParameter("id"));
-		Blog blog = blogService.getBlog(id);
-		if(blog != null)
-		{
-			return "addArticle";
-		}
-		return "home";
+		BlogDTO blogDto = blogService.getBlog(id);
+		return blogDto;
 	}
 	
+	@ResponseBody
+	@RequestMapping("/getVideos")
+	public VideosDTO getVideo(HttpServletRequest request)
+	{
+		logger.info("at controller getVideo:");
+		
+		VideosDTO dto = videoService.getVideo(request);
+		
+		return dto;
+		
+	}
+	
+	
+	
+	@ResponseBody
+	@RequestMapping("/getAjax")
+	public String getAjax(HttpServletRequest request)
+	{
+		return "ajax";
+	}
 }
