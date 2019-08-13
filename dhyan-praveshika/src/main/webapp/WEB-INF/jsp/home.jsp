@@ -102,6 +102,9 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <!-- CK Editor -->
   <script src="lib/ckeditor/ckeditor.js"></script>
   <script src="lib/ckeditor/config.js"></script>
+  
+   <!-- sweetalert  -->
+  <script src="lib/sweetalert/sweetalert.min.js"></script>
  
   <!-- AdminLTE App -->
   <script src="js/adminlte.js"></script>

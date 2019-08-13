@@ -95,7 +95,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 <tr>
                   <th>Video Name</th>
                   <th>Video Url</th>
-                  
+                  <th>Video category</th> 
                   <th style="width:80px">Actions</th>
                 </tr>
               </thead>
@@ -129,10 +129,16 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <script src="lib/bootstrap/js/bootstrap.min.js"></script>
   <!-- Data table -->
   <script src="lib/data-tables/js/datatables.min.js"></script>
+  
+  <!-- sweetalert  -->
+  <script src="lib/sweetalert/sweetalert.min.js"></script>
+  
   <!-- AdminLTE App -->
   <script src="js/adminlte.js"></script>
   <!-- AdminLTE App -->
   <script src="js/custom.js"></script>
+  
+  
 </body>
 
 </html>
