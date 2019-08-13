@@ -2,7 +2,7 @@ package com.dhyanpraveshika.service;
 
 import java.util.List;
 
-import com.dhyanpraveshika.model.Donation;
+import com.dhyanpraveshika.entity.Donation;
 
 public interface DonationService {
 

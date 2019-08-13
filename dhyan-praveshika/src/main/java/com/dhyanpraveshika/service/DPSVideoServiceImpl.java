@@ -17,7 +17,7 @@ import org.springframework.transaction.annotation.Transactional;
 import com.dhyanpraveshika.database.DPSVideoDAO;
 import com.dhyanpraveshika.dto.BlogDTO;
 import com.dhyanpraveshika.dto.VideosDTO;
-import com.dhyanpraveshika.model.DPSVideo;
+import com.dhyanpraveshika.entity.DPSVideo;
 
 @Service
 @Transactional

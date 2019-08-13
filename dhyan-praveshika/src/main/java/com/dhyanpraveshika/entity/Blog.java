@@ -1,4 +1,4 @@
-package com.dhyanpraveshika.model;
+package com.dhyanpraveshika.entity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -8,10 +8,9 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "dps_video")
-public class DPSVideo {
+@Table(name = "dps_blog")
+public class Blog {
 	
-
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "id")
@@ -20,14 +19,18 @@ public class DPSVideo {
 	@Column(name = "title")
 	private String title;
 	
-	@Column(name = "category")
-	private String category;
+	@Column(name = "description")
+	private String description;
 	
-	@Column(name = "path")
-	private String path;
+	@Column(name = "author")
+	private String author;
 	
 	@Column(name = "date")
 	private String date;
+	
+	@Column(name = "category")
+	private String category;
+	
 
 	public Long getId() {
 		return id;
@@ -45,20 +48,20 @@ public class DPSVideo {
 		this.title = title;
 	}
 
-	public String getCategory() {
-		return category;
+	public String getDescription() {
+		return description;
 	}
 
-	public void setCategory(String category) {
-		this.category = category;
+	public void setDescription(String description) {
+		this.description = description;
 	}
 
-	public String getPath() {
-		return path;
+	public String getAuthor() {
+		return author;
 	}
 
-	public void setPath(String path) {
-		this.path = path;
+	public void setAuthor(String author) {
+		this.author = author;
 	}
 
 	public String getDate() {
@@ -68,13 +71,19 @@ public class DPSVideo {
 	public void setDate(String date) {
 		this.date = date;
 	}
+	
+	public String getCategory() {
+		return category;
+	}
+
+	public void setCategory(String category) {
+		this.category = category;
+	}
 
 	@Override
 	public String toString() {
-		return "Video [id=" + id + ", title=" + title + ", category=" + category + ", path=" + path + ", date=" + date
-				+ "]";
+		return "Blog [id=" + id + ", title=" + title + ", description=" + description + ", author=" + author + ", date="
+				+ date + ", category=" + category + "]";
 	}
-	
-	
 
 }

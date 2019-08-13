@@ -12,7 +12,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.dhyanpraveshika.database.UserDAO;
 import com.dhyanpraveshika.dto.VideosDTO;
-import com.dhyanpraveshika.model.User;
+import com.dhyanpraveshika.entity.User;
 
 @Service
 @Transactional

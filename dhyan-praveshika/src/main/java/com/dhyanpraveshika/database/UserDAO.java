@@ -1,6 +1,6 @@
 package com.dhyanpraveshika.database;
 
-import com.dhyanpraveshika.model.User;
+import com.dhyanpraveshika.entity.User;
 
 public interface UserDAO extends GenericDAO<User, Long> {
 

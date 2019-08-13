@@ -8,6 +8,7 @@
       <!-- Modal content-->
       <div class="modal-content">
         <form action="/addEvent"  method="post" enctype="multipart/form-data">
+        <input type="hidden" id="id" name="id">
           <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal">&times;</button>
             <h4 class="modal-title">Add/Edit Event</h4>
@@ -16,8 +17,10 @@
 
             <div class="form-group">
               <label>Event Title</label>
-              <input type="text" rows="4" name="title" class="form-control">
+              <input type="text" rows="4" id="title" name="title" class="form-control">
             </div>
+            
+            <img class="img-thumbnail" id="image"  style="display:none"/>
 
             <div class="form-group">
               <label>Event Image</label>
@@ -33,27 +36,27 @@
 
             <div class="form-group">
               <label>Description</label>
-              <textarea type="text" rows="3" name="description" class="form-control"></textarea>
+              <textarea type="text" rows="3" id="description" name="description" class="form-control"></textarea>
             </div>
 
             <div class="row">
               <div class="col-sm-6">
                 <div class="form-group">
                   <label>Event Date</label>
-                  <input type="date" name="date" class="form-control">
+                  <input type="date" id="date" name="date" class="form-control">
                 </div>
               </div>
               <div class="col-sm-6">
                 <div class="form-group">
                   <label>Event Time</label>
-                  <input type="time" name="time" class="form-control">
+                  <input type="time" id="time" name="time" class="form-control">
                 </div>
               </div>
             </div>
 
             <div class="form-group">
               <label>Location</label>
-              <input type="text" name="location" class="form-control">
+              <input type="text" id="location" name="location" class="form-control">
             </div>
 
           </div>

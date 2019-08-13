@@ -5,7 +5,7 @@ import java.util.List;
 import javax.servlet.http.HttpServletRequest;
 
 import com.dhyanpraveshika.dto.BlogDTO;
-import com.dhyanpraveshika.model.Blog;
+import com.dhyanpraveshika.entity.Blog;
 
 public interface BlogService {
 
@@ -14,7 +14,7 @@ public interface BlogService {
 	List<Blog> getBlogs();
 
 	BlogDTO getBlog(Long id);
-	
-	 
+
+	boolean deleteArticle(Long id);
 
 }

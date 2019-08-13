@@ -22,11 +22,12 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.dhyanpraveshika.dto.BlogDTO;
 import com.dhyanpraveshika.dto.VideosDTO;
-import com.dhyanpraveshika.model.Blog;
-import com.dhyanpraveshika.model.DPSEvent;
-import com.dhyanpraveshika.model.DPSVideo;
-import com.dhyanpraveshika.model.Donation;
-import com.dhyanpraveshika.model.User;
+import com.dhyanpraveshika.dto.EventDTO;
+import com.dhyanpraveshika.entity.Blog;
+import com.dhyanpraveshika.entity.DPSEvent;
+import com.dhyanpraveshika.entity.DPSVideo;
+import com.dhyanpraveshika.entity.Donation;
+import com.dhyanpraveshika.entity.User;
 import com.dhyanpraveshika.service.BlogService;
 import com.dhyanpraveshika.service.DPSService;
 import com.dhyanpraveshika.service.UserService;
@@ -143,9 +144,8 @@ public class DPSController {
 	@GetMapping("/getBlogs")
 	public ResponseEntity<List<Blog>> getBlogs(HttpServletResponse res)
 	{
-		logger.info("fetching blog list:{}");
+		logger.info("fetching blog list at controller");
 		List<Blog> blogs = blogService.getBlogs();
-		logger.info("at controller donations:{}",blogs);
 		return new ResponseEntity<List<Blog>>(blogs,HttpStatus.OK);
 	}
 	
@@ -228,9 +228,22 @@ public class DPSController {
 	
 	
 	@ResponseBody
-	@RequestMapping("/getAjax")
-	public String getAjax(HttpServletRequest request)
+	@RequestMapping("/getEvent")
+	public EventDTO getEvent(HttpServletRequest request)
 	{
-		return "ajax";
+		logger.info("at controller getEvent");
+		Long id = Long.parseLong(request.getParameter("id"));
+		EventDTO eventDto = eventService.getEvent(id);
+		return eventDto;
+	}
+	
+	@RequestMapping("/deleteArticle")
+	public String deleteArticle(HttpServletRequest request)
+	{
+		logger.info("at controller deleteArticle");
+		Long id = Long.parseLong(request.getParameter("id"));
+		boolean result = blogService.deleteArticle(id);
+		logger.info("result :{}",result);
+		return "home";
 	}
 }

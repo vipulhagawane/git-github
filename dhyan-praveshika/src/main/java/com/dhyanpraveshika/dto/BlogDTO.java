@@ -7,6 +7,8 @@ public class BlogDTO {
 	private String description;
 	private String author;
 	private String category;
+	private String encodedString;
+	private String extension;
 
 	public String getTitle() {
 		return title;
@@ -47,11 +49,27 @@ public class BlogDTO {
 	public void setId(Long id) {
 		this.id = id;
 	}
+	
+	public String getEncodedString() {
+		return encodedString;
+	}
+
+	public void setEncodedString(String encodedString) {
+		this.encodedString = encodedString;
+	}
+
+	public String getExtension() {
+		return extension;
+	}
+
+	public void setExtension(String extension) {
+		this.extension = extension;
+	}
 
 	@Override
 	public String toString() {
 		return "BlogDTO [id=" + id + ", title=" + title + ", description=" + description + ", author=" + author
-				+ ", category=" + category + "]";
+				+ ", category=" + category + ", encodedString=" + encodedString + ", extension=" + extension + "]";
 	}
 
 	

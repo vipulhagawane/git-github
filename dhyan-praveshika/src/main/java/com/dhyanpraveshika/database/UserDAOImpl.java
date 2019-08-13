@@ -6,7 +6,7 @@ import javax.persistence.Query;
 
 import org.springframework.stereotype.Repository;
 
-import com.dhyanpraveshika.model.User;
+import com.dhyanpraveshika.entity.User;
 
 @Repository
 public class UserDAOImpl extends GenericDAOImpl<User, Long> implements UserDAO {

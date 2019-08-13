@@ -57,22 +57,6 @@ $('#donations').DataTable({
 		  {title : 'Amount' , data : 'amount'},
 		  ]
 });
-
-$('#events').DataTable({
-	  
-	  ajax : {
-		  url : '/getEvents',
-			  dataSrc : ''
-	  },
-	  columns:[
-		  {title : 'Title' , data : 'title'},
-		  {title : 'Description' , data : 'description'},
-		  {title : 'Date' , data : 'date'},
-		  {title : 'Time' , data : 'time'},
-		  {title : 'Location' , data : 'location'},
-		  ]
-});
-
 });
 
 //getVideos

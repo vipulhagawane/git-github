@@ -123,7 +123,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                   <th>Date</th>
                   <th>Time</th>
                   <th>Location</th>
-                  <th style="width:60px">Actions</th>
+                  <th style="width:80px">Actions</th>
                 </tr>
               </thead>
               
@@ -165,6 +165,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <script src="js/adminlte.js"></script>
   <!-- AdminLTE App -->
   <script src="js/custom.js"></script>
+  <script src="js/event.js"></script>
   <script>
     $('#eventSelectImage').on('click', function () {
       $('#hiddenFileOpner').trigger('click');

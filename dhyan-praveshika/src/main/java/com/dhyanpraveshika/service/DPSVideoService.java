@@ -5,7 +5,7 @@ import java.util.List;
 import javax.servlet.http.HttpServletRequest;
 
 import com.dhyanpraveshika.dto.VideosDTO;
-import com.dhyanpraveshika.model.DPSVideo;
+import com.dhyanpraveshika.entity.DPSVideo;
 
 public interface DPSVideoService {
 

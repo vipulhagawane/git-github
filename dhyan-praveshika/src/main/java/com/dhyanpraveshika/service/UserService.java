@@ -2,7 +2,7 @@ package com.dhyanpraveshika.service;
 
 import java.util.List;
 
-import com.dhyanpraveshika.model.User;
+import com.dhyanpraveshika.entity.User;
 
 public interface UserService {
 

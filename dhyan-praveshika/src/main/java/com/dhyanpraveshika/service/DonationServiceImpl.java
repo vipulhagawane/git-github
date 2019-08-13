@@ -8,7 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import com.dhyanpraveshika.database.DonationDAO;
-import com.dhyanpraveshika.model.Donation;
+import com.dhyanpraveshika.entity.Donation;
 
 @Service
 @Transactional
