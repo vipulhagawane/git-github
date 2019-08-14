@@ -136,7 +136,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <!-- AdminLTE App -->
   <script src="js/adminlte.js"></script>
   <!-- AdminLTE App -->
-  <script src="js/custom.js"></script>
+  <!-- <script src="js/custom.js"></script> -->
+  <script src="js/videoes.js"></script>
   
   
 </body>

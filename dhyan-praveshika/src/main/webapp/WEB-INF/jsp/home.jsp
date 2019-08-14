@@ -112,6 +112,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <script src="js/custom.js"></script>
    <script src="js/article.js"></script>
    <script src="js/videoes.js"></script>
+   
   <script>
     $(function () {
       CKEDITOR.replace('editor12');

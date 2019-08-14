@@ -27,6 +27,7 @@ import com.dhyanpraveshika.database.EventDAO;
 import com.dhyanpraveshika.dto.EventDTO;
 import com.dhyanpraveshika.entity.Blog;
 import com.dhyanpraveshika.entity.DPSEvent;
+import com.dhyanpraveshika.entity.DPSVideo;
 
 @Service
 @Transactional
@@ -184,6 +185,21 @@ public class EventServiceImpl implements EventService {
 			}
 		}
 		
+	}
+
+	@Override
+	public boolean deleteEvent(Long id) {
+
+		logger.info("Deleting article of id : {}",id);
+		DPSEvent video = eventDAO.findOne(id);
+		logger.info("Deleting Videos of id : {}",eventDAO.findOne(id));
+		if(video != null)
+		{
+			//video.delete(video);
+			eventDAO.delete(video);
+			return true;
+		}
+		return false;
 	}
 
 }

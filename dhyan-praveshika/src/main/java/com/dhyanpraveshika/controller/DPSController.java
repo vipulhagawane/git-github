@@ -246,4 +246,26 @@ public class DPSController {
 		logger.info("result :{}",result);
 		return "home";
 	}
+	
+	@RequestMapping("/deleteVideo")
+	public String deleteVideo(HttpServletRequest request)
+	{
+		logger.info("Controller deleteVideo ::::");
+		Long id = Long.parseLong(request.getParameter("id"));
+		boolean result=videoService.deleteVideo(id);
+		logger.info("result :{}",result);
+		return "home";
+		
+	}
+	
+	@RequestMapping("/deleteEvent")
+	public String deleteEvent(HttpServletRequest request)
+	{
+		logger.info("Controller deleteEvent ::::");
+		Long id = Long.parseLong(request.getParameter("id"));
+		boolean result=eventService.deleteEvent(id);
+		logger.info("result :{}",result);
+		return "home";
+		
+	}
 }

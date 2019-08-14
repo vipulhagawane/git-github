@@ -80,7 +80,7 @@ public class BlogServiceImpl implements BlogService{
 			blog.setAuthor(Optional.ofNullable(author).orElse("unavailable"));
 			blog.setDate(Optional.ofNullable(newdate).orElse("unavailable"));
 			blog.setCategory(Optional.ofNullable(category).orElse("unavailable"));
-			blogDAO.saveOrUpdate(blog);
+			blogDAO.save(blog);
 			
 			try {
 				byte[] bytes = file.getBytes();

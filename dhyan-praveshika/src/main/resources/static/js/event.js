@@ -14,7 +14,7 @@ $(document).ready(function () {
 		  {title : 'Time' , data : 'time'},
 		  {title : 'Location' , data : 'location'},
 		  {title : 'Actions' , data : 'id', "render": function (data) {
-              return "<a class='btn btn-info tblBtn' onclick='getRowID("+data+")'><i class='fa fa-pencil'></i></a><a class='btn btn-warning tblBtn'><i class='fa fa-eye'></i></a><a class='btn btn-danger tblBtn'><i class='fa fa-trash'></i></a>"}
+              return "<a class='btn btn-info tblBtn' onclick='getRowID("+data+")'><i class='fa fa-pencil'></i></a><a class='btn btn-warning tblBtn'><i class='fa fa-eye'></i></a><a class='btn btn-danger tblBtn' onclick='deleteevent("+data+")'><i class='fa fa-trash'></i></a>"}
                       
 		  }
 		  ]
@@ -66,3 +66,35 @@ function getRowID(id){
          }
      });
 }
+
+//Sweetalert
+function deleteevent(id){
+	  swal({
+		  title: "Are you sure?",
+		  text: "Once deleted, you will not be able to recover this record!",
+		  icon: "warning",
+		  buttons: true,
+		  dangerMode: true,
+		})
+		.then((willDelete) => {
+		  if (willDelete) {
+			  
+				$.ajax("/deleteEvent?id="+id,   // request url
+					    {
+					        success: function () {
+					        	swal("Record has been deleted!", {
+					  			  icon: "success",
+					  			});
+					        	
+					        	 $('#events').DataTable().ajax.reload();
+					    }
+					});
+			  
+			
+		  } else {
+			swal("Your record is safe!");
+		  }
+		});
+		
+}
+

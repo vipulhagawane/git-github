@@ -15,4 +15,9 @@ public interface DPSVideoService {
 
 	VideosDTO getVideo(HttpServletRequest request);
 
+	
+
+	boolean deleteVideo(Long id);
+
+	
 }

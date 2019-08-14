@@ -59,10 +59,35 @@ function getRowID(id){
 }
 
 
+
+
+
 function deleteArticle(id){
-	alert(id);
-	 $.ajax({
-		 type : 'GET',
-         url : "/deleteArticle?id="+id,
-	 });
+	  swal({
+		  title: "Are you sure?",
+		  text: "Once deleted, you will not be able to recover this record!",
+		  icon: "warning",
+		  buttons: true,
+		  dangerMode: true,
+		})
+		.then((willDelete) => {
+		  if (willDelete) {
+			  
+				$.ajax("/deleteArticle?id="+id,   // request url
+					    {
+					        success: function () {
+					        	swal("Record has been deleted!", {
+					  			  icon: "success",
+					  			});
+					        	
+					        	 $('#article').DataTable().ajax.reload();
+					    }
+					});
+			  
+			
+		  } else {
+			swal("Your record is safe!");
+		  }
+		});
+		
 }

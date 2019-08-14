@@ -17,6 +17,7 @@ import org.springframework.transaction.annotation.Transactional;
 import com.dhyanpraveshika.database.DPSVideoDAO;
 import com.dhyanpraveshika.dto.BlogDTO;
 import com.dhyanpraveshika.dto.VideosDTO;
+import com.dhyanpraveshika.entity.Blog;
 import com.dhyanpraveshika.entity.DPSVideo;
 
 @Service
@@ -27,6 +28,8 @@ public class DPSVideoServiceImpl implements DPSVideoService {
 
 	@Autowired
 	private DPSVideoDAO videoDAO;
+	
+	
 
 	@Override
 	public boolean addVideo(HttpServletRequest request) {
@@ -85,6 +88,23 @@ public class DPSVideoServiceImpl implements DPSVideoService {
 		}
 		
 		return dto;
+	}
+	
+	@Override
+	public boolean deleteVideo(Long id) {
+		
+		logger.info("Deleting article of id : {}",id);
+		
+		//Blog blog = blogDAO.findOne(id);
+		DPSVideo video = videoDAO.findOne(id);
+		logger.info("Deleting Videos of id : {}",videoDAO.findOne(id));
+		if(video != null)
+		{
+			//video.delete(video);
+			videoDAO.delete(video);
+			return true;
+		}
+		return false;
 	}
 
 }

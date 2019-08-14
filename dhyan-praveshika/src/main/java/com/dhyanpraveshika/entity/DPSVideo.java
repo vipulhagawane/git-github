@@ -74,7 +74,6 @@ public class DPSVideo {
 		return "Video [id=" + id + ", title=" + title + ", category=" + category + ", path=" + path + ", date=" + date
 				+ "]";
 	}
-	
-	
 
+	
 }

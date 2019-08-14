@@ -161,21 +161,15 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <script src="lib/bootstrap/js/bootstrap.min.js"></script>
   <!-- Data table -->
   <script src="lib/data-tables/js/datatables.min.js"></script>
+  
+     <!-- sweetalert  -->
+  <script src="lib/sweetalert/sweetalert.min.js"></script>
   <!-- AdminLTE App -->
   <script src="js/adminlte.js"></script>
   <!-- AdminLTE App -->
   <script src="js/custom.js"></script>
   <script src="js/event.js"></script>
-  <script>
-    $('#eventSelectImage').on('click', function () {
-      $('#hiddenFileOpner').trigger('click');
-      $('#hiddenFileOpner[type="file"]').change(function (e) {
-        var fileName = e.target.files[0].name;
-        $('#imageNameShowBox').val(fileName);
-      });
-
-    });
-  </script>
+ 
 </body>
 
 </html>
