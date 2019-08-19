@@ -1,4 +1,37 @@
 $(document).ready(function () {
+	
+	
+	$.ajax({
+	    type: "get",
+	    url: "/isArticleAdd",
+	   
+	    success: function(data){
+	    
+	     // alert(data);
+	     if(data == "")
+	    	 {
+	    	 $('#article').DataTable().ajax.reload();
+	    	 }
+	     else if(data == "success")
+	    	 {
+	    	 swal("Article has been added!", {
+	 			  icon: "success",
+	 			});
+	       	
+	       	 $('#article').DataTable().ajax.reload();
+	    	 }
+	     else if(data == "fail")
+		 {
+	     swal("Failed to add!");
+	   	
+	   	 $('#article').DataTable().ajax.reload();
+		 }
+	    },
+	    error: function(){      
+	     alert('Error while request..');
+	    }
+	   });
+	 
  
 $('#article').DataTable({
 	  
@@ -12,7 +45,7 @@ $('#article').DataTable({
 		  {title : 'Created By' , data : 'author'},
 		  {title : 'Category' , data : 'category'},
 		  {title : 'Actions' , data : 'id', "render": function (data) {
-              return "<a class='btn btn-info tblBtn' onclick='getRowID("+data+")'><i class='fa fa-pencil'></i></a><a class='btn btn-warning tblBtn'><i class='fa fa-eye'></i></a><a class='btn btn-danger tblBtn' onclick='deleteArticle("+data+")'><i class='fa fa-trash'></i></a>"}
+              return "<a class='btn btn-info tblBtn' onclick='getArticalID("+data+")'><i class='fa fa-pencil'></i></a><a class='btn btn-warning tblBtn'><i class='fa fa-eye'></i></a><a class='btn btn-danger tblBtn' onclick='deleteArticle("+data+")'><i class='fa fa-trash'></i></a>"}
                       
 		  }
 	  ]
@@ -39,7 +72,7 @@ $('#articleSelectImage').on('click', function () {
 
 
 });
-function getRowID(id){
+function getArticalID(id){
 	//window.location.href = "/getArticle?id="+id;
 	 $.ajax({
 		 type : 'GET',
@@ -57,12 +90,38 @@ function getRowID(id){
      });
 	//$('#editViewArticleModal').modal('show');
 }
-
-
-
-
-
 function deleteArticle(id){
+	  swal({
+		  title: "Are you sure?",
+		  text: "Once deleted, you will not be able to recover this record!",
+		  icon: "warning",
+		  buttons: true,
+		  dangerMode: true,
+		})
+		.then((willDelete) => {
+		  if (willDelete) {
+			  
+				$.ajax("/deleteArticle?id="+id,   // request url
+					    {
+					        success: function () {
+					        	swal("Record has been deleted!", {
+					  			  icon: "success",
+					  			});
+					        	
+					        	 $('#article').DataTable().ajax.reload();
+					    }
+					});
+			  
+			
+		  } else {
+			swal("Your record is safe!");
+		  }
+		});
+		
+}
+
+
+function saveForm1(id){
 	  swal({
 		  title: "Are you sure?",
 		  text: "Once deleted, you will not be able to recover this record!",

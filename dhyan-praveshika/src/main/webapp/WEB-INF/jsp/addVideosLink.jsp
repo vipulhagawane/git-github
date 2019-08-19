@@ -15,7 +15,7 @@
 
             <div class="form-group">
               <label>Video Title</label>
-              <input type="text" id="title" name="title" class="form-control">
+              <input type="text" id="title" name="title" class="form-control" required="required">
             </div>
 
             <div class="form-group">
@@ -29,7 +29,7 @@
 
             <div class="form-group">
               <label>Video Embaded URL</label>
-              <input type="text" id="path" class="form-control" name="path">
+              <input type="text" id="path" class="form-control" name="path" required="required">
             </div>
 
           </div>

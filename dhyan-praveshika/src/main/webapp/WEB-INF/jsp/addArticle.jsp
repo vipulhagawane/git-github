@@ -18,7 +18,7 @@
 			<input type="hidden" id="id" name="id">
             <div class="form-group">
               <label>Article Title</label>
-              <input id="articleTital" type="text"  id="articleTital" name="articleTital" class="form-control">
+              <input id="articleTital" type="text"  id="articleTital" name="articleTital" class="form-control" required="required">
             </div>
             
             <img class="img-thumbnail" id="image"  style="display:none"/>
@@ -27,8 +27,8 @@
               <label>Event Image</label>
               <div class="input-group">
                 <input id="hiddenFileOpner" class="hidden" type="file" name="file" class="form-control"
-                  placeholder="Select Image...">
-                <input id="imageNameShowBox" type="text" class="form-control" placeholder="Select Image..." readonly>
+                  placeholder="Select Image..." >
+                <input id="imageNameShowBox" type="text" class="form-control" placeholder="Select Image..." readonly required="required">
                 <span class="input-group-btn" id="articleSelectImage">
                   <button class="btn btn-default" type="button">Browse</button>
                 </span>
@@ -37,12 +37,12 @@
 
             <div class="form-group">
               <label>Creator Name</label>
-              <input type="text" id="authorName" name="authorName" class="form-control">
+              <input type="text" id="authorName" name="authorName" class="form-control" required="required">
             </div>
             
             <div class="form-group">
               <label>Category</label>
-              <input type="text" id="category" name="category" class="form-control">
+              <input type="text" id="category" name="category" class="form-control" required="required">
             </div>
 
             <div class="form-group">

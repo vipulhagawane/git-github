@@ -38,7 +38,9 @@ import com.dhyanpraveshika.service.EventService;
 @Controller
 
 public class DPSController {
-
+	
+	private String addArticle = null;
+	private String addEvent=null;
 	private static final Logger logger = LoggerFactory.getLogger(DPSController.class);
 
 	@Autowired
@@ -104,14 +106,7 @@ public class DPSController {
 		return "videos";
 	}
 
-	/*
-	 * @RequestMapping("/getVideos") public String getVideos(HttpServletRequest
-	 * request, ModelMap model) {
-	 * 
-	 * return "videos";
-	 * 
-	 * }
-	 */
+	
 	@PostMapping("/addVideo")
 	public String addVideo(HttpServletRequest request) {
 		
@@ -145,6 +140,7 @@ public class DPSController {
 	public ResponseEntity<List<Blog>> getBlogs(HttpServletResponse res)
 	{
 		logger.info("fetching blog list at controller");
+		addArticle = "";
 		List<Blog> blogs = blogService.getBlogs();
 		return new ResponseEntity<List<Blog>>(blogs,HttpStatus.OK);
 	}
@@ -154,8 +150,41 @@ public class DPSController {
 	{
 		boolean result = blogService.createBlog(request);
 		logger.info("result:{}",result);
+		
+		if(result == true)
+		{
+			addArticle = "success";
+		}
+		
+		else
+		{
+			addArticle = "fail";
+		}
 		return "home";
 	}
+	
+	
+	@PostMapping("/addEvent")
+	public String addEvent(HttpServletRequest request) 
+	{
+		logger.info("at controller addEvent :{}");
+		
+		boolean result = eventService.addEvent(request);
+		logger.info("result of add event{}", result);
+		
+		if(result == true)
+		{
+			addEvent = "success";
+		}
+		
+		else
+		{
+			addEvent = "fail";
+		}
+		
+		return "events";
+	}
+	
 	
 	@GetMapping("/getUsers")
 	public ResponseEntity<List<User>> getUsers(HttpServletResponse res)
@@ -183,16 +212,6 @@ public class DPSController {
 	}
 	
 	
-	@PostMapping("/addEvent")
-	public String addEvent(HttpServletRequest request) 
-	{
-		logger.info("at controller addEvent :{}");
-		
-		boolean result = eventService.addEvent(request);
-		logger.info("result of add event{}", result);
-		
-		return "events";
-	}
 	
 	@GetMapping("/getEvents")
 	public ResponseEntity<List<DPSEvent>> getEvents(HttpServletResponse res)
@@ -268,4 +287,24 @@ public class DPSController {
 		return "home";
 		
 	}
+	
+//vipul
+	
+	@ResponseBody
+	@GetMapping("/isArticleAdd")
+	public String getAddArticleResult()
+	{
+		logger.info("at controller addArticle : {},",addArticle);
+		return addArticle;
+	}
+	@ResponseBody
+	@GetMapping("/isEventAdd")
+	public String getAddEventResult()
+	{
+		logger.info("at controller addArticle : {},",addArticle);
+		return addEvent;
+	}
+	
+	
+	
 }

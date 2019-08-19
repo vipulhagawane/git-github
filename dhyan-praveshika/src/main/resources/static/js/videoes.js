@@ -11,12 +11,14 @@ $(document).ready(function () {
 		  {title : 'Video Url' , data : 'path'},
 		  {title : 'Video Category' , data : 'category'},
 		  {title : 'Actions' , data : 'id', "render": function (data) {
-			   return "<a class='btn btn-info tblBtn' onclick='getRowID("+data+")'><i class='fa fa-pencil'></i></a><a class='btn btn-warning tblBtn'><i class='fa fa-eye'></i></a><a class='btn btn-danger tblBtn' onclick='deleteRow("+data+")'><i class='fa fa-trash'></i></a>"}
+			   return "<a class='btn btn-info tblBtn' onclick='getRowID("+data+")'><i class='fa fa-pencil'></i></a><button class='btn btn-warning tblBtn' onclick='openVideoUrl(event)'><i class='fa fa-eye'></i></button><a class='btn btn-danger tblBtn' onclick='deleteRow("+data+")'><i class='fa fa-trash'></i></a>"}
                       
 		  }
 		  ]
 });
 });
+
+
 
 
 //Sweetalert
@@ -72,6 +74,14 @@ function getRowID(id){
 	 });
 }
 
+
+function openVideoUrl(event){
+	var selectedRow = event.target.closest('tr');
+	var VID_REGEX = /(?:youtube(?:-nocookie)?\.com\/(?:[^\/\n\s]+\/\S+\/|(?:v|e(?:mbed)?)\/|\S*?[?&]v=)|youtu\.be\/)([a-zA-Z0-9_-]{11})/;
+    var VideoId =  selectedRow.children[1].textContent.match(VID_REGEX)[1];
+	
+	 window.open("https://www.youtube.com/embed/" + VideoId);
+}
 
 
 

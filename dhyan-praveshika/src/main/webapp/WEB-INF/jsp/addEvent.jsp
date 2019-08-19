@@ -17,7 +17,7 @@
 
             <div class="form-group">
               <label>Event Title</label>
-              <input type="text" rows="4" id="title" name="title" class="form-control">
+              <input type="text" rows="4" id="title" name="title" class="form-control" required="required">
             </div>
             
             <img class="img-thumbnail" id="image"  style="display:none"/>
@@ -27,7 +27,7 @@
               <div class="input-group">
                 <input id="hiddenFileOpner" class="hidden" type="file" name="file" class="form-control"
                   placeholder="Select Image...">
-                <input id="imageNameShowBox" type="text" class="form-control" placeholder="Select Image..." readonly>
+                <input id="imageNameShowBox" type="text" class="form-control" placeholder="Select Image..." readonly required="required">
                 <span class="input-group-btn" id="eventSelectImage">
                   <button class="btn btn-default" type="button">Browse</button>
                 </span>
@@ -36,35 +36,36 @@
 
             <div class="form-group">
               <label>Description</label>
-              <textarea type="text" rows="3" id="description" name="description" class="form-control"></textarea>
+              <textarea type="text" rows="3" id="description" name="description" class="form-control" required="required"></textarea>
             </div>
 
             <div class="row">
               <div class="col-sm-6">
                 <div class="form-group">
                   <label>Event Date</label>
-                  <input type="date" id="date" name="date" class="form-control">
+                  <input type="date" id="date" name="date" class="form-control" required="required">
                 </div>
               </div>
               <div class="col-sm-6">
                 <div class="form-group">
                   <label>Event Time</label>
-                  <input type="time" id="time" name="time" class="form-control">
+                  <input type="time" id="time" name="time" class="form-control" required="required">
                 </div>
               </div>
             </div>
 
             <div class="form-group">
               <label>Location</label>
-              <input type="text" id="location" name="location" class="form-control">
+              <input type="text" id="location" name="location" class="form-control" required="required">
             </div>
 
           </div>
-
+			
           <div class="modal-footer">
-            <input type="submit" class="btn btn-primary" value = "Save"/>
+            <input type="submit" class="btn btn-primary" onclick="javascript: saveFormEvent(0)" value = "Save"/>
             <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
           </div>
+             <script src="js/article.js"></script>
         </form>
       </div>
     </div>

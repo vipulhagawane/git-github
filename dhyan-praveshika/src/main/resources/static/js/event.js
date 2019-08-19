@@ -1,6 +1,40 @@
 $(document).ready(function () {
   $('#example').DataTable();
   //Editor
+  
+  
+  $.ajax({
+	    type: "get",
+	    url: "/isEventAdd",
+	   
+	    success: function(data){
+	    
+	     // alert(data);
+	     if(data == "")
+	    	 {
+	    	 $('#events').DataTable().ajax.reload();
+	    	 }
+	     else if(data == "success")
+	    	 {
+	    	 swal("Article has been added!", {
+	 			  icon: "success",
+	 			});
+	       	
+	       	 $('#events').DataTable().ajax.reload();
+	    	 }
+	     else if(data == "fail")
+		 {
+	     swal("Failed to add!");
+	   	
+	   	 $('#events').DataTable().ajax.reload();
+		 }
+	    },
+	    error: function(){      
+	     alert('Error while request..');
+	    }
+	   });
+  
+  
   $('#events').DataTable({
 	  
 	  ajax : {
@@ -97,4 +131,7 @@ function deleteevent(id){
 		});
 		
 }
+
+
+
 
