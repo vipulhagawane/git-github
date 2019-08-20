@@ -39,8 +39,9 @@ import com.dhyanpraveshika.service.EventService;
 
 public class DPSController {
 	
-	private String addArticle = null;
-	private String addEvent=null;
+	private String addArticle = "";
+	private String addEvent="";
+	private String addVideo="";
 	private static final Logger logger = LoggerFactory.getLogger(DPSController.class);
 
 	@Autowired
@@ -101,19 +102,13 @@ public class DPSController {
 	}
 
 	@RequestMapping("/videos")
-	public String VideosContrller() {
-
+	public String VideosContrller() 
+	{
+		addVideo="";
 		return "videos";
 	}
 
 	
-	@PostMapping("/addVideo")
-	public String addVideo(HttpServletRequest request) {
-		
-		boolean result = videoService.addVideo(request);
-		logger.info("add video:{}",result);
-		return "videos";
-	}
 	
 	@RequestMapping("/userManagement")
 	public String userManagementContrller() {
@@ -185,6 +180,27 @@ public class DPSController {
 		return "events";
 	}
 	
+	@PostMapping("/addVideo")
+	public String addVideo(HttpServletRequest request) {
+		
+		boolean result = videoService.addVideo(request);
+		logger.info("add video:{}",result);
+		
+		
+		if(result == true)
+		{
+			addVideo = "success";
+		}
+		
+		else
+		{
+			addVideo = "fail";
+		}
+		
+		return "videos";
+	}
+	
+	
 	
 	@GetMapping("/getUsers")
 	public ResponseEntity<List<User>> getUsers(HttpServletResponse res)
@@ -199,7 +215,9 @@ public class DPSController {
 	public ResponseEntity<List<DPSVideo>> getVideoes(HttpServletResponse res)
 	{
 		logger.info("at controller getVideoes");
+		
 		List<DPSVideo> dps_videoes = videoService.getVideoes();
+		addVideo="";
 		return new ResponseEntity<List<DPSVideo>>(dps_videoes,HttpStatus.OK);
 	}
 	
@@ -305,6 +323,15 @@ public class DPSController {
 		return addEvent;
 	}
 	
+	
+	@ResponseBody
+	@GetMapping("/isVideoAdd")
+	public String getAddVideousResult()
+	{
+		logger.info("at controller addArticle");
+		
+		return addVideo;
+	}
 	
 	
 }

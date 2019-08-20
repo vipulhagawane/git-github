@@ -72,6 +72,7 @@ $('#articleSelectImage').on('click', function () {
 
 
 });
+
 function getArticalID(id){
 	//window.location.href = "/getArticle?id="+id;
 	 $.ajax({

@@ -1,7 +1,39 @@
 $(document).ready(function () {
+	
+	 $.ajax({
+		   
+		    url: "/isVideoAdd",
+		   
+		    success: function(data){
+		    
+		     //alert(data);
+		     if(data == "")
+		    	 {
+		    	 $('#videoes').DataTable().ajax.reload();
+		    	 }
+		     else if(data == "success")
+		    	 {
+		    	 swal("Article has been added!", {
+		 			  icon: "success",
+		 			});
+		       	
+		       	 $('#videoes').DataTable().ajax.reload();
+		    	 }
+		     else if(data == "fail")
+			 {
+		     swal("Failed to add!");
+		   	
+		   	 $('#videoes').DataTable().ajax.reload();
+			 }
+		    },
+		    error: function(){      
+		     alert('Error while request..');
+		    }
+		   });
+		 
 
  $('#videoes').DataTable({
-	  
+	 
 	  ajax : {
 		  url : '/getVideoes',
 			  dataSrc : ''
