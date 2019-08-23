@@ -16,14 +16,14 @@ public class User {
 	@Column(name = "id")
 	private Long id;
 	
-	@Column(name = "first_name")
-	private String firstName;
-	
-	@Column(name = "last_name")
-	private String lastName;
+	@Column(name = "full_name")
+	private String full_name;
 	
 	@Column(name = "phone_no")
 	private String phoneNo;
+	
+	@Column(name="age")
+	private String age;
 	
 	@Column(name = "email")
 	private String email;
@@ -31,8 +31,20 @@ public class User {
 	@Column(name = "password")
 	private String password;
 	
-	@Column(name = "user_type")
-	private String userType;
+	@Column (name="country")
+	private String country;
+	
+    @Column(name = "state")
+	private String state;
+    
+    @Column(name = "city")
+	private String city;
+
+    @Column(name ="fcm_token")
+    private String fcm_token;
+    
+    @Column(name ="created_date")
+    private String created_date;
 
 	public Long getId() {
 		return id;
@@ -42,20 +54,12 @@ public class User {
 		this.id = id;
 	}
 
-	public String getFirstName() {
-		return firstName;
+	public String getFull_name() {
+		return full_name;
 	}
 
-	public void setFirstName(String firstName) {
-		this.firstName = firstName;
-	}
-
-	public String getLastName() {
-		return lastName;
-	}
-
-	public void setLastName(String lastName) {
-		this.lastName = lastName;
+	public void setFull_name(String full_name) {
+		this.full_name = full_name;
 	}
 
 	public String getPhoneNo() {
@@ -64,6 +68,14 @@ public class User {
 
 	public void setPhoneNo(String phoneNo) {
 		this.phoneNo = phoneNo;
+	}
+
+	public String getAge() {
+		return age;
+	}
+
+	public void setAge(String age) {
+		this.age = age;
 	}
 
 	public String getEmail() {
@@ -82,12 +94,55 @@ public class User {
 		this.password = password;
 	}
 
-	public String getUserType() {
-		return userType;
+	public String getCountry() {
+		return country;
 	}
 
-	public void setUserType(String userType) {
-		this.userType = userType;
+	public void setCountry(String country) {
+		this.country = country;
 	}
+
+	public String getState() {
+		return state;
+	}
+
+	public void setState(String state) {
+		this.state = state;
+	}
+
+	public String getCity() {
+		return city;
+	}
+
+	public void setCity(String city) {
+		this.city = city;
+	}
+
+	public String getFcm_token() {
+		return fcm_token;
+	}
+
+	public void setFcm_token(String fcm_token) {
+		this.fcm_token = fcm_token;
+	}
+
+	public String getCreated_date() {
+		return created_date;
+	}
+
+	public void setCreated_date(String created_date) {
+		this.created_date = created_date;
+	}
+
+	@Override
+	public String toString() {
+		return "User [id=" + id + ", full_name=" + full_name + ", phoneNo=" + phoneNo + ", age=" + age + ", email="
+				+ email + ", password=" + password + ", country=" + country + ", state=" + state + ", city=" + city
+				+ ", fcm_token=" + fcm_token + ", created_date=" + created_date + "]";
+	}
+
+	
+    
+
 	
 }

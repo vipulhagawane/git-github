@@ -78,7 +78,7 @@ public class BlogServiceImpl implements BlogService{
 			blog.setTitle(Optional.ofNullable(title).orElse("unavailable"));
 			blog.setDescription(Optional.ofNullable(description).orElse("unavailable"));
 			blog.setAuthor(Optional.ofNullable(author).orElse("unavailable"));
-			blog.setDate(Optional.ofNullable(newdate).orElse("unavailable"));
+			blog.setCreated_date(Optional.ofNullable(newdate).orElse("unavailable"));
 			blog.setCategory(Optional.ofNullable(category).orElse("unavailable"));
 			blogDAO.save(blog);
 			

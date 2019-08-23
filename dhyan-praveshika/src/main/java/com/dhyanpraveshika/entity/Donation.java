@@ -22,14 +22,15 @@ public class Donation {
 	@Column(name = "email")
 	private String email;
 	
-	@Column(name = "date")
-	private String date;
+	@Column(name = "created_date")
+	private String created_date;
 	
 	@Column(name = "transaction_id")
 	private String transaction_id;
 	
 	@Column(name = "amount")
 	private String amount;
+	
 
 	public Long getId() {
 		return id;
@@ -55,12 +56,12 @@ public class Donation {
 		this.email = email;
 	}
 
-	public String getDate() {
-		return date;
+	public String getCreated_date() {
+		return created_date;
 	}
 
-	public void setDate(String date) {
-		this.date = date;
+	public void setCreated_date(String created_date) {
+		this.created_date = created_date;
 	}
 
 	public String getTransaction_id() {
@@ -81,10 +82,8 @@ public class Donation {
 
 	@Override
 	public String toString() {
-		return "Donation [id=" + id + ", donar=" + donar + ", email=" + email + ", date=" + date + ", transaction_id="
-				+ transaction_id + ", amount=" + amount + "]";
+		return "Donation [id=" + id + ", donar=" + donar + ", email=" + email + ", created_date=" + created_date
+				+ ", transaction_id=" + transaction_id + ", amount=" + amount + "]";
 	}
-	
-	
 
 }

@@ -25,12 +25,11 @@ public class Blog {
 	@Column(name = "author")
 	private String author;
 	
-	@Column(name = "date")
-	private String date;
+	@Column(name = "created_date")
+	private String created_date;
 	
 	@Column(name = "category")
 	private String category;
-	
 
 	public Long getId() {
 		return id;
@@ -64,14 +63,14 @@ public class Blog {
 		this.author = author;
 	}
 
-	public String getDate() {
-		return date;
+	public String getCreated_date() {
+		return created_date;
 	}
 
-	public void setDate(String date) {
-		this.date = date;
+	public void setCreated_date(String created_date) {
+		this.created_date = created_date;
 	}
-	
+
 	public String getCategory() {
 		return category;
 	}
@@ -82,8 +81,10 @@ public class Blog {
 
 	@Override
 	public String toString() {
-		return "Blog [id=" + id + ", title=" + title + ", description=" + description + ", author=" + author + ", date="
-				+ date + ", category=" + category + "]";
+		return "Blog [id=" + id + ", title=" + title + ", description=" + description + ", author=" + author
+				+ ", created_date=" + created_date + ", category=" + category + "]";
 	}
+	
+
 
 }

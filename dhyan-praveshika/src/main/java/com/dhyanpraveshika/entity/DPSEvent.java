@@ -25,8 +25,8 @@ public class DPSEvent {
 	@Column(name = "path")
 	private String path;
 	
-	@Column(name = "date")
-	private String date;
+	@Column(name = "created_date")
+	private String created_date;
 	
 	@Column(name = "time")
 	private String time;
@@ -66,12 +66,12 @@ public class DPSEvent {
 		this.path = path;
 	}
 
-	public String getDate() {
-		return date;
+	public String getCreated_date() {
+		return created_date;
 	}
 
-	public void setDate(String date) {
-		this.date = date;
+	public void setCreated_date(String created_date) {
+		this.created_date = created_date;
 	}
 
 	public String getTime() {
@@ -92,9 +92,10 @@ public class DPSEvent {
 
 	@Override
 	public String toString() {
-		return "Event [id=" + id + ", title=" + title + ", description=" + description + ", path=" + path + ", date="
-				+ date + ", time=" + time + ", location=" + location + "]";
+		return "DPSEvent [id=" + id + ", title=" + title + ", description=" + description + ", path=" + path
+				+ ", created_date=" + created_date + ", time=" + time + ", location=" + location + "]";
 	}
+
 	
 
 }

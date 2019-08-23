@@ -26,8 +26,8 @@ public class DPSVideo {
 	@Column(name = "path")
 	private String path;
 	
-	@Column(name = "date")
-	private String date;
+	@Column(name = "created_date")
+	private String created_date;
 
 	public Long getId() {
 		return id;
@@ -61,19 +61,21 @@ public class DPSVideo {
 		this.path = path;
 	}
 
-	public String getDate() {
-		return date;
+	public String getCreated_date() {
+		return created_date;
 	}
 
-	public void setDate(String date) {
-		this.date = date;
+	public void setCreated_date(String created_date) {
+		this.created_date = created_date;
 	}
 
 	@Override
 	public String toString() {
-		return "Video [id=" + id + ", title=" + title + ", category=" + category + ", path=" + path + ", date=" + date
-				+ "]";
+		return "DPSVideo [id=" + id + ", title=" + title + ", category=" + category + ", path=" + path
+				+ ", created_date=" + created_date + "]";
 	}
+
+	
 
 	
 }

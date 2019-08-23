@@ -25,13 +25,12 @@ public class AddVideosLink
 	@Column(name = "path")
 	private String path;
 	
-	@Column(name="createdDate")
-	private String createdDate;
+	@Column(name="created_date")
+	private String created_date;
 	
 	@Column(name="dps_video")
 	private String dps_video;
 
-	
 	public Long getV_id() {
 		return v_id;
 	}
@@ -56,12 +55,12 @@ public class AddVideosLink
 		this.path = path;
 	}
 
-	public String getCreatedDate() {
-		return createdDate;
+	public String getCreated_date() {
+		return created_date;
 	}
 
-	public void setCreatedDate(String createdDate) {
-		this.createdDate = createdDate;
+	public void setCreated_date(String created_date) {
+		this.created_date = created_date;
 	}
 
 	public String getDps_video() {
@@ -74,8 +73,9 @@ public class AddVideosLink
 
 	@Override
 	public String toString() {
-		return "addVideosLink [v_id=" + v_id + ", title=" + title + ", path=" + path + ", createdDate=" + createdDate
+		return "AddVideosLink [v_id=" + v_id + ", title=" + title + ", path=" + path + ", created_date=" + created_date
 				+ ", dps_video=" + dps_video + "]";
 	}
+
 	
 }//class Close 
