@@ -44,7 +44,7 @@ $(document).ready(function () {
 	  columns:[
 		  {title : 'Title' , data : 'title'},
 		  {title : 'Description' , data : 'description'},
-		  {title : 'Date' , data : 'date'},
+		  {title : 'Date' , data : 'created_date'},
 		  {title : 'Time' , data : 'time'},
 		  {title : 'Location' , data : 'location'},
 		  {title : 'Actions' , data : 'id', "render": function (data) {

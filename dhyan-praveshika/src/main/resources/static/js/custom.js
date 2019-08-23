@@ -8,12 +8,12 @@ $('#users').DataTable({
 			  dataSrc : ''
 	  },
 	  columns:[
-		  {title : 'First Name' , data : 'firstName'},
-		  {title : 'Last Name' , data : 'lastName'},
-		  {title : 'User Type' , data : 'userType'},
+		  {title : 'Full Name' , data : 'full_name'},
 		  {title : 'Email' , data : 'email'},
 		  {title : 'Contact Number' , data : 'phoneNo'},
-		  {title : 'Password' , data : 'password'},
+		  {title : 'city' , data : 'city'},
+		  {title : 'state' , data : 'state'},
+		  {title : 'country' , data : 'country'},
 	  ]
 });
 
@@ -28,7 +28,7 @@ $('#donations').DataTable({
 	  columns:[
 		  {title : 'Donar Name' , data : 'donar'},
 		  {title : 'Email' , data : 'email'},
-		  {title : 'Transaction Date' , data : 'date'},
+		  {title : 'Transaction Date' , data : 'created_date'},
 		  {title : 'Transaction ID' , data : 'transaction_id'},
 		  {title : 'Amount' , data : 'amount'},
 		  ]

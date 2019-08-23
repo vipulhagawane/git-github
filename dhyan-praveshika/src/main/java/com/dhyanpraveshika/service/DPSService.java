@@ -24,7 +24,7 @@ public class DPSService{
 	private static final Logger logger = LoggerFactory.getLogger(DPSService.class);
 	
 	
-	public boolean checkUser(HttpServletRequest request) {
+	public User checkUser(HttpServletRequest request) {
 		boolean checkUser = false;
 		String email = request.getParameter("email");
 		String password = request.getParameter("password");
@@ -37,7 +37,7 @@ public class DPSService{
 			checkUser = true;
 		}
 		
-		return checkUser;
+		return user;
 	}
 	
 	

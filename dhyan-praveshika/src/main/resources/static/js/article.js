@@ -1,37 +1,36 @@
 $(document).ready(function () {
 	
-	
+// 
 	$.ajax({
-	    type: "get",
-	    url: "/isArticleAdd",
-	   
-	    success: function(data){
-	    
-	     // alert(data);
-	     if(data == "")
-	    	 {
-	    	 $('#article').DataTable().ajax.reload();
-	    	 }
-	     else if(data == "success")
-	    	 {
-	    	 swal("Article has been added!", {
-	 			  icon: "success",
-	 			});
-	       	
-	       	 $('#article').DataTable().ajax.reload();
-	    	 }
-	     else if(data == "fail")
-		 {
-	     swal("Failed to add!");
-	   	
-	   	 $('#article').DataTable().ajax.reload();
-		 }
-	    },
-	    error: function(){      
-	     alert('Error while request..');
-	    }
-	   });
-	 
+    type: "get",
+    url: "/isArticleAdd",
+   
+    success: function(data){
+    
+     // alert(data);
+     if(data == "")
+    	 {
+    	 $('#article').DataTable().ajax.reload();
+    	 }
+     else if(data == "success")
+    	 {
+    	 swal("Article has been added!", {
+ 			  icon: "success",
+ 			});
+       	
+       	 $('#article').DataTable().ajax.reload();
+    	 }
+     else if(data == "fail")
+	 {
+     swal("Failed to add!");
+   	
+   	 $('#article').DataTable().ajax.reload();
+	 }
+    },
+    error: function(){      
+     alert('Error while request..');
+    }
+   });
  
 $('#article').DataTable({
 	  
@@ -41,15 +40,17 @@ $('#article').DataTable({
 	  },
 	  columns:[
 		  {title : 'Name Of Article' , data : 'title'},
-		  {title : 'Date' , data : 'date'},
+		  {title : 'Date' , data : 'created_date'},
 		  {title : 'Created By' , data : 'author'},
 		  {title : 'Category' , data : 'category'},
 		  {title : 'Actions' , data : 'id', "render": function (data) {
-              return "<a class='btn btn-info tblBtn' onclick='getArticalID("+data+")'><i class='fa fa-pencil'></i></a><a class='btn btn-warning tblBtn'><i class='fa fa-eye'></i></a><a class='btn btn-danger tblBtn' onclick='deleteArticle("+data+")'><i class='fa fa-trash'></i></a>"}
+              return "<a class='btn btn-info tblBtn' onclick='getArticle("+data+")'><i class='fa fa-pencil'></i></a><a class='btn btn-warning tblBtn' href='/viewArticle?id="+data+"'><i class='fa fa-eye'></i></a><a class='btn btn-danger tblBtn' onclick='deleteArticle("+data+")'><i class='fa fa-trash'></i></a>"}
                       
 		  }
 	  ]
 });
+
+
 
 $('.modal').on('hidden.bs.modal', function (e) {
 	  $(this)
@@ -73,7 +74,8 @@ $('#articleSelectImage').on('click', function () {
 
 });
 
-function getArticalID(id){
+	
+function getArticle(id){
 	//window.location.href = "/getArticle?id="+id;
 	 $.ajax({
 		 type : 'GET',
@@ -85,7 +87,12 @@ function getArticalID(id){
              $('#articleTital').val(data.title);
              $('#authorName').val(data.author);
              $('#category').val(data.category);
-             CKEDITOR.instances.editor12.setData(data.description)
+             CKEDITOR.instances.editor12.setData(data.description);
+             alert(data.encodedString);
+             if(data.encodedString !== null){
+            	 $('#image').attr('src', 'data:image/' + $('#extension').val(data.extension) + ';base64,' + data.encodedString);
+            	 $('#image').show();
+             }
              $('#editViewArticleModal').modal('show');
          }
      });

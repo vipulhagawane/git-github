@@ -49,7 +49,7 @@ public class DPSVideoServiceImpl implements DPSVideoService {
 			dpsvideo.setTitle(title);
 			dpsvideo.setCategory(category);
 			dpsvideo.setPath(path);
-			dpsvideo.setDate(newdate);
+			dpsvideo.setCreated_date(newdate);
 			videoDAO.save(dpsvideo);
 			
 			return true;

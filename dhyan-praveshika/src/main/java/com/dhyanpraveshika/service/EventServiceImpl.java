@@ -18,6 +18,7 @@ import org.apache.commons.lang.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.multipart.MultipartFile;
@@ -42,6 +43,9 @@ public class EventServiceImpl implements EventService {
 
 	@Autowired
 	private EventDAO eventDAO;
+	
+	@Value("${eventFolderPath}")
+	private String eventFolderPath;
 
 	@Override
 	public boolean addEvent(HttpServletRequest request) {
@@ -80,14 +84,14 @@ public class EventServiceImpl implements EventService {
 			
 			event.setTitle(title);
 			event.setDescription(description);
-			event.setDate(Optional.ofNullable(date).orElse("unavailable"));
+			event.setCreated_date(Optional.ofNullable(date).orElse("unavailable"));
 			event.setTime(Optional.ofNullable(time).orElse("unavailable"));
 			event.setLocation(Optional.ofNullable(location).orElse("unavailable"));
 			eventDAO.save(event);
 
 			try {
 				byte[] bytes = file.getBytes();
-				Path path = Paths.get(folder).resolve(event.getId() + "_" + file.getOriginalFilename());
+				Path path = Paths.get(eventFolderPath).resolve(event.getId() + "_" + file.getOriginalFilename());
 				Files.write(path, bytes);
 				logger.info("sucessfully uploaded at path : {}", path.toString());
 
@@ -128,7 +132,7 @@ public class EventServiceImpl implements EventService {
 			eventDTO.setId(Optional.ofNullable(event.getId()).orElse((long) 0));
 			eventDTO.setTitle(Optional.ofNullable(event.getTitle()).orElse("unavailable"));
 			eventDTO.setDescription(Optional.ofNullable(event.getDescription()).orElse("unavailable"));
-			eventDTO.setDate(Optional.ofNullable(event.getDate()).orElse("unavailable"));
+			eventDTO.setDate(Optional.ofNullable(event.getCreated_date()).orElse("unavailable"));
 			eventDTO.setTime(Optional.ofNullable(event.getTime()).orElse("unavailable"));
 			eventDTO.setLocation(Optional.ofNullable(event.getLocation()).orElse("unavailable"));
 			
@@ -140,7 +144,7 @@ public class EventServiceImpl implements EventService {
 
 	private EventDTO getEventImage(Long id, EventDTO eventDTO) {
 		logger.info("Fteching image by id :{}", id);
-		File file = new File(folder);
+		File file = new File(eventFolderPath);
 		File[] files = file.listFiles((dir, name) -> name.startsWith(id + "_"));
 		File eventImage = null;
 		byte[] bytes = null;
@@ -175,7 +179,7 @@ public class EventServiceImpl implements EventService {
 	
 	private void deletePreviousFiles(Long id) {
 		logger.info("deleting previous files");
-		File file = new File(folder);
+		File file = new File(eventFolderPath);
 		File[] files = file.listFiles((dir, name) -> name.startsWith(id + "_"));
 		
 		if (files.length > 0) {

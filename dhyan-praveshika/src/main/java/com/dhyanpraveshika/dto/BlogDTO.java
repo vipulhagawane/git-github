@@ -9,10 +9,23 @@ public class BlogDTO {
 	private String category;
 	private String encodedString;
 	private String extension;
+	private String created_date;
+	
+	
+	public String getCreated_date() {
+		return created_date;
+	}
+
+
+	public void setCreated_date(String created_date) {
+		this.created_date = created_date;
+	}
+
 
 	public String getTitle() {
 		return title;
 	}
+	
 
 	public void setTitle(String title) {
 		this.title = title;
@@ -66,11 +79,12 @@ public class BlogDTO {
 		this.extension = extension;
 	}
 
+
 	@Override
 	public String toString() {
 		return "BlogDTO [id=" + id + ", title=" + title + ", description=" + description + ", author=" + author
-				+ ", category=" + category + ", encodedString=" + encodedString + ", extension=" + extension + "]";
+				+ ", category=" + category + ", encodedString=" + encodedString + ", extension=" + extension
+				+ ", created_date=" + created_date + "]";
 	}
-
 	
 }

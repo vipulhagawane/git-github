@@ -4,6 +4,7 @@ import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -15,6 +16,7 @@ import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -62,10 +64,31 @@ public class DPSController {
 	@Autowired
 	private EventService eventService;
 
+	@Autowired
+	private HttpSession session;
 
-	//@RequestMapping(value = "/", method = RequestMethod.GET)
-	 @RequestMapping(value = { "/", "/login" }, method = RequestMethod.GET)
-	    public String showLoginPage(ModelMap model) {
+	@Autowired
+	private HttpServletRequest request;
+
+	
+
+	@PostMapping("setSessionData")
+	public void setSessionData(@RequestBody String user) {
+		request.getSession(true);
+		session.setAttribute("loggedInUser", user);
+	}
+
+	@ResponseBody
+	@GetMapping("/getSessionData")
+	public String getSessionData() {
+		logger.debug("session = {}", session.getAttribute("loggedInUser"));
+		String sessionData = String.valueOf(session.getAttribute("loggedInUser"));
+		return sessionData;
+	}
+
+	// @RequestMapping(value = "/", method = RequestMethod.GET)
+	@RequestMapping(value = { "/", "/login" }, method = RequestMethod.GET)
+	public String showLoginPage(ModelMap model) {
 		return "login";
 	}
 
@@ -73,40 +96,71 @@ public class DPSController {
 	public String home(HttpServletRequest request, ModelMap model) {
 		logger.info("fetching user details{}");
 
-		boolean user = DPSService.checkUser(request);
-
+		//boolean user = DPSService.checkUser(request);
+		User user = DPSService.checkUser(request);
 		logger.info("user available {}", user);
 		System.out.print("user" + user);
 
-		if (!user) {
+		if (user==null) {
 			model.put("errorMessag", "InvaledUserId and Password !!!!!");
 			return "login";
 		} else {
-			//model.put("name", email);
-			//model.put("pass", password);
+			setSessionData(user.getEmail());
+			/*
+			 * if (Storage.isSupported()) {
+			 * Storage.getLocalStorageIfSupported().setItem("loggedInUser",
+			 * user.getEmail());
+			 * logger.info("{}",Storage.getLocalStorageIfSupported().getItem("loggedInUser")
+			 * ); }
+			 */
+			// model.put("email",user.getEmail());
+			// window.localStorage.setItem("loggedInUser", user.getEmail());
 			return "home";
 		}
 
 	}
 	@RequestMapping("/getArticles")
 	public String getArticles(HttpServletRequest request, ModelMap model) {
+
+		String user = getSessionData();
 		
-		return "home";
+		if (user != null) {
+			//addArticle = "";
+			return "home";
+		} else {
+			return "login";
+		}
 
 	}
-	
-	@RequestMapping("/addArticles")
-	public String addArticles() 
-	{
-		return "home";
-	}
+//	@RequestMapping("/getArticles")
+//	public <List<Blog> getArticles(HttpServletRequest request, ModelMap model) {
+//		logger.info("fetching blog list at controller");
+//		addArticle = "";
+//		List<Blog> blogs = blogService.getBlogs();
+//		return new ResponseEntity<List<Blog>>(blogs, HttpStatus.OK);
+//
+//	}
 
 	@RequestMapping("/videos")
-	public String VideosContrller() 
-	{
-		addVideo="";
+	public String VideosContrller() {
+
 		return "videos";
 	}
+
+	/*
+	 * @RequestMapping("/getVideos") public String getVideos(HttpServletRequest
+	 * request, ModelMap model) {
+	 * 
+	 * return "videos";
+	 * 
+	 * }
+	 */
+	/*
+	 * @PostMapping("/addVideo") public String addVideo(HttpServletRequest request)
+	 * { String user = getSessionData(); if (user != null) { boolean result =
+	 * videoService.addVideo(request); logger.info("add video:{}", result); return
+	 * "videos"; } else { return "login"; }
+	 */
 
 	
 	
@@ -119,9 +173,16 @@ public class DPSController {
 	@RequestMapping("/donationList")
 	public String donationListContrller() {
 
-		return "donationList";
+		String user = getSessionData();
+		logger.info("loggedInUser :{}", user);
+		if (user != null) {
+			return "donationList";
+		} else {
+			return "login";
+		}
+
 	}
-	
+
 	@RequestMapping("/events")
 	public String events() {
 
@@ -332,6 +393,8 @@ public class DPSController {
 		
 		return addVideo;
 	}
+	
+	
 	
 	
 }

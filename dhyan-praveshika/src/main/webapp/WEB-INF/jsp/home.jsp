@@ -57,7 +57,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 <tr>
                   <th>Name Of Article</th>
                   <th>Date</th>
-                  <th>Created By</th>
+                  <th style="width:80px">Created By</th>
                   <th>Category</th>
                   <th style="width:80px">Actions</th>
                 </tr>

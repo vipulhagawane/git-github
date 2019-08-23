@@ -23,12 +23,22 @@ public class UserServiceImpl implements UserService {
 	@Override
 	public List<User> getUsers() {
 		
-		logger.info("getting users list:{}");
+		logger.info("getting users list");
 		
 		List<User> users = userDAO.findAll();
 		logger.info("users list :{}",users);
 		
 		return users;
+	}
+
+	@Override
+	public List<String> getTokens() {
+		
+		logger.info("getting token list");
+		
+		List<String> tokens = userDAO.getTokens();
+		logger.info("token list :{}",tokens.size());
+		return tokens;
 	}
 	
 	

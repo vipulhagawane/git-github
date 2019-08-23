@@ -9,7 +9,7 @@
       <div class="modal-content">
       
       <!-- add new Articale --> 
-        <form action="/addArticle" method="post" enctype="multipart/form-data">
+        <form action="addArticle" method="POST" enctype="multipart/form-data">
           <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal">&times;</button>
             <h4 class="modal-title">Add New Article</h4>
@@ -24,7 +24,7 @@
             <img class="img-thumbnail" id="image"  style="display:none"/>
             
             <div class="form-group">
-              <label>Event Image</label>
+              <label>Article Image</label>
               <div class="input-group">
                 <input id="hiddenFileOpner" class="hidden" type="file" name="file" class="form-control"
                   placeholder="Select Image..." >

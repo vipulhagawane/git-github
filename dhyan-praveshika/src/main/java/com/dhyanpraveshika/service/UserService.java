@@ -8,4 +8,6 @@ public interface UserService {
 
 	List<User> getUsers();
 
+	List<String> getTokens();
+
 }
