@@ -107,6 +107,7 @@ public class DPSController {
 			return "login";
 		} else {
 			setSessionData(user.getEmail());
+			session.setAttribute("currentUser", user.getEmail());
 			/*
 			 * if (Storage.isSupported()) {
 			 * Storage.getLocalStorageIfSupported().setItem("loggedInUser",
@@ -123,15 +124,8 @@ public class DPSController {
 	@RequestMapping("/getArticles")
 	public String getArticles(HttpServletRequest request, ModelMap model) {
 
-		String user = getSessionData();
-		
-		if (user != null) {
-			addArticle = "";
-			return "home";
-		} else {
-			return "login";
-		}
-
+		logger.info("at getArticles");
+		return "home";
 	}
 //	@RequestMapping("/getArticles")
 //	public <List<Blog> getArticles(HttpServletRequest request, ModelMap model) {
@@ -144,7 +138,7 @@ public class DPSController {
 
 	@RequestMapping("/videos")
 	public String VideosContrller() {
-
+		logger.info("at VideosContrller");
 		return "videos";
 	}
 
@@ -167,26 +161,21 @@ public class DPSController {
 	
 	@RequestMapping("/userManagement")
 	public String userManagementContrller() {
-
+		logger.info("at userManagementContrller");
 		return "userManagement";
 	}
 
 	@RequestMapping("/donationList")
 	public String donationListContrller() {
-
-		String user = getSessionData();
-		logger.info("loggedInUser :{}", user);
-		if (user != null) {
-			return "donationList";
-		} else {
-			return "login";
-		}
+		logger.info("at donationList");
+		return "donationList";
 
 	}
 
 	@RequestMapping("/events")
 	public String events() {
 
+		logger.info("at donationList");
 		return "events";
 	}
 	
@@ -410,6 +399,14 @@ public class DPSController {
 		}
 		return modelView;
 	}
-	
+
+	@RequestMapping("/signOut")
+	public String signOut() {
+		logger.info("signOut of user :{}",getSessionData());
+		String loggedInUser = getSessionData();
+		session.removeAttribute(loggedInUser);
+		session.invalidate();
+		return "login";
+	}
 	
 }

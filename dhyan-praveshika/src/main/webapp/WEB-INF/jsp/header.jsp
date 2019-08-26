@@ -54,7 +54,7 @@
         <div class="navbar-custom-menu">
           <ul class="nav navbar-nav">
             <li>
-              <a href="/login">
+              <a href="/signOut">
                 <i class="fa fa-sign-out" aria-hidden="true"></i>
                 Sign out
               </a>
@@ -62,6 +62,6 @@
           </ul>        </div>
       </nav>
     </header>
-
+<script src="js/session.js"></script>
 </body>
 </html>

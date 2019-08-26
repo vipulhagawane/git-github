@@ -19,4 +19,9 @@ public class DataDTO {
 		this.type = type;
 	}
 
+	@Override
+	public String toString() {
+		return "DataDTO [id=" + id + ", type=" + type + "]";
+	}
+	
 }

@@ -1,3 +1,4 @@
+<jsp:include page="session.jsp"></jsp:include>
 <!DOCTYPE html>
 <!--
 This is a starter template page. Use this page to start your new project from
@@ -7,6 +8,9 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
 <head>
   <jsp:include page="header.jsp"></jsp:include>
+  <!-- <script type="text/javascript">
+  localStorage.setItem('loggedInUser', email);
+  </script> -->
 </head>
 
 <body class="hold-transition skin-blue fixed sidebar-mini">

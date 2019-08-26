@@ -85,17 +85,23 @@ public class BlogServiceImpl implements BlogService{
 		{
 			Long id  = Long.parseLong(request.getParameter("id"));
 			logger.info("updating blog of id :{}",id);
-			Blog blog = blogDAO.findOne(id);
-			if(!file.isEmpty())
-			{
-				deletePreviousFiles(id);
-			}
-			Blog savedBlog = saveBlog(request,blog);
+			Blog prevBlog = blogDAO.findOne(id);
+			Blog savedBlog = saveBlog(request,prevBlog);
+			
 			if(savedBlog != null)
 			{
+				if(!file.isEmpty())
+				{
+					deletePreviousFiles(id);
+				}
 				saveArticleImage(savedBlog.getId(),file);
 				result = true;
 			}
+			else
+			{
+				blogDAO.save(prevBlog);
+			}
+			
 		}
 		
 		
@@ -347,16 +353,26 @@ public class BlogServiceImpl implements BlogService{
 		
 		if(type.equalsIgnoreCase("Blog"))
 		{
-			dataDTO.setType("Blog");
+			
 			notificationDto.setBody("New blog has been added.");
+		}
+		else if(type.equalsIgnoreCase("Event"))
+		{
+			notificationDto.setBody("New event has been added.");
+		}
+		else if(type.equalsIgnoreCase("Video"))
+		{
+			notificationDto.setBody("New video has been added.");
 		}
 
 		dataDTO.setId(id);
+		dataDTO.setType(type);
 		notificationDto.setTitle(title);
 		notificationJSON.setRegistration_ids(tokens);
 		notificationJSON.setNotification(notificationDto);
 		notificationJSON.setData(dataDTO);
-		
+		logger.info("notificationDto :{}",notificationDto.toString());
+		logger.info("dataDTO :{}",dataDTO.toString());
 		logger.info("notification json: {}", notificationJSON.toString());
 		
 		HttpEntity<NotificationJSON> request = new HttpEntity<>(notificationJSON, headers);

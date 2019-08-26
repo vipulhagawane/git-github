@@ -28,7 +28,6 @@ import com.dhyanpraveshika.database.EventDAO;
 import com.dhyanpraveshika.dto.EventDTO;
 import com.dhyanpraveshika.entity.Blog;
 import com.dhyanpraveshika.entity.DPSEvent;
-import com.dhyanpraveshika.entity.DPSVideo;
 
 @Service
 @Transactional
@@ -83,8 +82,6 @@ public class EventServiceImpl implements EventService {
 			if(newEvent != null)
 			{
 				saveEventImage(newEvent.getId(),file);
-				String type = "Event";
-				blogService.sendNotifications(newEvent.getId(),newEvent.getTitle(),type);
 				result = true;
 			}
 		}

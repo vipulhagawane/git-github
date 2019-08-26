@@ -64,7 +64,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
         <ul class="sidebar-menu" data-widget="tree">
           <li class="header">HEADER</li>
           <li><a href="/getArticles"><i class="fa fa-list-alt"></i> <span>Articles</span></a></li>
-          <li><a href="/events.html"><i class="fa fa-calendar"></i> <span>Events</span></a></li>
+          <li><a href="/events"><i class="fa fa-calendar"></i> <span>Events</span></a></li>
           <li><a href="/videos"><i class="fa fa-play"></i> <span>Videos</span></a></li>
           <li><a href="/userManagement"><i class="fa fa-user"></i> <span>User Management</span></a>
           </li>

@@ -17,7 +17,7 @@
   <meta name="author" content="${blog.author}" />
   <meta name="copyright" content="Copyright © 2019 TemPlaza. All Rights Reserved." />
 
-  <meta name="description" content="${blog.description}" />
+  <%-- <meta name="description" content="${blog.description}" /> --%>
   <meta name="category" content="${blog.category}" />
   <meta name="title" content="${blog.title}" />
   <meta name="date" content="${blog.created_date}" />
@@ -158,6 +158,7 @@
     #sidebar-left,
     header.tz-header {
       background-color: #ffffff;
+      position:relative;
     }
 
 

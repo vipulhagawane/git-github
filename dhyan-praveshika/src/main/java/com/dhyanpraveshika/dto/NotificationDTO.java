@@ -48,4 +48,12 @@ public class NotificationDTO {
 		this.icon = icon;
 	}
 
+	@Override
+	public String toString() {
+		return "NotificationDTO [title=" + title + ", body=" + body + ", sound=" + sound + ", click_action="
+				+ click_action + ", icon=" + icon + "]";
+	}
+	
+	
+
 }
