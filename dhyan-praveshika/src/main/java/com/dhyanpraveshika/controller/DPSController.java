@@ -21,6 +21,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.servlet.ModelAndView;
 
 import com.dhyanpraveshika.dto.BlogDTO;
 import com.dhyanpraveshika.dto.VideosDTO;
@@ -125,7 +126,7 @@ public class DPSController {
 		String user = getSessionData();
 		
 		if (user != null) {
-			//addArticle = "";
+			addArticle = "";
 			return "home";
 		} else {
 			return "login";
@@ -394,7 +395,21 @@ public class DPSController {
 		return addVideo;
 	}
 	
-	
+	@GetMapping("/viewArticle")
+	public ModelAndView viewArticle(HttpServletRequest request) {
+		logger.info("at controller viewArticle : {}", request.getParameter("id"));
+		ModelAndView modelView = new ModelAndView();
+		Long id = Long.parseLong(request.getParameter("id"));
+		BlogDTO blogDto = blogService.getBlog(id);
+
+		if (blogDto != null) {
+			modelView.addObject("blog", blogDto);
+			modelView.setViewName("articleInfo");
+		} else {
+			modelView.setViewName("home");
+		}
+		return modelView;
+	}
 	
 	
 }

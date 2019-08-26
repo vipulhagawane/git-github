@@ -34,7 +34,7 @@ import com.dhyanpraveshika.entity.DPSVideo;
 @Transactional
 public class EventServiceImpl implements EventService {
 
-	private static final String folder = "D:\\DhyanPraveShika_home\\images\\event";
+	//private static final String folder = "D:\\DhyanPraveShika_home\\images\\event";
 
 	private static final Logger logger = LoggerFactory.getLogger(EventServiceImpl.class);
 
@@ -44,6 +44,9 @@ public class EventServiceImpl implements EventService {
 	@Autowired
 	private EventDAO eventDAO;
 	
+	@Autowired
+	private BlogService blogService;
+	
 	@Value("${eventFolderPath}")
 	private String eventFolderPath;
 
@@ -51,20 +54,21 @@ public class EventServiceImpl implements EventService {
 	public boolean addEvent(HttpServletRequest request) {
 		
 		DPSEvent event;
-		
-		String title = request.getParameter("title");
-		String description = request.getParameter("description");
-		String date = request.getParameter("date");
-		String time = request.getParameter("time");
-		String location = request.getParameter("location");
-
+		boolean result = false;
 		MultipartHttpServletRequest multipartRequest = (MultipartHttpServletRequest) request;
 		MultipartFile file = multipartRequest.getFile("file");
 		
 		if(request.getParameter("id").isEmpty())
 		{
 			logger.info("creating new Event");
-			event = new DPSEvent();
+			DPSEvent newEvent = saveEvent(request,null);
+			if(newEvent != null)
+			{
+				saveEventImage(newEvent.getId(),file);
+				String type = "Event";
+				blogService.sendNotifications(newEvent.getId(),newEvent.getTitle(),type);
+				result = true;
+			}
 		}
 		else
 		{
@@ -75,35 +79,17 @@ public class EventServiceImpl implements EventService {
 			{
 				deletePreviousFiles(id);
 			}
-		}
-
-		logger.info("adding event details : {}", title + " " + description + " " + date + " " + time + " " + location
-				+ " " + file.getOriginalFilename());
-
-		if (title != null && description != null && file != null) {
-			
-			event.setTitle(title);
-			event.setDescription(description);
-			event.setCreated_date(Optional.ofNullable(date).orElse("unavailable"));
-			event.setTime(Optional.ofNullable(time).orElse("unavailable"));
-			event.setLocation(Optional.ofNullable(location).orElse("unavailable"));
-			eventDAO.save(event);
-
-			try {
-				byte[] bytes = file.getBytes();
-				Path path = Paths.get(eventFolderPath).resolve(event.getId() + "_" + file.getOriginalFilename());
-				Files.write(path, bytes);
-				logger.info("sucessfully uploaded at path : {}", path.toString());
-
-			} catch (IOException e) {
-				logger.info("exception found while getting image{}", e);
-				return false;
+			DPSEvent newEvent = saveEvent(request,event);
+			if(newEvent != null)
+			{
+				saveEventImage(newEvent.getId(),file);
+				String type = "Event";
+				blogService.sendNotifications(newEvent.getId(),newEvent.getTitle(),type);
+				result = true;
 			}
-
-			return true;
 		}
 
-		return false;
+		return result;
 	}
 
 	@Override
@@ -190,8 +176,56 @@ public class EventServiceImpl implements EventService {
 		}
 		
 	}
+	
+	private DPSEvent saveEvent(HttpServletRequest request, DPSEvent event) {
 
-	@Override
+		String title = request.getParameter("title");
+		String description = request.getParameter("description");
+		String date = request.getParameter("date");
+		String time = request.getParameter("time");
+		String location = request.getParameter("location");
+		
+		logger.info("adding event details : {}", title + " " + description + " " + date + " " + time + " " + location);
+		
+		if(event == null)
+		{
+			event = new DPSEvent();
+		}
+
+		if (title != null && description != null) {
+			
+			event.setTitle(title);
+			event.setDescription(description);
+			event.setCreated_date(Optional.ofNullable(date).orElse("unavailable"));
+			event.setTime(Optional.ofNullable(time).orElse("unavailable"));
+			event.setLocation(Optional.ofNullable(location).orElse("unavailable"));
+			eventDAO.save(event);
+
+		}
+		else
+		{
+			event = null;
+		}
+		
+		return event;
+	}
+
+	private void saveEventImage(Long id, MultipartFile file) {
+		if(file != null)
+		{
+			try {
+				byte[] bytes = file.getBytes();
+				Path path = Paths.get(eventFolderPath).resolve(id + "_" + file.getOriginalFilename());
+				Files.write(path, bytes);
+				logger.info("sucessfully uploaded at path : {}", path.toString());
+
+			} catch (IOException e) {
+				logger.info("exception found while getting image{}", e);
+			}
+		}
+		
+	}
+		@Override
 	public boolean deleteEvent(Long id) {
 
 		logger.info("Deleting article of id : {}",id);
@@ -205,5 +239,7 @@ public class EventServiceImpl implements EventService {
 		}
 		return false;
 	}
+
+
 
 }

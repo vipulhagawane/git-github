@@ -29,6 +29,8 @@ public class DPSVideoServiceImpl implements DPSVideoService {
 	@Autowired
 	private DPSVideoDAO videoDAO;
 	
+	@Autowired
+	private BlogService blogService;
 	
 
 	@Override
@@ -51,6 +53,9 @@ public class DPSVideoServiceImpl implements DPSVideoService {
 			dpsvideo.setPath(path);
 			dpsvideo.setCreated_date(newdate);
 			videoDAO.save(dpsvideo);
+			
+			String type = "Video";
+			blogService.sendNotifications(dpsvideo.getId(),dpsvideo.getTitle(),type);
 			
 			return true;
 		}

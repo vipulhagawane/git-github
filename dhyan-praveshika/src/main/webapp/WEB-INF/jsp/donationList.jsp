@@ -102,10 +102,10 @@ scratch. This page gets rid of all links and provides the needed markup only.
               </thead>
               
               <tfoot>
-                <tr>
+               <!--  <tr>
                   <td colspan="4" class="text-right"><b>Total</b></td>
                   <td>$20000</td>
-                </tr>
+                </tr> -->
               </tfoot>
             </table>
           </div>

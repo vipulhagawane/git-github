@@ -330,8 +330,8 @@ public class BlogServiceImpl implements BlogService{
 		
 	}
 	
-
-	private void sendNotifications(Long id, String title, String type) {
+	@Override
+	public void sendNotifications(Long id, String title, String type) {
 		logger.info("at sendNotifications :{}", fcmURL);
 
 		HttpHeaders headers = new HttpHeaders();

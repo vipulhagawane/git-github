@@ -20,5 +20,7 @@ public interface BlogService {
 	boolean deleteArticle(Long id);
 	
 	//void sendNotifications(BlogDTO blogDTO, EventDTO eventDto, VideosDTO videoDto);
+	
+	void sendNotifications(Long id, String title, String type);
 
 }
