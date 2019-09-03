@@ -20,6 +20,7 @@ import javax.mail.Session;
 import javax.mail.Transport;
 import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
+import javax.validation.Valid;
 
 import java.util.Locale;
 
@@ -30,6 +31,7 @@ import org.apache.logging.log4j.LogManager;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.MessageSource;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.data.domain.Page;
 import org.springframework.http.CacheControl;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
@@ -56,6 +58,8 @@ import org.springframework.web.util.UriComponentsBuilder;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.ui.freemarker.FreeMarkerTemplateUtils;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 
 import com.dps.exception.InvalidOldPasswordException;
 import com.dps.exception.ResourceNotFoundException;
@@ -69,13 +73,12 @@ import com.dps.repository.*;
 import com.dps.service.*;
 import com.dps.model.*;
 import freemarker.template.Template;
-//import freemarker.template.Configuration;
+
 
 @RestController
 @CrossOrigin
 @RequestMapping("/dhyanpraveshika")
 public class DPSController {
-	
 	
 private static final Logger logger = LogManager.getLogger(DPSController.class);
 	
@@ -113,7 +116,8 @@ private static final Logger logger = LogManager.getLogger(DPSController.class);
     JdbcTemplate sql;
 	
 	@Autowired
-	private ConfirmationTokenRepository confirmationTokenRepository;
+	CommentDetailsRepo commentdetailsrepo;
+	
 	
 	private BCryptPasswordEncoder encoder = new BCryptPasswordEncoder(12);
 	
@@ -136,17 +140,18 @@ private static final Logger logger = LogManager.getLogger(DPSController.class);
 					userdetails.setPassword(encoder.encode(userdetails.getPassword()));
 					userservice.createUser(userdetails);
 					logger.info("User added");
-
 					HttpHeaders headers = new HttpHeaders();
 					headers.setLocation(ucBuilder.path("/user/{id}").buildAndExpand(userdetails.getId()).toUri());
-					}
+				}
+				return ResponseEntity.ok().cacheControl(CacheControl.maxAge(1, TimeUnit.SECONDS)).body(true);
 				}
 				catch(Exception ex)
 				{
-					
+					logger.info("Error in adding user data");
+					logger.info("Error in adding user data", ex);
+					return ResponseEntity.ok().cacheControl(CacheControl.maxAge(1, TimeUnit.SECONDS)).body(false);
 				}
-					return ResponseEntity.ok().cacheControl(CacheControl.maxAge(1, TimeUnit.SECONDS)).body(true);
-				}
+			}
 				@PostMapping("/forgot-password")
 				public ResponseEntity<Boolean> forgotUserPassword(@RequestBody UserDetails userdetails)throws ResourceNotFoundException 
 				{
@@ -154,10 +159,7 @@ private static final Logger logger = LogManager.getLogger(DPSController.class);
 				System.out.println("userdetails.getEmail()"+userdetails.getEmail());
 				System.out.println("forgotUser.getEmail()"+forgotUser);
 				if(forgotUser != null) {
-					// create token
-					ConfirmationToken confirmationToken = new ConfirmationToken(forgotUser);
-					// save it
-					confirmationTokenRepository.save(confirmationToken);
+					
 					// random password generation
 					int length = 10;
 					char[] password=userservice.geek_Password(length);
@@ -306,10 +308,11 @@ private static final Logger logger = LogManager.getLogger(DPSController.class);
 		    }
 			
 			@GetMapping("/getBlogs")
-			public List<BlogDetails> getAllBlogs() {
+			public ResponseEntity<Map<String,Object>> getAllBlogs() {
 				
 				List<BlogDetails> availableBlogs = new ArrayList<BlogDetails>();
 				SqlRowSet rowSet=null;
+				Map<String, Object> map = new HashMap<String, Object>();
 				try
 				{
 				rowSet = sql.queryForRowSet("SELECT * from dps_blog");
@@ -345,20 +348,27 @@ private static final Logger logger = LogManager.getLogger(DPSController.class);
 					blogDetails.setPathURI(articleImage);
 					
 					availableBlogs.add(blogDetails);
+					
+					map.put(RESULT, availableBlogs);
+					map.put(STATUS, SUCCESS);
 				}
 				}
 				catch(Exception ex)
 				{
-					
+					logger.info("Error in getting blog data");
+					logger.info("Error in adding blog data", ex);
+					map.put(STATUS, FAIL);
+					map.put(MESSAGE, "Error in getting blog data");
 				}
 				logger.info("successfully get the blog details");
-				return availableBlogs;
+				return ResponseEntity.ok(map);
 			}
 			
 			@GetMapping("/search/{searchPara}")
-			public ResponseEntity<BlogDetails> getRecordByParameter(@PathVariable(value = "searchPara") String searchPara)
+			public ResponseEntity<Map<String,Object>> getRecordByParameter(@PathVariable(value = "searchPara") String searchPara)
 			        throws ResourceNotFoundException {
 				BlogDetails blogdetails=null;
+				Map<String, Object> map = new HashMap<String, Object>();
 				logger.info("Geting record according search parameter");
 				try
 				{
@@ -378,56 +388,72 @@ private static final Logger logger = LogManager.getLogger(DPSController.class);
 				}
 				}
 				blogdetails.setPathURI(articleImage);
+				map.put(RESULT, blogdetails);
+				map.put(STATUS, SUCCESS);
 				logger.info("Get the record successfully according to the search parameter");
 				}
 				catch(Exception ex)
 				{
-					
+					logger.info("Error in searching data");
+					logger.info("Error in searching data", ex);
+					map.put(STATUS, FAIL);
+					map.put(MESSAGE, "Error in getting blog data");
 				}
-			return ResponseEntity.ok().body(blogdetails);
+			return ResponseEntity.ok(map);
 			}
 			
 			@GetMapping("/getProfile/{id}")
-			public ResponseEntity<UserDetails> getEmployeeById(@PathVariable(value = "id") Long userId)
+			public ResponseEntity<Map<String,Object>>getEmployeeById(@PathVariable(value = "id") Long userId)
 			        throws ResourceNotFoundException {
-					UserDetails employee=null;
+					UserDetails userDetails=null;
+					Map<String,Object> map=new HashMap<String,Object>();
 					logger.info("Geting particular information");
 					try
 					{
-			         employee = userdetailsrepo.findById(userId)
+						userDetails = userdetailsrepo.findById(userId)
 			          .orElseThrow(() -> new ResourceNotFoundException("Employee not found for this id :: " + userId));
-			         
-			         
+			         map.put(RESULT, userDetails);
+					 map.put(STATUS, SUCCESS);
 			         logger.info("Get the profile successfully");
 					}
 					catch(Exception ex)
 					{
-						logger.info("Error in getting profile");
-						
+						logger.info("Error in getting profile data");
+						logger.info("Error in getting profile data", ex);
+						map.put(STATUS, FAIL);
+						map.put(MESSAGE, "Error in getting blog data");
 					}
-			        return ResponseEntity.ok().body(employee);
+			        return ResponseEntity.ok(map);
 			}
 			
 			@GetMapping("/getBlog/{id}")
-			public ResponseEntity<BlogDetails> getBlogById(@PathVariable(value = "id") Long blogId)
+			public ResponseEntity<Map<String,Object>> getBlogById(@PathVariable(value = "id") Long blogId)
 			        throws ResourceNotFoundException {
 					BlogDetails blog=null;
+					Map<String,Object> map=new HashMap<String,Object>();
 					try
 					{
 			        blog = blogdetailsrepo.findById(blogId)
 			          .orElseThrow(() -> new ResourceNotFoundException("Employee not found for this id :: " + blogId));
+			         map.put(RESULT, blog);
+			         map.put(STATUS, SUCCESS);
+			         logger.info("Get the blog successfully");
 					}
 					catch (Exception ex) {
-						
+						logger.info("Error in getting blog data according to user id");
+						logger.info("Error in getting blog data according to user id", ex);
+						map.put(STATUS, FAIL);
+						map.put(MESSAGE, "Error in getting blog data according to user id");
 					}
-			        return ResponseEntity.ok().body(blog);
+			        return ResponseEntity.ok(map);
 			}
 			@PutMapping("/updateProfile/{id}")
-		    public ResponseEntity<UserDetails> updateEmployee(@PathVariable(value = "id") Long userId,
+		    public ResponseEntity<Map<String,Object>> updateEmployee(@PathVariable(value = "id") Long userId,
 		         @RequestBody UserDetails userDetails) throws ResourceNotFoundException {
 				logger.info("update profile with id"+userId);
 				UserDetails user=null;
 				UserDetails updatedUser=null;
+				Map<String,Object> map=new HashMap<String,Object>();
 				try
 				{
 		        user = userdetailsrepo.findById(userId)
@@ -443,32 +469,41 @@ private static final Logger logger = LogManager.getLogger(DPSController.class);
 		        user.setFcm_token(userDetails.getFcm_token());
 		        
 		        updatedUser = userdetailsrepo.save(user);
+		        map.put(RESULT, updatedUser);
+		        map.put(STATUS, SUCCESS);
+		        logger.info("Get the blog successfully");
 		        logger.info("update profile success with id"+userId);
 				}
 				catch(Exception ex)
 				{
-					
+					logger.info("Error in updating data according to user id");
+					logger.info("Error in updating data according to user id", ex);
+					map.put(STATUS, FAIL);
+					map.put(MESSAGE, "Error in updating data according to user id");
 				}
-		        return ResponseEntity.ok(updatedUser);
+		        return ResponseEntity.ok(map);
 		    }
 			@DeleteMapping("/deleteProfile/{id}")
-		    public Map<String, Boolean> deleteEmployee(@PathVariable(value = "id") Long userId)
+		    public ResponseEntity<Boolean> deleteEmployee(@PathVariable(value = "id") Long userId)
 		         throws ResourceNotFoundException {
 				logger.info("in delete profile");
 				UserDetails user=null;
-				Map<String, Boolean> response = new HashMap<>();
+				Map<String, Boolean> map = new HashMap<>();
+				
 				try
 				{
 		        user = userdetailsrepo.findById(userId)
 		       .orElseThrow(() -> new ResourceNotFoundException("Employee not found for this id :: " + userId));
 		        userdetailsrepo.delete(user);
-		        response.put("deleted", Boolean.TRUE);
+		        map.put("deleted", Boolean.TRUE);
 		        logger.info("profile deleted successfully");
 				}
 				catch (Exception ex) {
-					
+					logger.info("Error in updating data according to user id");
+					logger.info("Error in updating data according to user id", ex);
+				return ResponseEntity.ok().cacheControl(CacheControl.maxAge(1, TimeUnit.SECONDS)).body(false);
 				}
-		        return response;
+		        return ResponseEntity.ok().cacheControl(CacheControl.maxAge(1, TimeUnit.SECONDS)).body(true);
 		    }
 			@GetMapping("/login/{email}/{password}/{fcm_token}")
 			public ResponseEntity<Map<String, Object>> getEmployeeById(@PathVariable(value = "email") String email,
@@ -495,18 +530,20 @@ private static final Logger logger = LogManager.getLogger(DPSController.class);
 				}
 				catch(Exception ex)
 				{
-					
+					logger.info("Error in user login");
+					logger.info("Error in user login", ex);
 				}
-			     	return ResponseEntity.ok(map);
+			    return ResponseEntity.ok(map);
 			}
 			
 			@GetMapping("/updatePassword/{email}/{password}/{oldpassword}")
-			public void changeUserPassword(
+			public ResponseEntity<Map<String,Object>> changeUserPassword(
 			  @PathVariable(value = "email") String email,
 			  @PathVariable(value = "password") String password,
 			  @PathVariable(value = "oldpassword") String oldPassword) {
 				logger.info("In update password");
 				UserDetails user=null;
+				Map<String,Object> map=new HashMap<String,Object>();
 				try
 				{
 				user = userservice.findUserByEmail(email);
@@ -515,13 +552,52 @@ private static final Logger logger = LogManager.getLogger(DPSController.class);
 			        throw new InvalidOldPasswordException();
 			    }
 			    userservice.changeUserPassword(user, password);
-			    logger.info("password changed successfuly");
+			    map.put("updated", Boolean.TRUE);
+			    logger.info("password updated successfuly");
 				}
 				catch(Exception ex)
 				{
+					logger.info("Error in updating password");
+					logger.info("Error in updating password", ex);
 					
 				}
+				return ResponseEntity.ok(map);
 			}
+			@PostMapping("/posts/{blogId}/{userId}/comments")
+		    public ResponseEntity<Map<String,Object>> createComment(@PathVariable (value = "blogId") Long blogId,
+		    							 @PathVariable (value = "userId") Long userId,
+		                                 @RequestBody CommentDetails commmentDetails) {
+				Map<String,Object> map=new HashMap<String,Object>();
+				try
+				{
+				UserDetails userDetails = userdetailsrepo.findById(userId)
+				          .orElseThrow(() -> new ResourceNotFoundException("Employee not found for this id :: " + userId));
+				 
+		         	blogdetailsrepo.findById(blogId).map(blogDetails -> {
+		        	commmentDetails.setBlogDetails(blogDetails);
+		        	commmentDetails.setUserDetails(userDetails);
+		        	logger.info("Login success..");
+				    map.put(RESULT, commmentDetails);
+				    map.put(STATUS, SUCCESS);
+		            return commentdetailsrepo.save(commmentDetails);
+		        }).orElseThrow(() -> new ResourceNotFoundException("blogId " + blogId + " not found"));
+		        }
+				catch(Exception ex)
+				{
+					logger.info("Error in commenting post according to user/blog id");
+					logger.info("Error in commenting post according to user/blog id", ex);
+					map.put(STATUS, FAIL);
+					map.put(MESSAGE, "Error in commenting post according to user/blog id");
+				}
+				return ResponseEntity.ok(map);
+		}
+//			@GetMapping("/posts/{blogId}/comments")
+//		    public Page<CommentDetails> getAllCommentsByPostId(@PathVariable (value = "blogId") Long blogId,
+//		                                                Pageable pageable) {
+//				
+//				return commentdetailsrepo.findByBlogId(blogId, pageable);
+//		}	
+				
 		}
 	
 	

@@ -17,7 +17,7 @@ public class VideoDetails {
 	private String title;
 	private String path;
 	private String category;
-	private String date;
+	private String created_Date;
 	public Long getId() {
 		return id;
 	}
@@ -30,9 +30,7 @@ public class VideoDetails {
 	public String getCategory() {
 		return category;
 	}
-	public String getDate() {
-		return date;
-	}
+	
 	public void setId(Long id) {
 		this.id = id;
 	}
@@ -45,14 +43,19 @@ public class VideoDetails {
 	public void setCategory(String category) {
 		this.category = category;
 	}
-	public void setDate(String date) {
-		this.date = date;
+	public String getCreated_Date() {
+		return created_Date;
+	}
+	public void setCreated_Date(String created_Date) {
+		this.created_Date = created_Date;
 	}
 	@Override
 	public String toString() {
-		return "VideoDetails [id=" + id + ", title=" + title + ", path=" + path + ", category=" + category + ", date="
-				+ date + "]";
+		return "VideoDetails [id=" + id + ", title=" + title + ", path=" + path + ", category=" + category
+				+ ", created_Date=" + created_Date + "]";
 	}
+	
+	
 	
 	
 	
