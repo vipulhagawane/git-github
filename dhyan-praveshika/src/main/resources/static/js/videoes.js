@@ -48,6 +48,17 @@ $(document).ready(function () {
 		  }
 		  ]
 });
+ 
+ $('.modal').on('hidden.bs.modal', function (e) {
+	  $(this)
+	    .find("input,textarea,select,img")
+	       .val('')
+	       .end()
+	    .find("input[type=checkbox], input[type=radio]")
+	       .prop("checked", "")
+	       .end();
+	});
+
 });
 
 
@@ -86,13 +97,13 @@ function deleteRow(id){
 
 //getVideos
 function getRowID(id){
-	 alert("hiii");
+	 //alert("hiii");
 	$.ajax({
 		 type : 'GET',
        url : "/getVideos?id="+id,
        
        success : function(data) {
-           alert(JSON.stringify(data.id));
+           //alert(JSON.stringify(data.id));
            $('#id').val(data.id);
            $('#title').val(data.title);
            $('#category').val(data.category);

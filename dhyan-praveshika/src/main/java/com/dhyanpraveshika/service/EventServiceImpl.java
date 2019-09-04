@@ -5,7 +5,10 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.Base64;
+import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 
@@ -115,8 +118,8 @@ public class EventServiceImpl implements EventService {
 			eventDTO.setId(Optional.ofNullable(event.getId()).orElse((long) 0));
 			eventDTO.setTitle(Optional.ofNullable(event.getTitle()).orElse("unavailable"));
 			eventDTO.setDescription(Optional.ofNullable(event.getDescription()).orElse("unavailable"));
-			eventDTO.setDate(Optional.ofNullable(event.getCreated_date()).orElse("unavailable"));
-			eventDTO.setTime(Optional.ofNullable(event.getTime()).orElse("unavailable"));
+			eventDTO.setEventDate(Optional.ofNullable(event.getEventDate()).orElse("unavailable"));
+			eventDTO.setEventTime(Optional.ofNullable(event.getEventTime()).orElse("unavailable"));
 			eventDTO.setLocation(Optional.ofNullable(event.getLocation()).orElse("unavailable"));
 			
 			logger.info("event dto :{}", eventDTO.toString());
@@ -191,10 +194,15 @@ public class EventServiceImpl implements EventService {
 
 		if (title != null && description != null) {
 			
+			Date createdDate = new Date();
+			DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd kk:mm:ss");
+			String today = dateFormat.format(createdDate);
+			
 			event.setTitle(title);
 			event.setDescription(description);
-			event.setCreated_date(Optional.ofNullable(date).orElse("unavailable"));
-			event.setTime(Optional.ofNullable(time).orElse("unavailable"));
+			event.setCreated_date(Optional.ofNullable(today).orElse("unavailable"));
+			event.setEventDate(Optional.ofNullable(date).orElse("unavailable"));
+			event.setEventTime(Optional.ofNullable(time).orElse("unavailable"));
 			event.setLocation(Optional.ofNullable(location).orElse("unavailable"));
 			eventDAO.save(event);
 

@@ -35,31 +35,25 @@ public class DPSVideoServiceImpl implements DPSVideoService {
 
 	@Override
 	public boolean addVideo(HttpServletRequest request) {
-		String title = request.getParameter("title");
-		String category = request.getParameter("category");
-		String path = request.getParameter("path");
 		
-		logger.info("video details from request  :{}",title + " " + category + " " + path);
-
-		if (title != null && category != null && path != null) {
-
-			Date date = new Date();
-			DateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy kk:mm:ss");
-			String newdate = dateFormat.format(date);
-			
-			DPSVideo dpsvideo = new DPSVideo();
-			dpsvideo.setTitle(title);
-			dpsvideo.setCategory(category);
-			dpsvideo.setPath(path);
-			dpsvideo.setCreated_date(newdate);
-			videoDAO.save(dpsvideo);
-			
+		boolean result = false;
+		
+		if(request.getParameter("id").isEmpty())
+		{
+			logger.info("creating new video");
+			DPSVideo dpsVideo = savedVideo(request,null);
 			String type = "Video";
-			blogService.sendNotifications(dpsvideo.getId(),dpsvideo.getTitle(),type);
-			
-			return true;
+			blogService.sendNotifications(dpsVideo.getId(),dpsVideo.getTitle(),type);
+			result = true;
 		}
-		return false;
+		else
+		{
+			Long videoId  = Long.parseLong(request.getParameter("id"));
+			DPSVideo dpsVideo = videoDAO.findOne(videoId);
+			savedVideo(request,dpsVideo);
+			result = true;
+		}
+		return result;
 	}
 
 	@Override
@@ -110,6 +104,31 @@ public class DPSVideoServiceImpl implements DPSVideoService {
 			return true;
 		}
 		return false;
+	}
+	
+	private DPSVideo savedVideo(HttpServletRequest request, DPSVideo dpsVideo) {
+		String title = request.getParameter("title");
+		String category = request.getParameter("category");
+		String path = request.getParameter("path");
+		logger.info("video details from request  :{}",title + " " + category + " " + path);
+		
+		if(dpsVideo == null)
+		{
+			dpsVideo = new DPSVideo();
+		}
+
+		if (title != null && category != null && path != null) {
+
+			Date date = new Date();
+			DateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy kk:mm:ss");
+			String newdate = dateFormat.format(date);
+			dpsVideo.setTitle(title);
+			dpsVideo.setCategory(category);
+			dpsVideo.setPath(path);
+			dpsVideo.setCreated_date(newdate);
+			videoDAO.save(dpsVideo);
+		}
+		return dpsVideo;
 	}
 
 }

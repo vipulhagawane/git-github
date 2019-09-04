@@ -36,7 +36,6 @@ public class DPSService{
 		{
 			checkUser = true;
 		}
-		
 		return user;
 	}
 	

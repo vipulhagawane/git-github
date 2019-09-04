@@ -50,11 +50,10 @@ $('#article').DataTable({
 	  ]
 });
 
-
-
+//to delete data from modal
 $('.modal').on('hidden.bs.modal', function (e) {
 	  $(this)
-	    .find("input,textarea,select")
+	    .find("input,textarea,select,img")
 	       .val('')
 	       .end()
 	    .find("input[type=checkbox], input[type=radio]")
@@ -82,13 +81,13 @@ function getArticle(id){
          url : "/getArticle?id="+id,
          
          success : function(data) {
-             //alert(JSON.stringify(data.id));
+             //alert(JSON.stringify(data));
              $('#id').val(data.id);
              $('#articleTital').val(data.title);
              $('#authorName').val(data.author);
              $('#category').val(data.category);
              CKEDITOR.instances.editor12.setData(data.description);
-             alert(data.encodedString);
+             //alert(data.encodedString);
              if(data.encodedString !== null){
             	 $('#image').attr('src', 'data:image/' + $('#extension').val(data.extension) + ';base64,' + data.encodedString);
             	 $('#image').show();

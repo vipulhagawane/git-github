@@ -127,12 +127,12 @@ public class BlogServiceImpl implements BlogService{
 		logger.info("fetching blog details by id");
 		
 		Blog blog = blogDAO.findOne(id);
-		logger.info("blog details :{}",blog.toString());
+		logger.info("blog details from db:{}",blog.toString());
 		
-		BlogDTO blogDto = null;
+		//BlogDTO blogDto = null;
 		if(blog != null)
 		{
-			blogDto =  new BlogDTO();
+			BlogDTO blogDto =  new BlogDTO();
 			
 			blogDto =  getArticleImage(id,blogDto);
 			
@@ -142,16 +142,10 @@ public class BlogServiceImpl implements BlogService{
 			blogDto.setAuthor(Optional.ofNullable(blog.getAuthor()).orElse("unavailable"));
 			blogDto.setCategory(Optional.ofNullable(blog.getCategory()).orElse("unavailable"));
 			blogDto.setCreated_date(Optional.ofNullable(blog.getCreated_date()).orElse("unavailable"));
-			
-			/*List<String> tokens = userService.getTokens();
-			
-			if(!tokens.isEmpty())
-			{
-				blogDto.setFcmToken(tokens);
-			}*/
+			logger.info("blogDto details :{}",blogDto.toString());
+			return blogDto;
 		}
-		logger.info("blogDto details :{}",blogDto.toString());
-		return blogDto;
+		return null;
 	}
 
 	@Override
@@ -300,7 +294,7 @@ public class BlogServiceImpl implements BlogService{
 		
 		if (!title.isEmpty() && !description.isEmpty() && !author.isEmpty()) {
 			Date date = new Date();
-			DateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy");
+			DateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy kk:hh:ss");
 			String newdate = dateFormat.format(date);
 			
 			blog.setTitle(Optional.ofNullable(title).orElse("unavailable"));
@@ -345,7 +339,7 @@ public class BlogServiceImpl implements BlogService{
 		headers.set("Authorization", notificationAuthKey);
 
 		List<String> tokens = userService.getTokens();
-		logger.info("tokens :{}",tokens);
+		logger.info("tokens :{}",tokens.size());
 
 		NotificationDTO notificationDto = new NotificationDTO();
 		DataDTO dataDTO = new DataDTO();

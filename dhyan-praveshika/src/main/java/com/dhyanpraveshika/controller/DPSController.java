@@ -125,6 +125,7 @@ public class DPSController {
 	public String getArticles(HttpServletRequest request, ModelMap model) {
 
 		logger.info("at getArticles");
+		addArticle = "";
 		return "home";
 	}
 //	@RequestMapping("/getArticles")
@@ -175,7 +176,7 @@ public class DPSController {
 	@RequestMapping("/events")
 	public String events() {
 
-		logger.info("at donationList");
+		logger.info("at events");
 		return "events";
 	}
 	
@@ -234,24 +235,21 @@ public class DPSController {
 	@PostMapping("/addVideo")
 	public String addVideo(HttpServletRequest request) {
 		
+		logger.info("creating new video:{}");
+		
 		boolean result = videoService.addVideo(request);
 		logger.info("add video:{}",result);
-		
 		
 		if(result == true)
 		{
 			addVideo = "success";
 		}
-		
 		else
 		{
 			addVideo = "fail";
 		}
-		
 		return "videos";
 	}
-	
-	
 	
 	@GetMapping("/getUsers")
 	public ResponseEntity<List<User>> getUsers(HttpServletResponse res)
@@ -280,12 +278,11 @@ public class DPSController {
 		return new ResponseEntity<List<Donation>>(donations,HttpStatus.OK);
 	}
 	
-	
-	
 	@GetMapping("/getEvents")
 	public ResponseEntity<List<DPSEvent>> getEvents(HttpServletResponse res)
 	{
 		logger.info("at controller getEvents");
+		addEvent = "";
 		List<DPSEvent> events = eventService.getEvents();
 		return new ResponseEntity<List<DPSEvent>>(events,HttpStatus.OK);
 	}
@@ -294,9 +291,8 @@ public class DPSController {
 	@RequestMapping("/getArticle")
 	public BlogDTO getArticle(HttpServletRequest request)
 	{
-		logger.info("at controller getArticle:");
-		
 		Long id = Long.parseLong(request.getParameter("id"));
+		logger.info("at controller getArticle of id{}:",id);
 		BlogDTO blogDto = blogService.getBlog(id);
 		return blogDto;
 	}

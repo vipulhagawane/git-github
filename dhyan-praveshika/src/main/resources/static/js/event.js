@@ -16,7 +16,7 @@ $(document).ready(function () {
 	    	 }
 	     else if(data == "success")
 	    	 {
-	    	 swal("Article has been added!", {
+	    	 swal("Event has been added!", {
 	 			  icon: "success",
 	 			});
 	       	
@@ -44,8 +44,8 @@ $(document).ready(function () {
 	  columns:[
 		  {title : 'Title' , data : 'title'},
 		  {title : 'Description' , data : 'description'},
-		  {title : 'Date' , data : 'created_date'},
-		  {title : 'Time' , data : 'time'},
+		  {title : 'Date' , data : 'eventDate'},
+		  {title : 'Time' , data : 'eventTime'},
 		  {title : 'Location' , data : 'location'},
 		  {title : 'Actions' , data : 'id', "render": function (data) {
               return "<a class='btn btn-info tblBtn' onclick='getRowID("+data+")'><i class='fa fa-pencil'></i></a><a class='btn btn-warning tblBtn'><i class='fa fa-eye'></i></a><a class='btn btn-danger tblBtn' onclick='deleteevent("+data+")'><i class='fa fa-trash'></i></a>"}
@@ -76,13 +76,13 @@ $(document).ready(function () {
 });
 
 function getRowID(id){
-	alert(id);
+	//alert(id);
 	 $.ajax({
 		 type : 'GET',
          url : "/getEvent?id="+id,
          
          success : function(data,request) {
-             alert(JSON.stringify(data));
+             //alert(JSON.stringify(data));
              $('#id').val(data.id);
              $('#title').val(data.title);
              $('#date').val(data.date);
@@ -90,7 +90,7 @@ function getRowID(id){
              $('#location').val(data.location);
              $('#description').val(data.description);
            // $('#image').val(data.eventFile);
-             console.log(data.encodedString);
+            // console.log(data.encodedString);
              if(data.encodedString !== null){
             	 $('#image').attr('src', 'data:image/' + $('#extension').val(data.extension) + ';base64,' + data.encodedString);
             	 $('#image').show();

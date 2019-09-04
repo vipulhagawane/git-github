@@ -83,8 +83,7 @@ public class BlogDTO {
 	@Override
 	public String toString() {
 		return "BlogDTO [id=" + id + ", title=" + title + ", description=" + description + ", author=" + author
-				+ ", category=" + category + ", encodedString=" + encodedString + ", extension=" + extension
-				+ ", created_date=" + created_date + "]";
+				+ ", category=" + category + ", extension=" + extension + ", created_date=" + created_date + "]";
 	}
-	
+
 }

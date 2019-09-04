@@ -11,9 +11,9 @@ $('#users').DataTable({
 		  {title : 'Full Name' , data : 'full_name'},
 		  {title : 'Email' , data : 'email'},
 		  {title : 'Contact Number' , data : 'phoneNo'},
-		  {title : 'city' , data : 'city'},
-		  {title : 'state' , data : 'state'},
-		  {title : 'country' , data : 'country'},
+		  {title : 'City' , data : 'city'},
+		  {title : 'State' , data : 'state'},
+		  {title : 'Country' , data : 'country'},
 	  ]
 });
 

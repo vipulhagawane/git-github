@@ -12,6 +12,7 @@ if ( window.history.replaceState ) {
       <div class="modal-content">
       
         <form action="/addVideo" method = "post">
+        <input type="hidden" id="id" name="id">
           <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal">&times;</button>
             <h4 class="modal-title">Add/Edit Video</h4>

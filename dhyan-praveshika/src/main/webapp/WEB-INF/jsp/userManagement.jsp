@@ -94,12 +94,12 @@ scratch. This page gets rid of all links and provides the needed markup only.
             <table id="users" class="table table-bordered table-striped table-hover">
               <thead>
                 <tr>
-                  <th>User Name</th>
-                  <th>User Type</th>
+                  <th>Full Name</th>
                   <th>Email</th>
                   <th>Contact Number</th>
-                  <th>password</th>
-                  <th style="width:60px">Actions</th>
+                  <th>City</th>
+                  <th>State</th>
+                  <th>Country</th>
                 </tr>
               </thead>
               

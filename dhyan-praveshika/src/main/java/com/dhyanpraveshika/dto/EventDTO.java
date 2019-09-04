@@ -1,14 +1,15 @@
 package com.dhyanpraveshika.dto;
 
 import java.io.File;
+import java.util.Arrays;
 
 public class EventDTO {
 	
 	private Long id;
 	private String title;
 	private String description;
-	private String date;
-	private String time;
+	private String eventDate;
+	private String eventTime;
 	private String location;
 	private byte[] eventFile;
 	private String encodedString;
@@ -31,18 +32,7 @@ public class EventDTO {
 	public void setDescription(String description) {
 		this.description = description;
 	}
-	public String getDate() {
-		return date;
-	}
-	public void setDate(String date) {
-		this.date = date;
-	}
-	public String getTime() {
-		return time;
-	}
-	public void setTime(String time) {
-		this.time = time;
-	}
+	
 	public String getLocation() {
 		return location;
 	}
@@ -70,12 +60,22 @@ public class EventDTO {
 	public void setExtension(String extension) {
 		this.extension = extension;
 	}
+	public String getEventDate() {
+		return eventDate;
+	}
+	public void setEventDate(String eventDate) {
+		this.eventDate = eventDate;
+	}
+	public String getEventTime() {
+		return eventTime;
+	}
+	public void setEventTime(String eventTime) {
+		this.eventTime = eventTime;
+	}
 	@Override
 	public String toString() {
-		return "EventDTO [id=" + id + ", title=" + title + ", description=" + description + ", date=" + date + ", time="
-				+ time + ", location=" + location + "]";
+		return "EventDTO [id=" + id + ", title=" + title + ", description=" + description + ", eventDate=" + eventDate
+				+ ", eventTime=" + eventTime + ", location=" + location + ", extension=" + extension + "]";
 	}
-	
-	
 
 }
