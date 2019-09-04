@@ -57,6 +57,7 @@ import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.util.UriComponentsBuilder;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.ui.freemarker.FreeMarkerTemplateUtils;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -118,6 +119,8 @@ private static final Logger logger = LogManager.getLogger(DPSController.class);
 	@Autowired
 	CommentDetailsRepo commentdetailsrepo;
 	
+	@Autowired
+    private PasswordEncoder passwordEncoder;
 	
 	private BCryptPasswordEncoder encoder = new BCryptPasswordEncoder(12);
 	
@@ -137,7 +140,12 @@ private static final Logger logger = LogManager.getLogger(DPSController.class);
 				}
 				else
 				{
-					userdetails.setPassword(encoder.encode(userdetails.getPassword()));
+					//userdetails.setPassword(encoder.encode(userdetails.getPassword()));
+					
+					
+					String hashedPassword = passwordEncoder.encode(userdetails.getPassword());
+					
+					userdetails.setPassword(hashedPassword);
 					userservice.createUser(userdetails);
 					logger.info("User added");
 					HttpHeaders headers = new HttpHeaders();
@@ -263,6 +271,7 @@ private static final Logger logger = LogManager.getLogger(DPSController.class);
 			      	else {	
 					logger.info("This email does not exist!");
 					logger.info("error");
+					return ResponseEntity.ok().cacheControl(CacheControl.maxAge(1, TimeUnit.SECONDS)).body(false);
 				}
 				return ResponseEntity.ok().cacheControl(CacheControl.maxAge(1, TimeUnit.SECONDS)).body(true);
 			}
@@ -576,7 +585,7 @@ private static final Logger logger = LogManager.getLogger(DPSController.class);
 		         	blogdetailsrepo.findById(blogId).map(blogDetails -> {
 		        	commmentDetails.setBlogDetails(blogDetails);
 		        	commmentDetails.setUserDetails(userDetails);
-		        	logger.info("Login success..");
+		        	logger.info("Post comment successfully...");
 				    map.put(RESULT, commmentDetails);
 				    map.put(STATUS, SUCCESS);
 		            return commentdetailsrepo.save(commmentDetails);

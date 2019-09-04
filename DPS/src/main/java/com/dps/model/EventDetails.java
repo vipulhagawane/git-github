@@ -16,10 +16,10 @@ public class EventDetails {
 	
 	private String title;
 	private String description;
-	private String date;
+	private String event_date;
 	private String location;
 	private String path; 
-	private String time;
+	private String event_time;
 	public long getId() {
 		return id;
 	}
@@ -29,8 +29,8 @@ public class EventDetails {
 	public String getDescription() {
 		return description;
 	}
-	public String getDate() {
-		return date;
+	public String getEvent_date() {
+		return event_date;
 	}
 	public String getLocation() {
 		return location;
@@ -38,8 +38,8 @@ public class EventDetails {
 	public String getPath() {
 		return path;
 	}
-	public String getTime() {
-		return time;
+	public String getEvent_time() {
+		return event_time;
 	}
 	public void setId(long id) {
 		this.id = id;
@@ -50,8 +50,8 @@ public class EventDetails {
 	public void setDescription(String description) {
 		this.description = description;
 	}
-	public void setDate(String date) {
-		this.date = date;
+	public void setEvent_date(String event_date) {
+		this.event_date = event_date;
 	}
 	public void setLocation(String location) {
 		this.location = location;
@@ -59,13 +59,13 @@ public class EventDetails {
 	public void setPath(String path) {
 		this.path = path;
 	}
-	public void setTime(String time) {
-		this.time = time;
+	public void setEvent_time(String event_time) {
+		this.event_time = event_time;
 	}
 	@Override
 	public String toString() {
-		return "EventDetails [id=" + id + ", title=" + title + ", description=" + description + ", date=" + date
-				+ ", location=" + location + ", path=" + path + ", time=" + time + "]";
+		return "EventDetails [id=" + id + ", title=" + title + ", description=" + description + ", event_date="
+				+ event_date + ", location=" + location + ", path=" + path + ", event_time=" + event_time + "]";
 	}
 	
 	
