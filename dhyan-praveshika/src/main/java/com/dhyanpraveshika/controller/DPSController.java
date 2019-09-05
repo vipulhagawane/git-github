@@ -13,6 +13,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -87,17 +88,17 @@ public class DPSController {
 		return sessionData;
 	}
 
-	
-	@RequestMapping("login")
-	public String showLoginPage() {
+	// @RequestMapping(value = "/", method = RequestMethod.GET)
+	@RequestMapping(value = {"login" }, method = RequestMethod.GET)
+	public String showLoginPage(ModelMap model) {
 		return "login";
 	}
 
-	@RequestMapping("home")
+	@RequestMapping("/home")
 	public String home(HttpServletRequest request, ModelMap model) {
 		logger.info("fetching user details{}");
 
-		
+		//boolean user = DPSService.checkUser(request);
 		User user = DPSService.checkUser(request);
 		logger.info("user available {}", user);
 		System.out.print("user" + user);
@@ -120,7 +121,14 @@ public class DPSController {
 		addArticle = "";
 		return "home";
 	}
-
+//	@RequestMapping("/getArticles")
+//	public <List<Blog> getArticles(HttpServletRequest request, ModelMap model) {
+//		logger.info("fetching blog list at controller");
+//		addArticle = "";
+//		List<Blog> blogs = blogService.getBlogs();
+//		return new ResponseEntity<List<Blog>>(blogs, HttpStatus.OK);
+//
+//	}
 
 	@RequestMapping("/videos")
 	public String VideosContrller() {
@@ -128,7 +136,21 @@ public class DPSController {
 		return "videos";
 	}
 
-	
+	/*
+	 * @RequestMapping("/getVideos") public String getVideos(HttpServletRequest
+	 * request, ModelMap model) {
+	 * 
+	 * return "videos";
+	 * 
+	 * }
+	 */
+	/*
+	 * @PostMapping("/addVideo") public String addVideo(HttpServletRequest request)
+	 * { String user = getSessionData(); if (user != null) { boolean result =
+	 * videoService.addVideo(request); logger.info("add video:{}", result); return
+	 * "videos"; } else { return "login"; }
+	 */
+
 	
 	
 	@RequestMapping("/userManagement")
