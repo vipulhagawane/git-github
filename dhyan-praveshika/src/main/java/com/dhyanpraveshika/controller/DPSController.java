@@ -39,7 +39,7 @@ import com.dhyanpraveshika.service.DonationService;
 import com.dhyanpraveshika.service.EventService;
 
 @Controller
-
+@RequestMapping("/")
 public class DPSController {
 	
 	private String addArticle = "";
@@ -87,17 +87,17 @@ public class DPSController {
 		return sessionData;
 	}
 
-	// @RequestMapping(value = "/", method = RequestMethod.GET)
-	@RequestMapping(value = { "/", "/login" }, method = RequestMethod.GET)
-	public String showLoginPage(ModelMap model) {
+	
+	@RequestMapping("login")
+	public String showLoginPage() {
 		return "login";
 	}
 
-	@RequestMapping("/home")
+	@RequestMapping("home")
 	public String home(HttpServletRequest request, ModelMap model) {
 		logger.info("fetching user details{}");
 
-		//boolean user = DPSService.checkUser(request);
+		
 		User user = DPSService.checkUser(request);
 		logger.info("user available {}", user);
 		System.out.print("user" + user);
@@ -108,15 +108,7 @@ public class DPSController {
 		} else {
 			setSessionData(user.getEmail());
 			session.setAttribute("currentUser", user.getEmail());
-			/*
-			 * if (Storage.isSupported()) {
-			 * Storage.getLocalStorageIfSupported().setItem("loggedInUser",
-			 * user.getEmail());
-			 * logger.info("{}",Storage.getLocalStorageIfSupported().getItem("loggedInUser")
-			 * ); }
-			 */
-			// model.put("email",user.getEmail());
-			// window.localStorage.setItem("loggedInUser", user.getEmail());
+			
 			return "home";
 		}
 
@@ -128,14 +120,7 @@ public class DPSController {
 		addArticle = "";
 		return "home";
 	}
-//	@RequestMapping("/getArticles")
-//	public <List<Blog> getArticles(HttpServletRequest request, ModelMap model) {
-//		logger.info("fetching blog list at controller");
-//		addArticle = "";
-//		List<Blog> blogs = blogService.getBlogs();
-//		return new ResponseEntity<List<Blog>>(blogs, HttpStatus.OK);
-//
-//	}
+
 
 	@RequestMapping("/videos")
 	public String VideosContrller() {
@@ -143,21 +128,7 @@ public class DPSController {
 		return "videos";
 	}
 
-	/*
-	 * @RequestMapping("/getVideos") public String getVideos(HttpServletRequest
-	 * request, ModelMap model) {
-	 * 
-	 * return "videos";
-	 * 
-	 * }
-	 */
-	/*
-	 * @PostMapping("/addVideo") public String addVideo(HttpServletRequest request)
-	 * { String user = getSessionData(); if (user != null) { boolean result =
-	 * videoService.addVideo(request); logger.info("add video:{}", result); return
-	 * "videos"; } else { return "login"; }
-	 */
-
+	
 	
 	
 	@RequestMapping("/userManagement")
