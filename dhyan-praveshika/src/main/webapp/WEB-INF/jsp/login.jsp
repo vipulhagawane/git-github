@@ -1,21 +1,26 @@
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
 <!DOCTYPE html>
 <html>
 
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<link rel='shortcut icon' type='image/x-icon' href='img/favicon.ico' />
+<link rel='shortcut icon' type='image/x-icon' href='/resources/img/favicon.ico' />
 <title>Admin | Dhyan Praveshika</title>
 <!-- Tell the browser to be responsive to screen width -->
 <meta
 	content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
 	name="viewport">
 <!-- Bootstrap 3.3.7 -->
-<link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
+<!-- <link rel="stylesheet" href="/lib/bootstrap/css/bootstrap.min.css"> -->
+<link rel="stylesheet" href="<c:url value="/resources/lib/bootstrap/css/bootstrap.min.css"/>">
 <!-- Font Awesome -->
-<link rel="stylesheet" href="lib/font-awesome/css/font-awesome.min.css">
+<link rel="stylesheet" href="<c:url value="/resources/lib/font-awesome/css/font-awesome.min.css"/>">
+<!-- <link rel="stylesheet" href="lib/font-awesome/css/font-awesome.min.css"> -->
 <!-- Theme style -->
-<link rel="stylesheet" href="css/AdminLTE.css">
+<link rel="stylesheet" href="<c:url value="/resources/css/AdminLTE.css"/>">
+<!-- <link rel="stylesheet" href="css/AdminLTE.css"> -->
 
 <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -34,7 +39,7 @@
 		<div class="dispTblCell">
 			<div class="login-box">
 				<div class="login-logo">
-					<a href="../../index2.html"> <img src="img/logo.png">
+					<a href="../../index2.html"> <img src="/resources/img/logo.png">
 					</a>
 				</div>
 				<!-- /.login-logo -->
@@ -44,7 +49,7 @@
 					<h3>Login</h3>
 					<br>
 					
-					<form action="/home" method="post">
+					<form action="home" method="post">
 						
 						<div class="form-group has-feedback">
 							
@@ -76,11 +81,14 @@
 		</div>
 	</div>
 	<!-- jQuery 3 -->
-	<script src="../../bower_components/jquery/dist/jquery.min.js"></script>
+	<!-- <script src="../../bower_components/jquery/dist/jquery.min.js"></script> -->
+	<script src="<c:url value="/resources/jquery/dist/jquery.min.js" />"></script>
 	<!-- Bootstrap 3.3.7 -->
-	<script src="../../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+	<!-- <script src="../../bower_components/bootstrap/dist/js/bootstrap.min.js"></script> -->
+	<script src="<c:url value="/resources/bootstrap/dist/js/bootstrap.min.js"/>"></script>
 	<!-- iCheck -->
 	<script src="../../plugins/iCheck/icheck.min.js"></script>
+	<script src="<c:url value="/resources/bootstrap/dist/js/bootstrap.min.js"/>"></script>
 	<script>
 		$(function() {
 			$('input').iCheck({

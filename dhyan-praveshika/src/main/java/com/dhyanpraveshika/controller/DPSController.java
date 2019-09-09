@@ -81,20 +81,20 @@ public class DPSController {
 	}
 
 	@ResponseBody
-	@GetMapping("/getSessionData")
+	@GetMapping("getSessionData")
 	public String getSessionData() {
 		logger.debug("session = {}", session.getAttribute("loggedInUser"));
 		String sessionData = String.valueOf(session.getAttribute("loggedInUser"));
 		return sessionData;
 	}
 
-	// @RequestMapping(value = "/", method = RequestMethod.GET)
-	@RequestMapping(value = {"login" }, method = RequestMethod.GET)
-	public String showLoginPage(ModelMap model) {
+	
+	@RequestMapping("login")
+	public String showLoginPage() {
 		return "login";
 	}
 
-	@RequestMapping("/home")
+	@PostMapping("home")
 	public String home(HttpServletRequest request, ModelMap model) {
 		logger.info("fetching user details{}");
 
@@ -114,46 +114,26 @@ public class DPSController {
 		}
 
 	}
-	@RequestMapping("/getArticles")
+	@RequestMapping("getArticles")
 	public String getArticles(HttpServletRequest request, ModelMap model) {
 
 		logger.info("at getArticles");
 		addArticle = "";
 		return "home";
 	}
-//	@RequestMapping("/getArticles")
-//	public <List<Blog> getArticles(HttpServletRequest request, ModelMap model) {
-//		logger.info("fetching blog list at controller");
-//		addArticle = "";
-//		List<Blog> blogs = blogService.getBlogs();
-//		return new ResponseEntity<List<Blog>>(blogs, HttpStatus.OK);
-//
-//	}
 
-	@RequestMapping("/videos")
+
+	@RequestMapping("videos")
 	public String VideosContrller() {
 		logger.info("at VideosContrller");
 		return "videos";
 	}
 
-	/*
-	 * @RequestMapping("/getVideos") public String getVideos(HttpServletRequest
-	 * request, ModelMap model) {
-	 * 
-	 * return "videos";
-	 * 
-	 * }
-	 */
-	/*
-	 * @PostMapping("/addVideo") public String addVideo(HttpServletRequest request)
-	 * { String user = getSessionData(); if (user != null) { boolean result =
-	 * videoService.addVideo(request); logger.info("add video:{}", result); return
-	 * "videos"; } else { return "login"; }
-	 */
+	
 
 	
 	
-	@RequestMapping("/userManagement")
+	@RequestMapping("userManagement")
 	public String userManagementContrller() {
 		logger.info("at userManagementContrller");
 		return "userManagement";
@@ -166,17 +146,16 @@ public class DPSController {
 
 	}
 
-	@RequestMapping("/events")
+	@RequestMapping("events")
 	public String events() {
 
 		logger.info("at events");
 		return "events";
 	}
 	
+	@ResponseBody
+	@GetMapping("getBlogs")
 	
-	//anga
-	
-	@GetMapping("/getBlogs")
 	public ResponseEntity<List<Blog>> getBlogs(HttpServletResponse res)
 	{
 		logger.info("fetching blog list at controller");

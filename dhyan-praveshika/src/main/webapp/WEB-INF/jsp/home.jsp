@@ -1,3 +1,4 @@
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <jsp:include page="session.jsp"></jsp:include>
 <!DOCTYPE html>
 <!--
@@ -98,24 +99,24 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <jsp:include page="addArticle.jsp"></jsp:include>
   <!-- REQUIRED JS SCRIPTS -->
   <!-- jQuery 3 -->
-  <script src="lib/jquery/jquery.min.js"></script>
+  <script src="<c:url value="/resources/lib/jquery/jquery.min.js" />"></script>
   <!-- Bootstrap 3.3.7 -->
-  <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+  <script src="<c:url value="/resources/lib/bootstrap/js/bootstrap.min.js"/>"></script>
   <!-- Data table -->
-  <script src="lib/data-tables/js/datatables.min.js"></script>
+  <script src="<c:url value="/resources/lib/data-tables/js/datatables.min.js"/>"></script>
   <!-- CK Editor -->
-  <script src="lib/ckeditor/ckeditor.js"></script>
-  <script src="lib/ckeditor/config.js"></script>
+  <script src="<c:url value="/resources/lib/ckeditor/ckeditor.js"/>"></script>
+  <script src="<c:url value="/resources/lib/ckeditor/config.js"/>"></script>
   
    <!-- sweetalert  -->
-  <script src="lib/sweetalert/sweetalert.min.js"></script>
+  <script src="<c:url value="/resources/lib/sweetalert/sweetalert.min.js"/>"></script>
  
   <!-- AdminLTE App -->
-  <script src="js/adminlte.js"></script>
+  <script src="<c:url value="/resources/js/adminlte.js"/>"></script>
   <!-- AdminLTE App -->
-  <script src="js/custom.js"></script>
-   <script src="js/article.js"></script>
-   <script src="js/videoes.js"></script>
+  <script src="<c:url value="/resources/js/custom.js"/>"></script>
+   <script src="<c:url value="/resources/js/article.js"/>"></script>
+   <script src="<c:url value="/resources/js/videoes.js"/>"></script>
    
   <script>
     $(function () {
