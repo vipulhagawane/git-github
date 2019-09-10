@@ -1,13 +1,10 @@
 $(document).ready(function () {
-	
-// 
+
 	$.ajax({
     type: "get",
-    url: "/isArticleAdd",
-   
+    url: "/dhyanpraveshika-web/isArticleAdd",
+    dataSrc : '',
     success: function(data){
-    
-     // alert(data);
      if(data == "")
     	 {
     	 $('#article').DataTable().ajax.reload();
@@ -26,18 +23,14 @@ $(document).ready(function () {
    	
    	 $('#article').DataTable().ajax.reload();
 	 }
-    },
-    error: function(){      
-     alert('Error while request..');
     }
    });
- 
 $('#article').DataTable({
-	  
 	  ajax : {
-		  url : '/getBlogs',
+		  url : '/dhyanpraveshika-web/getBlogs',
 			  dataSrc : ''
 	  },
+	  
 	  columns:[
 		  {title : 'Name Of Article' , data : 'title'},
 		  {title : 'Date' , data : 'created_date'},
@@ -70,7 +63,6 @@ $('#articleSelectImage').on('click', function () {
 
   });
 
-
 });
 
 	
@@ -78,7 +70,7 @@ function getArticle(id){
 	//window.location.href = "/getArticle?id="+id;
 	 $.ajax({
 		 type : 'GET',
-         url : "/getArticle?id="+id,
+         url : "/dhyanpraveshika-web/getArticle?id="+id,
          
          success : function(data) {
              //alert(JSON.stringify(data));
@@ -108,7 +100,7 @@ function deleteArticle(id){
 		.then((willDelete) => {
 		  if (willDelete) {
 			  
-				$.ajax("/deleteArticle?id="+id,   // request url
+				$.ajax("/dhyanpraveshika-web/deleteArticle?id="+id,   // request url
 					    {
 					        success: function () {
 					        	swal("Record has been deleted!", {
@@ -139,7 +131,7 @@ function saveForm1(id){
 		.then((willDelete) => {
 		  if (willDelete) {
 			  
-				$.ajax("/deleteArticle?id="+id,   // request url
+				$.ajax("/dhyanpraveshika-web/deleteArticle?id="+id,   // request url
 					    {
 					        success: function () {
 					        	swal("Record has been deleted!", {
@@ -150,7 +142,6 @@ function saveForm1(id){
 					    }
 					});
 			  
-			
 		  } else {
 			swal("Your record is safe!");
 		  }

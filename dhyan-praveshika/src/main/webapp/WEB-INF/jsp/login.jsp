@@ -6,7 +6,7 @@
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<link rel='shortcut icon' type='image/x-icon' href='/resources/img/favicon.ico' />
+<link rel='shortcut icon' type='image/x-icon' href="<c:url value="/resources/img/favicon.ico" />">
 <title>Admin | Dhyan Praveshika</title>
 <!-- Tell the browser to be responsive to screen width -->
 <meta
@@ -39,7 +39,7 @@
 		<div class="dispTblCell">
 			<div class="login-box">
 				<div class="login-logo">
-					<a href="../../index2.html"> <img src="/resources/img/logo.png">
+					<a href="../../index2.html"> <img src="<c:url value="/resources/img/logo.png"/>">
 					</a>
 				</div>
 				<!-- /.login-logo -->
@@ -49,7 +49,7 @@
 					<h3>Login</h3>
 					<br>
 					
-					<form action="home" method="post">
+					<form action="/dhyanpraveshika-web/home" method="post">
 						
 						<div class="form-group has-feedback">
 							
@@ -82,7 +82,7 @@
 	</div>
 	<!-- jQuery 3 -->
 	<!-- <script src="../../bower_components/jquery/dist/jquery.min.js"></script> -->
-	<script src="<c:url value="/resources/jquery/dist/jquery.min.js" />"></script>
+	<%-- <script src="<c:url value="/resources/jquery/dist/jquery.min.js" />"></script>
 	<!-- Bootstrap 3.3.7 -->
 	<!-- <script src="../../bower_components/bootstrap/dist/js/bootstrap.min.js"></script> -->
 	<script src="<c:url value="/resources/bootstrap/dist/js/bootstrap.min.js"/>"></script>
@@ -97,7 +97,7 @@
 				increaseArea : '20%' /* optional */
 			});
 		});
-	</script>
+	</script> --%>
 </body>
 
 </html>

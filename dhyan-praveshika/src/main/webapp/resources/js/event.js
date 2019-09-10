@@ -5,7 +5,7 @@ $(document).ready(function () {
   
   $.ajax({
 	    type: "get",
-	    url: "/isEventAdd",
+	    url: "/dhyanpraveshika-web/isEventAdd",
 	   
 	    success: function(data){
 	    
@@ -38,7 +38,7 @@ $(document).ready(function () {
   $('#events').DataTable({
 	  
 	  ajax : {
-		  url : '/getEvents',
+		  url : '/dhyanpraveshika-web/getEvents',
 			  dataSrc : ''
 	  },
 	  columns:[
@@ -79,7 +79,7 @@ function getRowID(id){
 	//alert(id);
 	 $.ajax({
 		 type : 'GET',
-         url : "/getEvent?id="+id,
+         url : "/dhyanpraveshika-web/getEvent?id="+id,
          
          success : function(data,request) {
              //alert(JSON.stringify(data));
@@ -113,7 +113,7 @@ function deleteevent(id){
 		.then((willDelete) => {
 		  if (willDelete) {
 			  
-				$.ajax("/deleteEvent?id="+id,   // request url
+				$.ajax("/dhyanpraveshika-web/deleteEvent?id="+id,   // request url
 					    {
 					        success: function () {
 					        	swal("Record has been deleted!", {

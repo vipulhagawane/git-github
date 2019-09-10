@@ -8,7 +8,9 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <html>
 
 <head>
+<script src="<c:url value="/resources/lib/jquery/jquery.min.js" />"></script>
   <jsp:include page="header.jsp"></jsp:include>
+  
   <!-- <script type="text/javascript">
   localStorage.setItem('loggedInUser', email);
   </script> -->
@@ -27,11 +29,11 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
         <ul class="sidebar-menu" data-widget="tree">
           <li class="header">Menu</li>
-          <li class="active"><a href="/getArticles"><i class="fa fa-list-alt"></i> <span>Articles</span></a></li>
-          <li><a href="/events"><i class="fa fa-calendar"></i> <span>Events</span></a></li>
-          <li><a href="/videos"><i class="fa fa-play"></i> <span>Videos</span></a></li>
-          <li><a href="/userManagement"><i class="fa fa-user"></i> <span>User Management</span></a></li>
-          <li><a href="/donationList"><i class="fa fa-user"></i> <span>Donations</span></a></li>
+          <li class="active"><a href="/dhyanpraveshika-web/getArticles"><i class="fa fa-list-alt"></i> <span>Articles</span></a></li>
+          <li><a href="/dhyanpraveshika-web/events"><i class="fa fa-calendar"></i> <span>Events</span></a></li>
+          <li><a href="/dhyanpraveshika-web/videos"><i class="fa fa-play"></i> <span>Videos</span></a></li>
+          <li><a href="/dhyanpraveshika-web/userManagement"><i class="fa fa-user"></i> <span>User Management</span></a></li>
+          <li><a href="/dhyanpraveshika-web/donationList"><i class="fa fa-user"></i> <span>Donations</span></a></li>
         </ul>
       </section>
     </aside>
@@ -97,9 +99,9 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <!-- ./wrapper -->
 
 <jsp:include page="addArticle.jsp"></jsp:include>
-  <!-- REQUIRED JS SCRIPTS -->
+   <!-- REQUIRED JS SCRIPTS -->
   <!-- jQuery 3 -->
-  <script src="<c:url value="/resources/lib/jquery/jquery.min.js" />"></script>
+  <%-- <script src="<c:url value="/resources/lib/jquery/jquery.min.js" />"></script> --%>
   <!-- Bootstrap 3.3.7 -->
   <script src="<c:url value="/resources/lib/bootstrap/js/bootstrap.min.js"/>"></script>
   <!-- Data table -->
@@ -114,9 +116,9 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <!-- AdminLTE App -->
   <script src="<c:url value="/resources/js/adminlte.js"/>"></script>
   <!-- AdminLTE App -->
-  <script src="<c:url value="/resources/js/custom.js"/>"></script>
-   <script src="<c:url value="/resources/js/article.js"/>"></script>
-   <script src="<c:url value="/resources/js/videoes.js"/>"></script>
+  <script src="<c:url value="/resources/js/article.js"/>"></script>
+  <%-- <script src="<c:url value="/resources/js/custom.js"/>"></script>
+  <script src="<c:url value="/resources/js/videoes.js"/>"></script>  --%>
    
   <script>
     $(function () {

@@ -1,3 +1,4 @@
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <jsp:include page="session.jsp"></jsp:include>
 <!DOCTYPE html>
 <!--
@@ -7,6 +8,9 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <html>
 
 <head>
+
+  <!-- jQuery 3 -->
+  <script src="<c:url value="/resources/lib/jquery/jquery.min.js"/>"></script>
 <jsp:include page="header.jsp"></jsp:include>
  <!--  <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -88,12 +92,12 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
         <ul class="sidebar-menu" data-widget="tree">
           <li class="header">HEADER</li>
-          <li><a href="/getArticles"><i class="fa fa-list-alt"></i> <span>Articles</span></a></li>
-          <li class="active"><a href="/events"><i class="fa fa-calendar"></i> <span>Events</span></a></li>
-          <li><a href="/videos"><i class="fa fa-play"></i> <span>Videos</span></a></li>
-          <li><a href="/userManagement"><i class="fa fa-user"></i> <span>User Management</span></a>
+          <li><a href="<c:url value="/getArticles"/>"><i class="fa fa-list-alt"></i> <span>Articles</span></a></li>
+          <li class="active"><a href="<c:url value="/events"/>"><i class="fa fa-calendar"></i> <span>Events</span></a></li>
+          <li><a href="<c:url value="/videos"/>"><i class="fa fa-play"></i> <span>Videos</span></a></li>
+          <li><a href="<c:url value="/userManagement"/>"><i class="fa fa-user"></i> <span>User Management</span></a>
           </li>
-          <li><a href="/donationList"><i class="fa fa-user"></i> <span>Donations</span></a></li>
+          <li><a href="<c:url value="/donationList"/>"><i class="fa fa-user"></i> <span>Donations</span></a></li>
         </ul>
       </section>
     </aside>
@@ -156,21 +160,19 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
   <jsp:include page="addEvent.jsp"></jsp:include>
   <!-- REQUIRED JS SCRIPTS -->
-  <!-- jQuery 3 -->
-  <script src="lib/jquery/jquery.min.js"></script>
   <!-- Bootstrap 3.3.7 -->
-  <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+  <script src="<c:url value="/resources/lib/bootstrap/js/bootstrap.min.js"/>"></script>
   <!-- Data table -->
-  <script src="lib/data-tables/js/datatables.min.js"></script>
+  <script src="<c:url value="/resources/lib/data-tables/js/datatables.min.js"/>"></script>
   
      <!-- sweetalert  -->
-  <script src="lib/sweetalert/sweetalert.min.js"></script>
+  <script src="<c:url value="/resources/lib/sweetalert/sweetalert.min.js"/>"></script>
   <!-- AdminLTE App -->
-  <script src="js/adminlte.js"></script>
+  <script src="<c:url value="/resources/js/adminlte.js"/>"></script>
   <!-- AdminLTE App -->
-  <script src="js/custom.js"></script>
-  <script src="js/event.js"></script>
- 
+  <script src="<c:url value="/resources/js/custom.js"/>"></script>
+  <script src="<c:url value="/resources/js/event.js"/>"></script>
+  
 </body>
 
 </html>

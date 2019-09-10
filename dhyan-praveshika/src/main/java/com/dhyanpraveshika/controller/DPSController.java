@@ -40,7 +40,7 @@ import com.dhyanpraveshika.service.DonationService;
 import com.dhyanpraveshika.service.EventService;
 
 @Controller
-@RequestMapping("/")
+
 public class DPSController {
 	
 	private String addArticle = "";
@@ -89,12 +89,12 @@ public class DPSController {
 	}
 
 	
-	@RequestMapping("login")
+	@RequestMapping("/login")
 	public String showLoginPage() {
 		return "login";
 	}
 
-	@PostMapping("home")
+	@PostMapping("/home")
 	public String home(HttpServletRequest request, ModelMap model) {
 		logger.info("fetching user details{}");
 
@@ -114,7 +114,7 @@ public class DPSController {
 		}
 
 	}
-	@RequestMapping("getArticles")
+	@RequestMapping("/getArticles")
 	public String getArticles(HttpServletRequest request, ModelMap model) {
 
 		logger.info("at getArticles");
@@ -123,7 +123,7 @@ public class DPSController {
 	}
 
 
-	@RequestMapping("videos")
+	@RequestMapping("/videos")
 	public String VideosContrller() {
 		logger.info("at VideosContrller");
 		return "videos";
@@ -133,7 +133,7 @@ public class DPSController {
 
 	
 	
-	@RequestMapping("userManagement")
+	@RequestMapping("/userManagement")
 	public String userManagementContrller() {
 		logger.info("at userManagementContrller");
 		return "userManagement";
@@ -146,16 +146,15 @@ public class DPSController {
 
 	}
 
-	@RequestMapping("events")
+	@RequestMapping("/events")
 	public String events() {
 
 		logger.info("at events");
 		return "events";
 	}
 	
-	@ResponseBody
-	@GetMapping("getBlogs")
-	
+
+	@GetMapping("/getBlogs")
 	public ResponseEntity<List<Blog>> getBlogs(HttpServletResponse res)
 	{
 		logger.info("fetching blog list at controller");
@@ -331,7 +330,7 @@ public class DPSController {
 	@GetMapping("/isArticleAdd")
 	public String getAddArticleResult()
 	{
-		logger.info("at controller addArticle : {},",addArticle);
+		logger.info("at controller addArticle : {}",addArticle);
 		return addArticle;
 	}
 	@ResponseBody
@@ -343,7 +342,7 @@ public class DPSController {
 	}
 	
 	
-	@ResponseBody
+	//@ResponseBody
 	@GetMapping("/isVideoAdd")
 	public String getAddVideousResult()
 	{

@@ -1,0 +1,19 @@
+/*Data table CSS*/
+.dataTable thead tr {
+  background-color: #222d32;
+  color: #fff;
+}
+.dataTable thead tr th{
+  border-color: rgba(255,255,255,0.2) !important;
+}
+.dataTables_filter input[type="search"]{
+  border: 1px solid #999;
+}
+.tblBtn {
+  border-radius: 50%;
+  padding: 0;
+  height: 25px;
+  width: 25px;
+  margin: 0 2px;
+  line-height: 25px;
+}

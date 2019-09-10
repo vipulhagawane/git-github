@@ -11,7 +11,6 @@
   <link rel='shortcut icon' type='image/x-icon' href='img/favicon.ico' />
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-  <script src="<c:url value="/resources/js/videoes.js"/>"></script>
   <link rel="stylesheet" href="<c:url value="/resources/lib/bootstrap/css/bootstrap.min.css"/>">
   <!-- Font Awesome -->
   <link rel="stylesheet" href="<c:url value="/resources/lib/font-awesome/css/font-awesome.min.css"/>">
@@ -64,6 +63,5 @@
           </ul>        </div>
       </nav>
     </header>
-<script src="<c:url value="/resources/js/session.js"/>"></script>
 </body>
 </html>
