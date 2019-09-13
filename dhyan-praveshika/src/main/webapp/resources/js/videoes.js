@@ -2,7 +2,7 @@ $(document).ready(function () {
 	
 	 $.ajax({
 		   
-		    url: "/isVideoAdd",
+		    url: "/dhyanpraveshika-web/isVideoAdd",
 		   
 		    success: function(data){
 		    
@@ -35,7 +35,7 @@ $(document).ready(function () {
  $('#videoes').DataTable({
 	 
 	  ajax : {
-		  url : '/getVideoes',
+		  url : '/dhyanpraveshika-web/getVideoes',
 			  dataSrc : ''
 	  },
 	  columns:[
@@ -76,7 +76,7 @@ function deleteRow(id){
 		.then((willDelete) => {
 		  if (willDelete) {
 			  
-				$.ajax("/deleteVideo?id="+id,   // request url
+				$.ajax("/dhyanpraveshika-web/deleteVideo?id="+id,   // request url
 					    {
 					        success: function () {
 					        	swal("Record has been deleted!", {
@@ -100,7 +100,7 @@ function getRowID(id){
 	 //alert("hiii");
 	$.ajax({
 		 type : 'GET',
-       url : "/getVideos?id="+id,
+       url : "/dhyanpraveshika-web/getVideos?id="+id,
        
        success : function(data) {
            //alert(JSON.stringify(data.id));

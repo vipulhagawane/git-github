@@ -37,7 +37,7 @@ $('#article').DataTable({
 		  {title : 'Created By' , data : 'author'},
 		  {title : 'Category' , data : 'category'},
 		  {title : 'Actions' , data : 'id', "render": function (data) {
-              return "<a class='btn btn-info tblBtn' onclick='getArticle("+data+")'><i class='fa fa-pencil'></i></a><a class='btn btn-warning tblBtn' href='/viewArticle?id="+data+"'><i class='fa fa-eye'></i></a><a class='btn btn-danger tblBtn' onclick='deleteArticle("+data+")'><i class='fa fa-trash'></i></a>"}
+              return "<a class='btn btn-info tblBtn' onclick='getArticle("+data+")'><i class='fa fa-pencil'></i></a><a class='btn btn-warning tblBtn' href='/dhyanpraveshika-web/viewArticle?id="+data+"'><i class='fa fa-eye'></i></a><a class='btn btn-danger tblBtn' onclick='deleteArticle("+data+")'><i class='fa fa-trash'></i></a>"}
                       
 		  }
 	  ]

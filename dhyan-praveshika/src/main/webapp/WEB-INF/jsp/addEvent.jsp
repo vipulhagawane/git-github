@@ -13,7 +13,7 @@ if ( window.history.replaceState ) {
 
       <!-- Modal content-->
       <div class="modal-content">
-        <form action="/addEvent"  method="post" enctype="multipart/form-data">
+        <form action="/dhyanpraveshika-web/addEvent"  method="post" enctype="multipart/form-data">
         <input type="hidden" id="id" name="id">
           <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal">&times;</button>

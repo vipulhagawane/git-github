@@ -4,7 +4,7 @@ $(document).ready(function () {
 $('#users').DataTable({
 	  
 	  ajax : {
-		  url : '/getUsers',
+		  url : '/dhyanpraveshika-web/getUsers',
 			  dataSrc : ''
 	  },
 	  columns:[
@@ -22,7 +22,7 @@ $('#users').DataTable({
 $('#donations').DataTable({
 	  
 	  ajax : {
-		  url : '/getDonations',
+		  url : '/dhyanpraveshika-web/getDonations',
 			  dataSrc : ''
 	  },
 	  columns:[

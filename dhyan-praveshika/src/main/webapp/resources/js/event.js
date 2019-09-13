@@ -30,7 +30,7 @@ $(document).ready(function () {
 		 }
 	    },
 	    error: function(){      
-	     alert('Error while request..');
+	     alert('Error while isEventAdd..');
 	    }
 	   });
   

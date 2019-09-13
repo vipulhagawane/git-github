@@ -6,12 +6,13 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <html>
 
 <head>
+<script src="<c:url value="/resources/lib/jquery/jquery.min.js" />"></script>
  <jsp:include page="header.jsp"></jsp:include>
 
 </head>
 
 <body class="hold-transition skin-blue fixed sidebar-mini">
-<<!-- div class="wrapper">
+<!-- div class="wrapper">
     Main Header
     <header class="main-header">
       Logo
@@ -104,7 +105,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
               <tfoot>
                 <tr>
                   <td colspan="4" class="text-right"><b>Total</b></td>
-                  <td>$20000</td>
+                 <!--  <td>$20000</td> -->
                 </tr>
               </tfoot>
             </table>
@@ -130,19 +131,19 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <!-- Add the sidebar's background. This div must be placed
   immediately after the control sidebar -->
     <div class="control-sidebar-bg"></div>
-  </div>
+  
   <!-- ./wrapper -->
   <!-- REQUIRED JS SCRIPTS -->
   <!-- jQuery 3 -->
-  <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+  <script src="<c:url value="http://code.jquery.com/jquery-1.11.1.min.js"/>"></script>
   <!-- Bootstrap 3.3.7 -->
-  <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+  <script src="<c:url value="/resources/lib/bootstrap/js/bootstrap.min.js"/>"></script>
   <!-- Data table -->
-  <script src="lib/data-tables/js/datatables.min.js"></script>
+  <script src="<c:url value="/resources/js/datatables.min.js"/>"></script>
   <!-- AdminLTE App -->
-  <script src="js/adminlte.js"></script>
+  <script src="<c:url value="/resources/js/adminlte.js"/>"></script>
   <!-- AdminLTE App -->
-  <script src="js/custom.js"></script>
+  <script src="<c:url value="/resources/js/custom.js"/>"></script>
 </body>
 
 </html>

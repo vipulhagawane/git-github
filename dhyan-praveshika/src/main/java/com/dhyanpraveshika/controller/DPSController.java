@@ -40,7 +40,6 @@ import com.dhyanpraveshika.service.DonationService;
 import com.dhyanpraveshika.service.EventService;
 
 @Controller
-
 public class DPSController {
 	
 	private String addArticle = "";
@@ -89,7 +88,7 @@ public class DPSController {
 	}
 
 	
-	@RequestMapping("/login")
+	@RequestMapping("/")
 	public String showLoginPage() {
 		return "login";
 	}
@@ -139,7 +138,7 @@ public class DPSController {
 		return "userManagement";
 	}
 
-	@RequestMapping("/donationList")
+	@GetMapping("/donationList")
 	public String donationListContrller() {
 		logger.info("at donationList");
 		return "donationList";
@@ -222,6 +221,7 @@ public class DPSController {
 		return "videos";
 	}
 	
+	@ResponseBody
 	@GetMapping("/getUsers")
 	public ResponseEntity<List<User>> getUsers(HttpServletResponse res)
 	{
@@ -231,6 +231,7 @@ public class DPSController {
 		return new ResponseEntity<List<User>>(users,HttpStatus.OK);
 	}
 	
+	@ResponseBody
 	@GetMapping("/getVideoes")
 	public ResponseEntity<List<DPSVideo>> getVideoes(HttpServletResponse res)
 	{
@@ -269,7 +270,7 @@ public class DPSController {
 	}
 	
 	@ResponseBody
-	@RequestMapping("/getVideos")
+	@GetMapping("/getVideo")
 	public VideosDTO getVideo(HttpServletRequest request)
 	{
 		logger.info("at controller getVideo:");
@@ -330,24 +331,23 @@ public class DPSController {
 	@GetMapping("/isArticleAdd")
 	public String getAddArticleResult()
 	{
-		logger.info("at controller addArticle : {}",addArticle);
+		logger.info("at controller isArticleAdd : {}",addArticle);
 		return addArticle;
 	}
 	@ResponseBody
 	@GetMapping("/isEventAdd")
 	public String getAddEventResult()
 	{
-		logger.info("at controller addArticle : {},",addArticle);
+		logger.info("at controller isEventAdd : {}",addEvent);
 		return addEvent;
 	}
 	
 	
-	//@ResponseBody
+	@ResponseBody
 	@GetMapping("/isVideoAdd")
 	public String getAddVideousResult()
 	{
-		logger.info("at controller addArticle");
-		
+		logger.info("at controller isVideoAdd :{}",addVideo);
 		return addVideo;
 	}
 	
