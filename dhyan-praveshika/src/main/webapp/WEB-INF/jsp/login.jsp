@@ -1,9 +1,20 @@
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%
+response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate");
+response.setHeader("This-Header-Is-Set", "no-cache, no-store, must-revalidate");
+response.setHeader("Pragma", "no-cache");
+response.setHeader("Expires", "0");
+%>
 
 <!DOCTYPE html>
 <html>
 
 <head>
+<meta http-equiv="Cache-control" content="no-cache, no-store, must-revalidate"/>
+<meta http-equiv="This-Header-Is-Set" content="no-cache, no-store, must-revalidate"/>
+<meta http-equiv="Pragma" content="no-cache"/>
+<meta http-equiv="Expires" content="0"/>
+
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <link rel='shortcut icon' type='image/x-icon' href="<c:url value="/resources/img/favicon.ico" />">

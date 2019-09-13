@@ -5,7 +5,18 @@
 This is a starter template page. Use this page to start your new project from
 scratch. This page gets rid of all links and provides the needed markup only.
 -->
+<%
+response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate");
+response.setHeader("This-Header-Is-Set", "no-cache, no-store, must-revalidate");
+response.setHeader("Pragma", "no-cache");
+response.setHeader("Expires", "0");
+%>
+
 <html>
+<meta http-equiv="Cache-control" content="no-cache, no-store, must-revalidate"/>
+<meta http-equiv="This-Header-Is-Set" content="no-cache, no-store, must-revalidate"/>
+<meta http-equiv="Pragma" content="no-cache"/>
+<meta http-equiv="Expires" content="0"/>
 
 <head>
 <script src="<c:url value="/resources/lib/jquery/jquery.min.js" />"></script>

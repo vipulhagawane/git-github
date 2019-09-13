@@ -1,12 +1,24 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
+<%
+response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate");
+response.setHeader("This-Header-Is-Set", "no-cache, no-store, must-revalidate");
+response.setHeader("Pragma", "no-cache");
+response.setHeader("Expires", "0");
+%>
 <!DOCTYPE html>
 <html>
 
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  
+  <meta http-equiv="Cache-control" content="no-cache, no-store, must-revalidate"/>
+<meta http-equiv="This-Header-Is-Set" content="no-cache, no-store, must-revalidate"/>
+<meta http-equiv="Pragma" content="no-cache"/>
+<meta http-equiv="Expires" content="0"/>
   <title>Dhyan Praveshika | Articles</title>
   <link rel='shortcut icon' type='image/x-icon' href='img/favicon.ico' />
   <!-- Tell the browser to be responsive to screen width -->
@@ -55,7 +67,7 @@
         <div class="navbar-custom-menu">
           <ul class="nav navbar-nav">
             <li>
-              <a href="/signOut">
+              <a href="/dhyanpraveshika-web/signOut">
                 <i class="fa fa-sign-out" aria-hidden="true"></i>
                 Sign out
               </a>

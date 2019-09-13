@@ -21,7 +21,7 @@ function signOut()
 	alert("signOut");
 	$.ajax({
 		
-        url : '/signOut',
+        url : '/dhyanpraveshika-web/signOut',
 	 });
 
 }
