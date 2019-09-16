@@ -1,11 +1,11 @@
 $(document).ready(function () {
-  $('#example').DataTable();
+  
   //Editor
   
   
   $.ajax({
 	    type: "get",
-	    url: "/dhyanpraveshika-web/isEventAdd",
+	    url: '/dhyanpraveshika-web/isEventAdd',
 	   
 	    success: function(data){
 	    
@@ -130,6 +130,16 @@ function deleteevent(id){
 		  }
 		});
 		
+}
+
+function signOut()
+{
+	alert("signOut");
+	$.ajax({
+		
+        url : '/dhyanpraveshika-web/signOut',
+	 });
+
 }
 
 

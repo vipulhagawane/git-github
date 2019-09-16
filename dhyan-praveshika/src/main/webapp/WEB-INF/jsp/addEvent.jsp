@@ -71,7 +71,7 @@ if ( window.history.replaceState ) {
             <input type="submit" class="btn btn-primary" value = "Save"/>
             <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
           </div>
-             <script src="js/article.js"></script>
+             
         </form>
       </div>
     </div>

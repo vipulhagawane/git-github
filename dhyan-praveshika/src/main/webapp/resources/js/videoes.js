@@ -2,7 +2,7 @@ $(document).ready(function () {
 	
 	 $.ajax({
 		   
-		    url: "/dhyanpraveshika-web/isVideoAdd",
+		    url: '/dhyanpraveshika-web/isVideoAdd',
 		   
 		    success: function(data){
 		    

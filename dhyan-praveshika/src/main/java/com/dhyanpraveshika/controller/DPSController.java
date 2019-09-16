@@ -113,7 +113,7 @@ public class DPSController {
 		}
 
 	}
-	@RequestMapping("/getArticles")
+	@GetMapping("/getArticles")
 	public String getArticles(HttpServletRequest request, ModelMap model) {
 
 		logger.info("at getArticles");
@@ -122,7 +122,7 @@ public class DPSController {
 	}
 
 
-	@RequestMapping("/videos")
+	@GetMapping("/videos")
 	public String VideosContrller() {
 		logger.info("at VideosContrller");
 		return "videos";

@@ -2,7 +2,7 @@ $(document).ready(function () {
 
 	$.ajax({
     type: "get",
-    url: "/dhyanpraveshika-web/isArticleAdd",
+    url: '/dhyanpraveshika-web/isArticleAdd',
     dataSrc : '',
     success: function(data){
      if(data == "")
@@ -148,3 +148,12 @@ function saveForm1(id){
 		});
 		
 }
+/*function getArticles()
+{
+	alert("getArticles");
+	$.ajax({
+		
+        url : '/dhyanpraveshika-web/getArticles',
+	 });
+
+}*/

@@ -1,11 +1,7 @@
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%-- <jsp:include page="session.jsp"></jsp:include> --%>
+ <jsp:include page="session.jsp"></jsp:include> 
 
-<%
-response.setHeader("Cache-Control","no-cache"); //HTTP 1.1
-response.setHeader("Pragma","no-cache"); //HTTP 1.0
-response.setDateHeader ("Expires", 0); //prevents caching at the proxy server
-%>
+
 <!DOCTYPE html>
 <!--
 This is a starter template page. Use this page to start your new project from
@@ -20,36 +16,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 </head>
 
 <body class="hold-transition skin-blue fixed sidebar-mini">
- <!--  <div class="wrapper">
-    Main Header
-    <header class="main-header">
-      Logo
-      <a href="index2.html" class="logo">
-        mini logo for sidebar mini 50x50 pixels
-        <span class="logo-mini"><img src="img/dhyanPraveshikaIcon.png"></span>
-        logo for regular state and mobile devices
-        <span class="logo-lg"><img src="img/dhyanPraveshikaIcon.png"> Dhyan Praveshika</span>
-      </a>
 
-      Header Navbar
-      <nav class="navbar navbar-static-top" role="navigation">
-        Sidebar toggle button
-        <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
-          <span class="sr-only">Toggle navigation</span>
-        </a>
-        Navbar Right Menu
-        <div class="navbar-custom-menu">
-          <ul class="nav navbar-nav">
-            <li>
-              <a href="login.html">
-                <i class="fa fa-sign-out" aria-hidden="true"></i>
-                Sign out
-              </a>
-            </li>
-          </ul>
-        </div>
-      </nav>
-    </header> -->
     <!-- Left side column. contains the logo and sidebar -->
     <aside class="main-sidebar">
       <section class="sidebar">

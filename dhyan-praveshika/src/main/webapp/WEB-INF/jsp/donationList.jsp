@@ -41,7 +41,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
           <li><a href="<c:url value="/videos"/>"><i class="fa fa-play"></i> <span>Videos</span></a></li>
           <li><a href="<c:url value="/userManagement"/>"><i class="fa fa-user"></i> <span>User Management</span></a>
           </li>
-          <li class="active"><a href="<c:url value="/dhyanpraveshika-web/donationList"/>"><i class="fa fa-user"></i> <span>Donations</span></a></li>
+          <li class="active"><a href="<c:url value="/donationList"/>"><i class="fa fa-user"></i> <span>Donations</span></a></li>
         </ul>
       </section>
     </aside>

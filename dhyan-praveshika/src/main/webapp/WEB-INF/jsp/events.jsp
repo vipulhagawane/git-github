@@ -116,9 +116,11 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <!-- AdminLTE App -->
   <script src="<c:url value="/resources/js/adminlte.js"/>"></script>
   <!-- AdminLTE App -->
-  <script src="<c:url value="/resources/js/custom.js"/>"></script>
+  
+  <%-- <script src="<c:url value="/resources/js/custom.js"/>"></script> --%>
   <script src="<c:url value="/resources/js/event.js"/>"></script>
-  <script src="<c:url value="/resources/js/article.js"/>"></script>
+  
+  <%-- <script src="<c:url value="/resources/js/article.js"/>"></script> --%>
 </body>
 
 </html>
