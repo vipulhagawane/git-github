@@ -1,3 +1,5 @@
+
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <!--
 This is a starter template page. Use this page to start your new project from
@@ -22,11 +24,11 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
         <ul class="sidebar-menu" data-widget="tree">
           <li class="header">Menu</li>
-          <li class="active"><a href="/getArticles"><i class="fa fa-list-alt"></i> <span>Articles</span></a></li>
-          <li><a href="events.html"><i class="fa fa-calendar"></i> <span>Events</span></a></li>
-          <li><a href="/videos"><i class="fa fa-play"></i> <span>Videos</span></a></li>
-          <li><a href="/userManagement"><i class="fa fa-user"></i> <span>User Management</span></a></li>
-          <li><a href="/donationList"><i class="fa fa-user"></i> <span>Donations</span></a></li>
+          <li class="active"><a href="<c:url value="/getArticles"/>"><i class="fa fa-list-alt"></i> <span>Articles</span></a></li>
+          <li><a  href="<c:url value="/events.html"/>"><i class="fa fa-calendar"></i> <span>Events</span></a></li>
+          <li><a  href="<c:url value="/videos"/>"><i class="fa fa-play"></i> <span>Videos</span></a></li>
+          <li><a  href="<c:url value="/userManagement"/>"><i class="fa fa-user"></i> <span>User Management</span></a></li>
+          <li><a  href="<c:url value="/donationList"/>"><i class="fa fa-user"></i> <span>Donations</span></a></li>
         </ul>
       </section>
     </aside>

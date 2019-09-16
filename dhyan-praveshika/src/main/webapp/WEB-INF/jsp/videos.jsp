@@ -1,5 +1,11 @@
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<jsp:include page="session.jsp"></jsp:include>
+<%-- <jsp:include page="session.jsp"></jsp:include> --%>
+
+<%
+response.setHeader("Cache-Control","no-cache"); //HTTP 1.1
+response.setHeader("Pragma","no-cache"); //HTTP 1.0
+response.setDateHeader ("Expires", 0); //prevents caching at the proxy server
+%>
 <!DOCTYPE html>
 <!--
 This is a starter template page. Use this page to start your new project from

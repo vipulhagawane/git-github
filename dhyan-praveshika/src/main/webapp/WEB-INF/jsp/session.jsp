@@ -1,4 +1,4 @@
-<%@page import="org.slf4j.Logger"%>
+<%-- <%@page import="org.slf4j.Logger"%>
 <%@page import="org.slf4j.LoggerFactory"%>
 <head>
 <script>
@@ -21,4 +21,4 @@ if ( window.history.replaceState ) {
 	}
 	
 
-%>
+%> --%>

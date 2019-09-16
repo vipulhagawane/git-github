@@ -1,5 +1,6 @@
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<jsp:include page="session.jsp"></jsp:include>
+
+<%-- <jsp:include page="session.jsp"></jsp:include> --%>
 <!DOCTYPE html>
 <!--
 This is a starter template page. Use this page to start your new project from
@@ -40,11 +41,11 @@ response.setHeader("Expires", "0");
 
         <ul class="sidebar-menu" data-widget="tree">
           <li class="header">Menu</li>
-          <li class="active"><a href="/dhyanpraveshika-web/getArticles"><i class="fa fa-list-alt"></i> <span>Articles</span></a></li>
-          <li><a href="/dhyanpraveshika-web/events"><i class="fa fa-calendar"></i> <span>Events</span></a></li>
-          <li><a href="/dhyanpraveshika-web/videos"><i class="fa fa-play"></i> <span>Videos</span></a></li>
-          <li><a href="/dhyanpraveshika-web/userManagement"><i class="fa fa-user"></i> <span>User Management</span></a></li>
-          <li><a href="/dhyanpraveshika-web/donationList"><i class="fa fa-user"></i> <span>Donations</span></a></li>
+          <li class="active"><a  href="<c:url value="/getArticles"/>"><i class="fa fa-list-alt"></i> <span>Articles</span></a></li>
+          <li><a  href="<c:url value="/events"/>"><i class="fa fa-calendar"></i> <span>Events</span></a></li>
+          <li><a  href="<c:url value="/videos"/>"><i class="fa fa-play"></i> <span>Videos</span></a></li>
+          <li><a  href="<c:url value="/userManagement"/>"><i class="fa fa-user"></i> <span>User Management</span></a></li>
+          <li><a  href="<c:url value="/donationList"/>"><i class="fa fa-user"></i> <span>Donations</span></a></li>
         </ul>
       </section>
     </aside>

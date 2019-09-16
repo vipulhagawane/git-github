@@ -13,36 +13,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 </head>
 
 <body class="hold-transition skin-blue fixed sidebar-mini">
-  <!-- <div class="wrapper">
-    Main Header
-    <header class="main-header">
-      Logo
-      <a href="index2.html" class="logo">
-        mini logo for sidebar mini 50x50 pixels
-        <span class="logo-mini"><img src="img/dhyanPraveshikaIcon.png"></span>
-        logo for regular state and mobile devices
-        <span class="logo-lg"><img src="img/dhyanPraveshikaIcon.png"> Dhyan Praveshika</span>
-      </a>
-
-      Header Navbar
-      <nav class="navbar navbar-static-top" role="navigation">
-        Sidebar toggle button
-        <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
-          <span class="sr-only">Toggle navigation</span>
-        </a>
-        Navbar Right Menu
-        <div class="navbar-custom-menu">
-          <ul class="nav navbar-nav">
-            <li>
-              <a href="/login">
-                <i class="fa fa-sign-out" aria-hidden="true"></i>
-                Sign out
-              </a>
-            </li>
-          </ul>
-        </div>
-      </nav>
-    </header> -->
+ 
     <!-- Left side column. contains the logo and sidebar -->
     <aside class="main-sidebar">
       <section class="sidebar">
@@ -70,7 +41,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
           <li><a href="<c:url value="/videos"/>"><i class="fa fa-play"></i> <span>Videos</span></a></li>
           <li><a href="<c:url value="/userManagement"/>"><i class="fa fa-user"></i> <span>User Management</span></a>
           </li>
-          <li class="active"><a href="/dhyanpraveshika-web/donationList"><i class="fa fa-user"></i> <span>Donations</span></a></li>
+          <li class="active"><a href="<c:url value="/dhyanpraveshika-web/donationList"/>"><i class="fa fa-user"></i> <span>Donations</span></a></li>
         </ul>
       </section>
     </aside>
