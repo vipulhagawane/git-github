@@ -1,8 +1,8 @@
-<script>
+<!-- <script>
 if ( window.history.replaceState ) {
   window.history.replaceState( null, null, '/videos' );
 }
-</script>
+</script> -->
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 

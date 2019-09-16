@@ -13,7 +13,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
-import org.springframework.web.bind.annotation.CrossOrigin;
+
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -79,7 +79,7 @@ public class DPSController {
 		session.setAttribute("loggedInUser", user);
 	}
 
-	@ResponseBody
+	
 	@GetMapping("getSessionData")
 	public String getSessionData() {
 		logger.debug("session = {}", session.getAttribute("loggedInUser"));
@@ -221,7 +221,7 @@ public class DPSController {
 		return "videos";
 	}
 	
-	@ResponseBody
+	
 	@GetMapping("/getUsers")
 	public ResponseEntity<List<User>> getUsers(HttpServletResponse res)
 	{
@@ -231,7 +231,7 @@ public class DPSController {
 		return new ResponseEntity<List<User>>(users,HttpStatus.OK);
 	}
 	
-	@ResponseBody
+	
 	@GetMapping("/getVideoes")
 	public ResponseEntity<List<DPSVideo>> getVideoes(HttpServletResponse res)
 	{
@@ -259,7 +259,7 @@ public class DPSController {
 		return new ResponseEntity<List<DPSEvent>>(events,HttpStatus.OK);
 	}
 	
-	@ResponseBody
+	
 	@RequestMapping("/getArticle")
 	public BlogDTO getArticle(HttpServletRequest request)
 	{
@@ -269,7 +269,7 @@ public class DPSController {
 		return blogDto;
 	}
 	
-	@ResponseBody
+	
 	@GetMapping("/getVideo")
 	public VideosDTO getVideo(HttpServletRequest request)
 	{
@@ -283,7 +283,7 @@ public class DPSController {
 	
 	
 	
-	@ResponseBody
+	
 	@RequestMapping("/getEvent")
 	public EventDTO getEvent(HttpServletRequest request)
 	{
@@ -327,14 +327,14 @@ public class DPSController {
 	
 //vipul
 	
-	@ResponseBody
+	
 	@GetMapping("/isArticleAdd")
 	public String getAddArticleResult()
 	{
 		logger.info("at controller isArticleAdd : {}",addArticle);
 		return addArticle;
 	}
-	@ResponseBody
+	
 	@GetMapping("/isEventAdd")
 	public String getAddEventResult()
 	{
@@ -343,7 +343,7 @@ public class DPSController {
 	}
 	
 	
-	@ResponseBody
+	
 	@GetMapping("/isVideoAdd")
 	public String getAddVideousResult()
 	{

@@ -30,7 +30,7 @@ $(document).ready(function () {
 		 }
 	    },
 	    error: function(){      
-	     alert('Error while isEventAdd..');
+	     //alert('Error while isEventAdd..');
 	    }
 	   });
   
@@ -132,12 +132,12 @@ function deleteevent(id){
 		
 }
 
-function signOut()
+function events()
 {
-	alert("signOut");
+	//alert("events");
 	$.ajax({
 		
-        url : '/dhyanpraveshika-web/signOut',
+        url : '/dhyanpraveshika-web/events',
 	 });
 
 }
