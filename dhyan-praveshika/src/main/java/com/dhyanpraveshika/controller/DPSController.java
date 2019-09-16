@@ -145,7 +145,7 @@ public class DPSController {
 
 	}
 
-	@RequestMapping("/events")
+	@GetMapping("/events")
 	public String events() {
 
 		logger.info("at events");
@@ -250,6 +250,7 @@ public class DPSController {
 		return new ResponseEntity<List<Donation>>(donations,HttpStatus.OK);
 	}
 	
+	
 	@GetMapping("/getEvents")
 	public ResponseEntity<List<DPSEvent>> getEvents(HttpServletResponse res)
 	{
@@ -259,7 +260,7 @@ public class DPSController {
 		return new ResponseEntity<List<DPSEvent>>(events,HttpStatus.OK);
 	}
 	
-	
+	@ResponseBody
 	@RequestMapping("/getArticle")
 	public BlogDTO getArticle(HttpServletRequest request)
 	{
@@ -269,7 +270,7 @@ public class DPSController {
 		return blogDto;
 	}
 	
-	
+	@ResponseBody
 	@GetMapping("/getVideo")
 	public VideosDTO getVideo(HttpServletRequest request)
 	{
@@ -283,7 +284,7 @@ public class DPSController {
 	
 	
 	
-	
+	@ResponseBody
 	@RequestMapping("/getEvent")
 	public EventDTO getEvent(HttpServletRequest request)
 	{
@@ -327,14 +328,14 @@ public class DPSController {
 	
 //vipul
 	
-	
+	@ResponseBody
 	@GetMapping("/isArticleAdd")
 	public String getAddArticleResult()
 	{
 		logger.info("at controller isArticleAdd : {}",addArticle);
 		return addArticle;
 	}
-	
+	@ResponseBody
 	@GetMapping("/isEventAdd")
 	public String getAddEventResult()
 	{
@@ -343,13 +344,14 @@ public class DPSController {
 	}
 	
 	
-	
+	@ResponseBody
 	@GetMapping("/isVideoAdd")
 	public String getAddVideousResult()
 	{
 		logger.info("at controller isVideoAdd :{}",addVideo);
 		return addVideo;
 	}
+	
 	
 	@GetMapping("/viewArticle")
 	public ModelAndView viewArticle(HttpServletRequest request) {

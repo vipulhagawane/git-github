@@ -1,6 +1,6 @@
 <script>
 if ( window.history.replaceState ) {
-  window.history.replaceState( null, null, '/getArticles' );
+  window.history.replaceState( null, null, '/dhyanpraveshika-web/getArticles' );
 }
 </script>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"

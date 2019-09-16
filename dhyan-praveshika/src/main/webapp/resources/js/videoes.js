@@ -100,7 +100,7 @@ function getRowID(id){
 	 //alert("hiii");
 	$.ajax({
 		 type : 'GET',
-       url : "/dhyanpraveshika-web/getVideos?id="+id,
+       url : "/dhyanpraveshika-web/getVideo?id="+id,
        
        success : function(data) {
            //alert(JSON.stringify(data.id));
