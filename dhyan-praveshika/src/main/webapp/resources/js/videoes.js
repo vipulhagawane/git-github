@@ -13,7 +13,7 @@ $(document).ready(function () {
 		    	 }
 		     else if(data == "success")
 		    	 {
-		    	 swal("Article has been added!", {
+		    	 swal("Video has been added!", {
 		 			  icon: "success",
 		 			});
 		       	

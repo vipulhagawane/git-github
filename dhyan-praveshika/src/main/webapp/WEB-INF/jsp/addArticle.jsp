@@ -26,7 +26,7 @@ if ( window.history.replaceState ) {
               <input id="articleTital" type="text"  id="articleTital" name="articleTital" class="form-control" required="required">
             </div>
             
-            <img class="img-thumbnail" id="image"  style="display:none"/>
+            <img class="img-responsive" id="image"  style="display:none"/>
             
             <div class="form-group">
               <label>Article Image</label>
@@ -57,7 +57,8 @@ if ( window.history.replaceState ) {
             </div>
 	</div>
           <div class="modal-footer">
-            <input type="submit" class="btn btn-primary" value = "Save"/>
+          <!-- <input type="button"  data-dismiss="modal"/> -->
+            <button type="submit" class="btn btn-primary" >Save</button>
             <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
           </div>
         </form>

@@ -1,12 +1,5 @@
  <%@page import="org.slf4j.Logger"%>
 <%@page import="org.slf4j.LoggerFactory"%>
-<head>
-<script>
-if ( window.history.replaceState ) {
-  window.history.replaceState( null, null, '/login' );
-}
-</script>
-</head>
 <% 
 	Logger logger = LoggerFactory.getLogger(this.getClass());
 	HttpSession currentSession = request.getSession(false);

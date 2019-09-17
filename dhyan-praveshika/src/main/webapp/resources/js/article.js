@@ -51,7 +51,11 @@ $('.modal').on('hidden.bs.modal', function (e) {
 	       .end()
 	    .find("input[type=checkbox], input[type=radio]")
 	       .prop("checked", "")
+	       .end()
+	       .find("img")
+	       .attr("src", "")
 	       .end();
+	  CKEDITOR.instances.editor12.setData('');
 	});
 
 $('#articleSelectImage').on('click', function () {
