@@ -132,15 +132,7 @@ function deleteevent(id){
 		
 }
 
-function events()
-{
-	//alert("events");
-	$.ajax({
-		
-        url : '/dhyanpraveshika-web/events',
-	 });
 
-}
 
 
 

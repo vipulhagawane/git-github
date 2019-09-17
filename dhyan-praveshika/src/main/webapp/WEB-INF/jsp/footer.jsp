@@ -6,5 +6,5 @@
         Developed by <a href="http://www.dahlia-tech.com/" target="_blank">Dahlia Technologies</a>
       </div>
       <!-- Default to the left -->
-      <strong>Copyright &copy; 2019 <a href="#">Dhyan Praveshika</a>.</strong> All rights reserved.
+      <strong>Copyright &copy; 2019 <a href="http://www.dhyanpraveshika.org/" target="_blank">Dhyan Praveshika</a>.</strong> All rights reserved.
     </footer>

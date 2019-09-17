@@ -148,12 +148,4 @@ function saveForm1(id){
 		});
 		
 }
-/*function getArticles()
-{
-	alert("getArticles");
-	$.ajax({
-		
-        url : '/dhyanpraveshika-web/getArticles',
-	 });
 
-}*/
