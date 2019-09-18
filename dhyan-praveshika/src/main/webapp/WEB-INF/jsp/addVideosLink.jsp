@@ -41,7 +41,7 @@ if ( window.history.replaceState ) {
           </div>
 
           <div class="modal-footer">
-            <input type="submit" class="btn btn-primary" value = "Save"/>
+            <button type="submit" class="btn btn-primary">Save</button>
             <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
           </div>
         </form>

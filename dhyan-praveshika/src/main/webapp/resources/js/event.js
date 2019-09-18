@@ -54,7 +54,7 @@ $(document).ready(function () {
 		  ]
 });
   
-  $('.modal').on('hidden.bs.modal', function (e) {
+ /* $('.modal').on('hidden.bs.modal', function (e) {
 	  $(this)
 	    .find("input,textarea,select")
 	       .val('')
@@ -62,6 +62,19 @@ $(document).ready(function () {
 	    .find("input[type=checkbox], input[type=radio]")
 	       .prop("checked", "")
 	       .end();
+	});*/
+  $('.modal').on('hidden.bs.modal', function (e) {
+	  $(this)
+	    .find("input,textarea,select,img")
+	       .val('')
+	       .end()
+	    .find("input[type=checkbox], input[type=radio]")
+	       .prop("checked", "")
+	       .end()
+	       .find("img")
+	       .attr("src", "")
+	       .end();
+	  CKEDITOR.instances.editor12.setData('');
 	});
   
   $('#eventSelectImage').on('click', function () {

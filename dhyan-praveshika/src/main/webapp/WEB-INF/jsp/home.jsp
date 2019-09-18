@@ -9,10 +9,6 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
 
 <html>
-<meta http-equiv="Cache-control" content="no-cache, no-store, must-revalidate"/>
-<meta http-equiv="This-Header-Is-Set" content="no-cache, no-store, must-revalidate"/>
-<meta http-equiv="Pragma" content="no-cache"/>
-<meta http-equiv="Expires" content="0"/>
 
 <head>
 <script src="<c:url value="/resources/lib/jquery/jquery.min.js" />"></script>
@@ -35,7 +31,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
         </div>
 
         <ul class="sidebar-menu" data-widget="tree">
-          <li class="header">Menu</li>
+          <li class="header">MENU</li>
           <li class="active"><a  href="<c:url value="/getArticles"/>"><i class="fa fa-list-alt"></i> <span>Articles</span></a></li>
           <li><a  href="<c:url value="/events"/>"><i class="fa fa-calendar"></i> <span>Events</span></a></li>
           <li><a  href="<c:url value="/videos"/>"><i class="fa fa-play"></i> <span>Videos</span></a></li>

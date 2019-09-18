@@ -142,6 +142,7 @@ public class BlogServiceImpl implements BlogService{
 			blogDto.setAuthor(Optional.ofNullable(blog.getAuthor()).orElse("unavailable"));
 			blogDto.setCategory(Optional.ofNullable(blog.getCategory()).orElse("unavailable"));
 			blogDto.setCreated_date(Optional.ofNullable(blog.getCreated_date()).orElse("unavailable"));
+			
 			logger.info("blogDto details :{}",blogDto.toString());
 			return blogDto;
 		}

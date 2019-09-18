@@ -51,7 +51,7 @@ response.setHeader("Expires", "0");
 		<div class="dispTblCell">
 			<div class="login-box">
 				<div class="login-logo">
-					<a href="../../index2.html"> <img src="<c:url value="/resources/img/logo.png"/>">
+					<a href="/dhyanpraveshika-web"> <img src="<c:url value="/resources/img/logo.png"/>">
 					</a>
 				</div>
 				<!-- /.login-logo -->

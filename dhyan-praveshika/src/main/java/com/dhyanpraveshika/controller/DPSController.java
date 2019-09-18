@@ -42,7 +42,7 @@ import com.dhyanpraveshika.service.EventService;
 @Controller
 public class DPSController {
 	
-	private String addArticle = "";
+	private String addArticle = new String();
 	private String addEvent="";
 	private String addVideo="";
 	private static final Logger logger = LoggerFactory.getLogger(DPSController.class);
@@ -117,7 +117,12 @@ public class DPSController {
 	public String getArticles(HttpServletRequest request, ModelMap model) {
 
 		logger.info("at getArticles");
-		addArticle = "";
+		/*
+		 * session.setAttribute("addArticle",null);
+		 * System.out.println("date+++"+session.getAttribute("addArticle"));
+		 */
+		addArticle = null;
+		logger.info("at getArticles:{}",addArticle);
 		return "home";
 	}
 
@@ -157,7 +162,12 @@ public class DPSController {
 	public ResponseEntity<List<Blog>> getBlogs(HttpServletResponse res)
 	{
 		logger.info("fetching blog list at controller");
-		addArticle = "";
+		/*
+		 * session.setAttribute("addArticle",null);
+		 * System.out.println("Blogs++++"+session.getAttribute("addArticle"));
+		 */
+		addArticle = null;
+		logger.info("at getBlogs:{}",addArticle);
 		List<Blog> blogs = blogService.getBlogs();
 		return new ResponseEntity<List<Blog>>(blogs,HttpStatus.OK);
 	}
@@ -170,12 +180,16 @@ public class DPSController {
 		
 		if(result == true)
 		{
-			addArticle = "success";
+			//session.setAttribute("addArticle","success");
+			addArticle = new String("success");
+			logger.info("at getBlogs:{}",addArticle);
 		}
 		
 		else
 		{
-			addArticle = "fail";
+			//session.setAttribute("addArticle","fail");
+			addArticle = new String("success");
+			logger.info("at getBlogs:{}",addArticle);
 		}
 		return "home";
 	}
@@ -332,6 +346,10 @@ public class DPSController {
 	@GetMapping("/isArticleAdd")
 	public String getAddArticleResult()
 	{
+		/*
+		 * String result = (String)session.getAttribute("addArticle");
+		 * System.out.println("isArticleAdd+++++++-----"+result);
+		 */
 		logger.info("at controller isArticleAdd : {}",addArticle);
 		return addArticle;
 	}

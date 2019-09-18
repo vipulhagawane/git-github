@@ -47,13 +47,15 @@ if ( window.history.replaceState ) {
             
             <div class="form-group">
               <label>Category</label>
-              <input type="text" id="category" name="category" class="form-control" required="required">
+              <input type="text" id="category" name="category" class="form-control" required>
             </div>
 
             <div class="form-group">
               <label>Article</label>
-              <textarea id="editor12" id="articleDescription" name="articleDescription" rows="10" cols="80">
+              <textarea id="editor12" id="articleDescription" name="articleDescription" rows="10" cols="80" required>
+              .
               </textarea>
+              <p class="error"></p>
             </div>
 	</div>
           <div class="modal-footer">
@@ -65,4 +67,25 @@ if ( window.history.replaceState ) {
       </div>
     </div>
   </div>
+  
+<!-- <script>
+CKEDITOR.replace("editor12")
+$('#event').validate({
+    rules:{
+        name:{
+            required: true
+        },  
+    },
+    messages:{
+        body:{
+            required: "event body is required"
+        }
+    },
+    errorPlacement: function(error, element){
+        $(element).each(function (){
+            $(this).parent('td').find('p.error').html(error);
+        })
+    });
+ 
+</script>  --> 
  

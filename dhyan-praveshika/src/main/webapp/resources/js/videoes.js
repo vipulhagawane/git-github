@@ -120,8 +120,9 @@ function getRowID(id){
 
 function openVideoUrl(event){
 	var selectedRow = event.target.closest('tr');
-	var VID_REGEX = /(?:youtube(?:-nocookie)?\.com\/(?:[^\/\n\s]+\/\S+\/|(?:v|e(?:mbed)?)\/|\S*?[?&]v=)|youtu\.be\/)([a-zA-Z0-9_-]{11})/;
-    var VideoId =  selectedRow.children[1].textContent.match(VID_REGEX)[1];
+	//var VID_REGEX = /(?:youtube(?:-nocookie)?\.com\/(?:[^\/\n\s]+\/\S+\/|(?:v|e(?:mbed)?)\/|\S*?[?&]v=)|youtu\.be\/)([a-zA-Z0-9_-]{11})/;
+	var VID_REGEX = /^.*(?:(?:youtu\.be\/|v\/|vi\/|u\/\w\/|embed\/)|(?:(?:watch)?\?v(?:i)?=|\&v(?:i)?=))([^#\&\?]*).*/
+	var VideoId =  selectedRow.children[1].textContent.match(VID_REGEX)[1];
 	
 	 window.open("https://www.youtube.com/embed/" + VideoId);
 }

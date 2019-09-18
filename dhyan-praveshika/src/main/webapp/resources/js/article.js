@@ -5,7 +5,8 @@ $(document).ready(function () {
     url: '/dhyanpraveshika-web/isArticleAdd',
     dataSrc : '',
     success: function(data){
-     if(data == "")
+    	alert(data);
+    if(data == null)
     	 {
     	 $('#article').DataTable().ajax.reload();
     	 }
@@ -152,4 +153,6 @@ function saveForm1(id){
 		});
 		
 }
+
+
 

@@ -19,7 +19,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
           </div>
         </div>
 
-        <form action="#" method="get" class="sidebar-form">
+       <!--  <form action="#" method="get" class="sidebar-form">
           <div class="input-group">
             <input type="text" name="q" class="form-control" placeholder="Search...">
             <span class="input-group-btn">
@@ -27,10 +27,10 @@ scratch. This page gets rid of all links and provides the needed markup only.
               </button>
             </span>
           </div>
-        </form>
+        </form> -->
 
         <ul class="sidebar-menu" data-widget="tree">
-          <li class="header">HEADER</li>
+          <li class="header">MENU</li>
           <li><a href="<c:url value="/getArticles"/>"><i class="fa fa-list-alt"></i> <span>Articles</span></a></li>
           <li><a href="<c:url value="/events"/>"><i class="fa fa-calendar"></i> <span>Events</span></a></li>
           <li><a href="<c:url value="/videos"/>"><i class="fa fa-play"></i> <span>Videos</span></a></li>
