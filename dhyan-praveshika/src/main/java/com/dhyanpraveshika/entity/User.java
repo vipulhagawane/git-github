@@ -45,6 +45,13 @@ public class User {
     
     @Column(name ="created_date")
     private String created_date;
+    
+    //new
+    @Column(name ="profile")
+    private String profile;
+    
+    @Column(name ="reg_type")
+    private String reg_type;
 
 	public Long getId() {
 		return id;
@@ -134,15 +141,31 @@ public class User {
 		this.created_date = created_date;
 	}
 
+	public String getProfile() {
+		return profile;
+	}
+
+	public void setProfile(String profile) {
+		this.profile = profile;
+	}
+
+	public String getReg_type() {
+		return reg_type;
+	}
+
+	public void setReg_type(String reg_type) {
+		this.reg_type = reg_type;
+	}
+
 	@Override
 	public String toString() {
 		return "User [id=" + id + ", full_name=" + full_name + ", phoneNo=" + phoneNo + ", age=" + age + ", email="
 				+ email + ", password=" + password + ", country=" + country + ", state=" + state + ", city=" + city
-				+ ", fcm_token=" + fcm_token + ", created_date=" + created_date + "]";
+				+ ", fcm_token=" + fcm_token + ", created_date=" + created_date + ", profile=" + profile + ", reg_type="
+				+ reg_type + "]";
 	}
-
-	
+   
     
-
+    
 	
 }

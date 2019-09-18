@@ -128,12 +128,12 @@ function openVideoUrl(event){
 
 	
 	
-	//var VideoId =  selectedRow.children[1].textContent.match(VID_REGEX)[1];
+	var VideoId =  selectedRow.children[1].textContent.match(VID_REGEX)[1];
 	
 	
 	
-	let VID_REGEX = /^(https?:\/\/)?((www\.)?(youtube(-nocookie)?|youtube.googleapis)\.com.*(v\/|v=|vi=|vi\/|e\/|embed\/|user\/.*\/u\/\d+\/)|youtu\.be\/)([_0-9a-z-]+)/i ;
-	let VideoId = selectedRow.children[1].textContent.match(VID_REGEX)[7];
+	//let VID_REGEX = /^(https?:\/\/)?((www\.)?(youtube(-nocookie)?|youtube.googleapis)\.com.*(v\/|v=|vi=|vi\/|e\/|embed\/|user\/.*\/u\/\d+\/)|youtu\.be\/)([_0-9a-z-]+)/i ;
+	//let VideoId = selectedRow.children[1].textContent.match(VID_REGEX)[7];
 	
 	
 	

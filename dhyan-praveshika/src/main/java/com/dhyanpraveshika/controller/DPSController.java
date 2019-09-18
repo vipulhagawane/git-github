@@ -103,7 +103,7 @@ public class DPSController {
 		System.out.print("user" + user);
 
 		if (user==null) {
-			model.put("errorMessag", "InvaledUserId and Password !!!!!");
+			model.put("errorMessag", "Invaled UserId and Password !!!!!");
 			return "login";
 		} else {
 			setSessionData(user.getEmail());
