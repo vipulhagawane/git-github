@@ -93,8 +93,9 @@ public class BlogServiceImpl implements BlogService{
 				if(!file.isEmpty())
 				{
 					deletePreviousFiles(id);
+					saveArticleImage(savedBlog.getId(),file);
 				}
-				saveArticleImage(savedBlog.getId(),file);
+				//saveArticleImage(savedBlog.getId(),file);
 				result = true;
 			}
 			else
@@ -295,7 +296,8 @@ public class BlogServiceImpl implements BlogService{
 		
 		if (!title.isEmpty() && !description.isEmpty() && !author.isEmpty()) {
 			Date date = new Date();
-			DateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy kk:hh:ss");
+			//DateFormat dateFormat = new SimpleDateFormat("dd-MMMM-yyyy kk:hh:ss");
+			DateFormat dateFormat = new SimpleDateFormat("dd-MMMM-yyyy");
 			String newdate = dateFormat.format(date);
 			
 			blog.setTitle(Optional.ofNullable(title).orElse("unavailable"));

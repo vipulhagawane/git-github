@@ -123,8 +123,19 @@ function getRowID(id){
 function openVideoUrl(event){
 	var selectedRow = event.target.closest('tr');
 	//var VID_REGEX = /(?:youtube(?:-nocookie)?\.com\/(?:[^\/\n\s]+\/\S+\/|(?:v|e(?:mbed)?)\/|\S*?[?&]v=)|youtu\.be\/)([a-zA-Z0-9_-]{11})/;
-	var VID_REGEX = /^.*(?:(?:youtu\.be\/|v\/|vi\/|u\/\w\/|embed\/)|(?:(?:watch)?\?v(?:i)?=|\&v(?:i)?=))([^#\&\?]*).*/
-	var VideoId =  selectedRow.children[1].textContent.match(VID_REGEX)[1];
+	//var VID_REGEX = /^.*(?:(?:youtu\.be\/|v\/|vi\/|u\/\w\/|embed\/)|(?:(?:watch)?\?v(?:i)?=|\&v(?:i)?=))([^#\&\?]*).*/ ;
+	
+
+	
+	
+	//var VideoId =  selectedRow.children[1].textContent.match(VID_REGEX)[1];
+	
+	
+	
+	let VID_REGEX = /^(https?:\/\/)?((www\.)?(youtube(-nocookie)?|youtube.googleapis)\.com.*(v\/|v=|vi=|vi\/|e\/|embed\/|user\/.*\/u\/\d+\/)|youtu\.be\/)([_0-9a-z-]+)/i ;
+	let VideoId = selectedRow.children[1].textContent.match(VID_REGEX)[7];
+	
+	
 	
 	 window.open("https://www.youtube.com/embed/" + VideoId);
 }
