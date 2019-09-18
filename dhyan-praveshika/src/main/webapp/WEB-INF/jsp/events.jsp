@@ -123,4 +123,9 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <%-- <script src="<c:url value="/resources/js/article.js"/>"></script> --%>
 </body>
 
+<script>
+ $("#addEditEvent").on("submit", function(e){
+    	sessionStorage.setItem("addEvent","success");
+	});
+  </script>
 </html>

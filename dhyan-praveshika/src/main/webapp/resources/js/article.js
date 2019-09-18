@@ -5,27 +5,29 @@ $(document).ready(function () {
     url: '/dhyanpraveshika-web/isArticleAdd',
     dataSrc : '',
     success: function(data){
-    	alert(data);
-    if(data == null)
+    if(sessionStorage.getItem("addArticle") == null)
     	 {
     	 $('#article').DataTable().ajax.reload();
     	 }
-     else if(data == "success")
+     else if(sessionStorage.getItem("addArticle") == "success")
     	 {
     	 swal("Article has been added!", {
  			  icon: "success",
- 			});
-       	
+ 			});     
+    
        	 $('#article').DataTable().ajax.reload();
+       	sessionStorage.setItem("addArticle",null);
     	 }
-     else if(data == "fail")
+     else if(sessionStorage.getItem("addArticle") == "fail")
 	 {
      swal("Failed to add!");
    	
    	 $('#article').DataTable().ajax.reload();
+   	sessionStorage.setItem("addArticle",null);
 	 }
     }
    });
+	
 $('#article').DataTable({
 	  ajax : {
 		  url : '/dhyanpraveshika-web/getBlogs',
@@ -38,7 +40,7 @@ $('#article').DataTable({
 		  {title : 'Created By' , data : 'author'},
 		  {title : 'Category' , data : 'category'},
 		  {title : 'Actions' , data : 'id', "render": function (data) {
-              return "<a class='btn btn-info tblBtn' onclick='getArticle("+data+")'><i class='fa fa-pencil'></i></a><a class='btn btn-warning tblBtn' href='/dhyanpraveshika-web/viewArticle?id="+data+"'><i class='fa fa-eye'></i></a><a class='btn btn-danger tblBtn' onclick='deleteArticle("+data+")'><i class='fa fa-trash'></i></a>"}
+              return "<a class='btn btn-info tblBtn' onclick='getArticle("+data+")'><i class='fa fa-pencil'></i></a><a class='btn btn-warning tblBtn' href='/dhyanpraveshika-web/viewArticle?id="+data+"' target='_blank'><i class='fa fa-eye'></i></a><a class='btn btn-danger tblBtn' onclick='deleteArticle("+data+")'><i class='fa fa-trash'></i></a>"}
                       
 		  }
 	  ]
@@ -94,6 +96,7 @@ function getArticle(id){
      });
 	//$('#editViewArticleModal').modal('show');
 }
+
 function deleteArticle(id){
 	  swal({
 		  title: "Are you sure?",
@@ -112,7 +115,9 @@ function deleteArticle(id){
 					  			  icon: "success",
 					  			});
 					        	
+					        	
 					        	 $('#article').DataTable().ajax.reload();
+					        	 
 					    }
 					});
 			  
@@ -150,7 +155,7 @@ function saveForm1(id){
 		  } else {
 			swal("Your record is safe!");
 		  }
-		});
+		});	 
 		
 }
 

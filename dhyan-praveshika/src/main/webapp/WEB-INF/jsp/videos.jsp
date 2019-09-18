@@ -118,7 +118,11 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <!-- AdminLTE App -->
  
   <script src="<c:url value="/resources/js/videoes.js"/>"></script>
-  
+  <script>
+ $("#addEditVideo").on("submit", function(e){
+    	sessionStorage.setItem("addVideo","success");
+	});
+  </script>
   
 </body>
 

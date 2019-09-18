@@ -127,6 +127,10 @@ scratch. This page gets rid of all links and provides the needed markup only.
     $(function () {
       CKEDITOR.replace('editor12');
     });
+    
+    $("#addEditArticle").on("submit", function(e){
+    	sessionStorage.setItem("addArticle","success");
+	});
   </script>
 </body>
 

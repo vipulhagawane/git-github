@@ -7,23 +7,25 @@ $(document).ready(function () {
 		    success: function(data){
 		    
 		     //alert(data);
-		     if(data == "")
+		     if(sessionStorage.getItem("addVideo") == null)
 		    	 {
 		    	 $('#videoes').DataTable().ajax.reload();
 		    	 }
-		     else if(data == "success")
+		     else if(sessionStorage.getItem("addVideo") == "success")
 		    	 {
 		    	 swal("Video has been added!", {
 		 			  icon: "success",
 		 			});
 		       	
 		       	 $('#videoes').DataTable().ajax.reload();
+		       	sessionStorage.setItem("addVideo",null);
 		    	 }
-		     else if(data == "fail")
+		     else if(sessionStorage.getItem("addVideo") == "fail")
 			 {
 		     swal("Failed to add!");
 		   	
 		   	 $('#videoes').DataTable().ajax.reload();
+		   	sessionStorage.setItem("addVideo",null);
 			 }
 		    },
 		    error: function(){      

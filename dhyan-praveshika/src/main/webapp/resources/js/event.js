@@ -9,24 +9,29 @@ $(document).ready(function () {
 	   
 	    success: function(data){
 	    
-	     // alert(data);
-	     if(data == "")
+	    // alert(data);
+	    // if(data == "")
+	    	if(sessionStorage.getItem("addEvent") == null)
 	    	 {
+	    		
 	    	 $('#events').DataTable().ajax.reload();
 	    	 }
-	     else if(data == "success")
+	     //else if(data == "success")
+	    	 else if(sessionStorage.getItem("addEvent") == "success") 
 	    	 {
 	    	 swal("Event has been added!", {
 	 			  icon: "success",
 	 			});
 	       	
 	       	 $('#events').DataTable().ajax.reload();
+	       	sessionStorage.setItem("addEvent",null);
 	    	 }
 	     else if(data == "fail")
 		 {
 	     swal("Failed to add!");
 	   	
 	   	 $('#events').DataTable().ajax.reload();
+	   	sessionStorage.setItem("addEvent",null);
 		 }
 	    },
 	    error: function(){      

@@ -117,11 +117,9 @@ public class DPSController {
 	public String getArticles(HttpServletRequest request, ModelMap model) {
 
 		logger.info("at getArticles");
-		/*
-		 * session.setAttribute("addArticle",null);
-		 * System.out.println("date+++"+session.getAttribute("addArticle"));
-		 */
-		addArticle = null;
+		 session.setAttribute("addArticle",null);
+		 System.out.println("date+++"+session.getAttribute("addArticle"));
+		//addArticle = null;
 		logger.info("at getArticles:{}",addArticle);
 		return "home";
 	}
@@ -162,12 +160,11 @@ public class DPSController {
 	public ResponseEntity<List<Blog>> getBlogs(HttpServletResponse res)
 	{
 		logger.info("fetching blog list at controller");
-		/*
-		 * session.setAttribute("addArticle",null);
-		 * System.out.println("Blogs++++"+session.getAttribute("addArticle"));
-		 */
-		addArticle = null;
-		logger.info("at getBlogs:{}",addArticle);
+		
+		 session.setAttribute("addArticle",null);
+		 System.out.println("Blogs++++"+session.getAttribute("addArticle"));
+		//addArticle = null;
+		logger.info("at getBlogs:{}",session.getAttribute("addArticle"));
 		List<Blog> blogs = blogService.getBlogs();
 		return new ResponseEntity<List<Blog>>(blogs,HttpStatus.OK);
 	}
@@ -180,16 +177,16 @@ public class DPSController {
 		
 		if(result == true)
 		{
-			//session.setAttribute("addArticle","success");
-			addArticle = new String("success");
-			logger.info("at getBlogs:{}",addArticle);
+			session.setAttribute("addArticle","success");
+			//addArticle = new String("success");
+			logger.info("at getBlogs:{}",session.getAttribute("addArticle"));
 		}
 		
 		else
 		{
-			//session.setAttribute("addArticle","fail");
-			addArticle = new String("success");
-			logger.info("at getBlogs:{}",addArticle);
+			session.setAttribute("addArticle","fail");
+			//addArticle = new String("fail");
+			logger.info("at getBlogs:{}",session.getAttribute("addArticle"));
 		}
 		return "home";
 	}
@@ -346,12 +343,11 @@ public class DPSController {
 	@GetMapping("/isArticleAdd")
 	public String getAddArticleResult()
 	{
-		/*
-		 * String result = (String)session.getAttribute("addArticle");
-		 * System.out.println("isArticleAdd+++++++-----"+result);
-		 */
-		logger.info("at controller isArticleAdd : {}",addArticle);
-		return addArticle;
+		
+		 String result = (String)session.getAttribute("addArticle");
+		 System.out.println("isArticleAdd+++++++-----"+result);
+		 logger.info("at controller isArticleAdd : {}",result);
+		 return result;
 	}
 	@ResponseBody
 	@GetMapping("/isEventAdd")
