@@ -77,16 +77,26 @@ public class EventServiceImpl implements EventService {
 			Long id  = Long.parseLong(request.getParameter("id"));
 			logger.info("updating event of id :{}",id);
 			event = eventDAO.findOne(id);
-			if(!file.isEmpty())
-			{
-				deletePreviousFiles(id);
-			}
+			/*
+			 * if(!file.isEmpty()) { deletePreviousFiles(id); } DPSEvent newEvent =
+			 * saveEvent(request,event); if(newEvent != null) {
+			 * saveEventImage(newEvent.getId(),file); result = true; }
+			 */
 			DPSEvent newEvent = saveEvent(request,event);
 			if(newEvent != null)
 			{
-				saveEventImage(newEvent.getId(),file);
+				if(!file.isEmpty())
+				{
+					deletePreviousFiles(id);
+					saveEventImage(newEvent.getId(),file);
+				}
 				result = true;
 			}
+			else
+			{
+				eventDAO.save(event);
+			}
+			
 		}
 
 		return result;
