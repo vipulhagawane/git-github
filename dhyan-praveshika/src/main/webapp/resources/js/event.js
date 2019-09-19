@@ -53,7 +53,7 @@ $(document).ready(function () {
 		  {title : 'Time' , data : 'eventTime'},
 		  {title : 'Location' , data : 'location'},
 		  {title : 'Actions' , data : 'id', "render": function (data) {
-              return "<a class='btn btn-info tblBtn' onclick='getRowID("+data+")'><i class='fa fa-pencil'></i></a><a class='btn btn-warning tblBtn'><i class='fa fa-eye'></i></a><a class='btn btn-danger tblBtn' onclick='deleteevent("+data+")'><i class='fa fa-trash'></i></a>"}
+              return "<a class='btn btn-info tblBtn' onclick='getRowID("+data+")'><i class='fa fa-pencil'></i></a><a class='btn btn-danger tblBtn' onclick='deleteevent("+data+")'><i class='fa fa-trash'></i></a>"}
                       
 		  }
 		  ]
@@ -79,7 +79,7 @@ $(document).ready(function () {
 	       .find("img")
 	       .attr("src", "")
 	       .end();
-	  CKEDITOR.instances.editor12.setData('');
+	  //CKEDITOR.instances.editor12.setData('');
 	});
   
   $('#eventSelectImage').on('click', function () {
@@ -103,8 +103,8 @@ function getRowID(id){
              //alert(JSON.stringify(data));
              $('#id').val(data.id);
              $('#title').val(data.title);
-             $('#date').val(data.date);
-             $('#time').val(data.time);
+             $('#date').val(data.eventDate);
+             $('#time').val(data.eventTime);
              $('#location').val(data.location);
              $('#description').val(data.description);
            // $('#image').val(data.eventFile);

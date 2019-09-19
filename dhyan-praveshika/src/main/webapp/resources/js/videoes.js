@@ -6,7 +6,7 @@ $(document).ready(function () {
 		   
 		    success: function(data){
 		    
-		     //alert(data);
+		     // alert(data);
 		     if(sessionStorage.getItem("addVideo") == null)
 		    	 {
 		    	 $('#videoes').DataTable().ajax.reload();
@@ -29,7 +29,7 @@ $(document).ready(function () {
 			 }
 		    },
 		    error: function(){      
-		     //alert('Error while request..');
+		     // alert('Error while request..');
 		    }
 		   });
 		 
@@ -66,7 +66,7 @@ $(document).ready(function () {
 
 
 
-//Sweetalert
+// Sweetalert
 function deleteRow(id){
 	  swal({
 		  title: "Are you sure?",
@@ -78,7 +78,8 @@ function deleteRow(id){
 		.then((willDelete) => {
 		  if (willDelete) {
 			  
-				$.ajax("/dhyanpraveshika-web/deleteVideo?id="+id,   // request url
+				$.ajax("/dhyanpraveshika-web/deleteVideo?id="+id,   // request
+																	// url
 					    {
 					        success: function () {
 					        	swal("Record has been deleted!", {
@@ -97,22 +98,22 @@ function deleteRow(id){
 		
 }
 
-//getVideos
+// getVideos
 function getRowID(id){
-	 //alert("hiii");
+	 // alert("hiii");
 	$.ajax({
 		 type : 'GET',
        url : "/dhyanpraveshika-web/getVideo?id="+id,
        
        success : function(data) {
-           //alert(JSON.stringify(data.id));
+           // alert(JSON.stringify(data.id));
            $('#id').val(data.id);
            $('#title').val(data.title);
            $('#category').val(data.category);
            $('#path').val(data.path);
      
            
-           /*CKEDITOR.instances.editor12.setData(data.description)*/
+           /* CKEDITOR.instances.editor12.setData(data.description) */
            $('#editAddVideoModal').modal('show');
        }
        
@@ -122,24 +123,10 @@ function getRowID(id){
 
 function openVideoUrl(event){
 	var selectedRow = event.target.closest('tr');
-	//var VID_REGEX = /(?:youtube(?:-nocookie)?\.com\/(?:[^\/\n\s]+\/\S+\/|(?:v|e(?:mbed)?)\/|\S*?[?&]v=)|youtu\.be\/)([a-zA-Z0-9_-]{11})/;
-	//var VID_REGEX = /^.*(?:(?:youtu\.be\/|v\/|vi\/|u\/\w\/|embed\/)|(?:(?:watch)?\?v(?:i)?=|\&v(?:i)?=))([^#\&\?]*).*/ ;
-	
-
-	
-	
+	var VID_REGEX = /(?:youtube(?:-nocookie)?\.com\/(?:[^\/\n\s]+\/\S+\/|(?:v|e(?:mbed)?)\/|\S*?[?&]v=)|youtu\.be\/)([a-zA-Z0-9_-]{11})/;
 	var VideoId =  selectedRow.children[1].textContent.match(VID_REGEX)[1];
-	
-	
-	
-	//let VID_REGEX = /^(https?:\/\/)?((www\.)?(youtube(-nocookie)?|youtube.googleapis)\.com.*(v\/|v=|vi=|vi\/|e\/|embed\/|user\/.*\/u\/\d+\/)|youtu\.be\/)([_0-9a-z-]+)/i ;
-	//let VideoId = selectedRow.children[1].textContent.match(VID_REGEX)[7];
-	
-	
-	
-	 window.open("https://www.youtube.com/embed/" + VideoId);
+	window.open("https://www.youtube.com/embed/" + VideoId);
+
 }
-
-
 
 
