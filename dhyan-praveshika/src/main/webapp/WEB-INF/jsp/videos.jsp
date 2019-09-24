@@ -71,9 +71,9 @@ scratch. This page gets rid of all links and provides the needed markup only.
             <table id="videoes" class="table table-bordered table-striped table-hover">
               <thead>
                 <tr>
-                  <th style="width:100px">Video Name</th>
+                  <th>Video Name</th>
                   <th>Video Url</th>
-                  <th style="width:100px">Video Category</th> 
+                  <th style="width:100px">Category</th> 
                   <th style="width:80px">Actions</th>
                 </tr>
               </thead>

@@ -1,11 +1,26 @@
+
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
 <%@ taglib uri="http://www.springframework.org/tags" prefix="spring" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="u" %>
 <!DOCTYPE html>
 <html lang="en-gb" dir="ltr" xmlns:fb="http://ogp.me/ns/fb#">
+
+
 <head>
-
-
+  <meta http-equiv="refresh" content="30">
+  <head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Free Web tutorials">
+  <meta name="keywords" content="HTML,CSS,XML,JavaScript">
+  <meta name="author" content="John Doe">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+  <%-- <meta property="og:url"           content="http://13.235.83.236:8080/dhyanpraveshika-web/viewArticle?id=${blog.id}" />
+  <meta property="og:category"      content="${blog.category}" />
+  <meta property="og:title"         content="${blog.title}" />
+  <meta property="og:date"   content="${blog.created_date}" />
+  <meta property="og:image"         content="${blog.encodedString}" />
+  <meta property="og:author" content="${blog.author}" />  --%>
   <base href="http://dhyanpraveshika.org/index.php/175-tantra-s-origins" />
   <meta http-equiv="content-type" content="text/html; charset=utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,15 +29,15 @@
   
   <meta name="keywords"
     content="dhyan praveshika, dhyan praveshika india, spiritual learning, spirituality, e magazine, indian philosophy, ayurvedic blog, spiritual magazine, spiritual articles, spirituality and healing, new age magazine, spiritual india" />
-  <meta name="author" content="${blog.author}" />
+  <%-- <meta name="author" content="${blog.author}" /> --%>
   <meta name="copyright" content="Copyright © 2019 TemPlaza. All Rights Reserved." />
 
   <%-- <meta name="description" content="${blog.description}" /> --%>
-  <meta name="category" content="${blog.category}" />
+ <%--  <meta name="category" content="${blog.category}" />
   <meta name="title" content="${blog.title}" />
   <meta name="date" content="${blog.created_date}" />
   <meta name="generator" content="Joomla! - Open Source Content Management" />
-  <title>Dhyan Praveshika</title>
+  --%> <title>Dhyan Praveshika</title>
 
   <link href="http://dhyanpraveshika.org/index.php/175-tantra-s-origins" rel="canonical" />
   <link href="/templates/tz_dreame/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />

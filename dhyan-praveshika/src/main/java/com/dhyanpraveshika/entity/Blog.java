@@ -32,10 +32,15 @@ public class Blog {
 	private String category;
 	
 	
-	@Column(name = "shareURL")
-	private String shareURL;
+	
+	 @Column(name = "shareURL") 
+	 private String shareURL;
+	 
 
-
+	/*
+	 * @Column(name = "pathuri") private String pathuri;
+	 */
+	
 	public Long getId() {
 		return id;
 	}
@@ -96,14 +101,19 @@ public class Blog {
 	}
 
 
-	public String getShareURL() {
-		return shareURL;
-	}
+	/*
+	 * public String getPathuri() { return pathuri; }
+	 * 
+	 * 
+	 * public void setPathuri(String pathuri) { this.pathuri = pathuri; }
+	 */
 
 
-	public void setShareURL(String shareURL) {
-		this.shareURL = shareURL;
-	}
+	
+	 public String getShareURL() { return shareURL; }
+	  
+	  
+	 public void setShareURL(String shareURL) { this.shareURL = shareURL; }
 
 
 	@Override
@@ -111,6 +121,9 @@ public class Blog {
 		return "Blog [id=" + id + ", title=" + title + ", description=" + description + ", author=" + author
 				+ ", created_date=" + created_date + ", category=" + category + ", shareURL=" + shareURL + "]";
 	}
+	 
+	 
+	 
 
-
+	
 }

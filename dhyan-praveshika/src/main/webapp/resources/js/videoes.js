@@ -43,7 +43,7 @@ $(document).ready(function () {
 	  columns:[
 		  {title : 'Video Name' , data : 'title'},
 		  {title : 'Video Url' , data : 'path'},
-		  {title : 'Video Category' , data : 'category'},
+		  {title : 'Category' , data : 'category'},
 		  {title : 'Actions' , data : 'id', "render": function (data) {
 			   return "<a class='btn btn-info tblBtn' onclick='getRowID("+data+")'><i class='fa fa-pencil'></i></a><button class='btn btn-warning tblBtn' onclick='openVideoUrl(event)'><i class='fa fa-eye'></i></button><a class='btn btn-danger tblBtn' onclick='deleteRow("+data+")'><i class='fa fa-trash'></i></a>"}
                       
