@@ -343,7 +343,11 @@ public class BlogServiceImpl implements BlogService{
 
 		List<String> tokens = userService.getTokens();
 		logger.info("tokens :{}",tokens.size());
-
+		
+		for(String token:tokens)
+		{
+		logger.info("tokens :{}",token);
+		}
 		NotificationDTO notificationDto = new NotificationDTO();
 		DataDTO dataDTO = new DataDTO();
 		NotificationJSON notificationJSON = new NotificationJSON();

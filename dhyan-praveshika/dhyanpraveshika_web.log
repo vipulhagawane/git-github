@@ -1,0 +1,678 @@
+2019-09-24 12:59:55.051  INFO 13500 --- [restartedMain] c.d.DhyanPraveshikaApplication           : Starting DhyanPraveshikaApplication on DESKTOP-LQ9AGEK with PID 13500 (D:\DhyanPraveShika_home\GIT_HUB_CODE\git-github\dhyan-praveshika\target\classes started by vipul in D:\DhyanPraveShika_home\GIT_HUB_CODE\git-github\dhyan-praveshika)
+2019-09-24 12:59:55.053  INFO 13500 --- [restartedMain] c.d.DhyanPraveshikaApplication           : The following profiles are active: uat
+2019-09-24 12:59:55.090  INFO 13500 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-09-24 12:59:55.090  INFO 13500 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-09-24 12:59:55.730  INFO 13500 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-09-24 12:59:55.757  INFO 13500 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 21ms. Found 0 repository interfaces.
+2019-09-24 12:59:56.079  INFO 13500 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$251fafd7] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-09-24 12:59:56.383  INFO 13500 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-09-24 12:59:56.405  INFO 13500 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-09-24 12:59:56.406  INFO 13500 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-09-24 12:59:56.623  INFO 13500 --- [restartedMain] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2019-09-24 12:59:56.628  INFO 13500 --- [restartedMain] o.a.c.c.C.[.[.[/dhyanpraveshika-web]     : Initializing Spring embedded WebApplicationContext
+2019-09-24 12:59:56.628  INFO 13500 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1537 ms
+2019-09-24 12:59:56.801  INFO 13500 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-09-24 12:59:57.281  INFO 13500 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-09-24 12:59:57.327  INFO 13500 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-09-24 12:59:57.380  INFO 13500 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.10.Final}
+2019-09-24 12:59:57.381  INFO 13500 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2019-09-24 12:59:57.518  INFO 13500 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-09-24 12:59:57.633  INFO 13500 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-09-24 12:59:58.262  INFO 13500 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-09-24 12:59:58.299  INFO 13500 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-09-24 12:59:58.671  INFO 13500 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-09-24 12:59:58.724  WARN 13500 --- [restartedMain] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-09-24 12:59:58.956  INFO 13500 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path '/dhyanpraveshika-web'
+2019-09-24 12:59:58.961  INFO 13500 --- [restartedMain] c.d.DhyanPraveshikaApplication           : Started DhyanPraveshikaApplication in 4.205 seconds (JVM running for 4.902)
+2019-09-24 13:01:43.770  INFO 13500 --- [http-nio-8080-exec-2] o.a.c.c.C.[.[.[/dhyanpraveshika-web]     : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-09-24 13:01:43.771  INFO 13500 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-09-24 13:01:43.787  INFO 13500 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 16 ms
+2019-09-24 13:01:48.332  INFO 13500 --- [http-nio-8080-exec-9] c.d.controller.DPSController             : fetching user details{}
+2019-09-24 13:01:48.337  INFO 13500 --- [http-nio-8080-exec-9] com.dhyanpraveshika.service.DPSService   : user details:vipul@gmail.com	123
+2019-09-24 13:01:48.351  INFO 13500 --- [http-nio-8080-exec-9] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2019-09-24 13:01:48.452  INFO 13500 --- [http-nio-8080-exec-9] c.d.controller.DPSController             : user available User [id=1, full_name=vipul hagawane, phoneNo=9503864208, age=20, email=vipul@gmail.com, password=123, country=india, state=admin, city=pune, fcm_token=null, created_date=12/12/2019, profile=null, reg_type=admin]
+2019-09-24 13:01:48.768  INFO 13500 --- [http-nio-8080-exec-9] o.a.jsp.WEB_002dINF.jsp.session_jsp      : session validation : vipul@gmail.com
+2019-09-24 13:01:49.529  INFO 13500 --- [http-nio-8080-exec-7] c.d.controller.DPSController             : at controller isArticleAdd : null
+2019-09-24 13:01:49.564  INFO 13500 --- [http-nio-8080-exec-1] c.d.controller.DPSController             : fetching blog list at controller
+2019-09-24 13:01:49.564  INFO 13500 --- [http-nio-8080-exec-1] c.d.controller.DPSController             : at getBlogs:null
+2019-09-24 13:01:49.565  INFO 13500 --- [http-nio-8080-exec-1] c.d.service.BlogServiceImpl              : fetching blog list
+2019-09-24 13:01:49.572  INFO 13500 --- [http-nio-8080-exec-1] c.d.service.BlogServiceImpl              : total blogs :1
+2019-09-24 13:01:49.606  INFO 13500 --- [http-nio-8080-exec-8] c.d.controller.DPSController             : fetching blog list at controller
+2019-09-24 13:01:49.607  INFO 13500 --- [http-nio-8080-exec-8] c.d.controller.DPSController             : at getBlogs:null
+2019-09-24 13:01:49.607  INFO 13500 --- [http-nio-8080-exec-8] c.d.service.BlogServiceImpl              : fetching blog list
+2019-09-24 13:01:49.610  INFO 13500 --- [http-nio-8080-exec-8] c.d.service.BlogServiceImpl              : total blogs :1
+2019-09-24 13:01:52.416  INFO 13500 --- [http-nio-8080-exec-1] c.d.controller.DPSController             : at userManagementContrller
+2019-09-24 13:01:52.581  INFO 13500 --- [http-nio-8080-exec-1] o.a.jsp.WEB_002dINF.jsp.session_jsp      : session validation : vipul@gmail.com
+2019-09-24 13:01:52.832  INFO 13500 --- [http-nio-8080-exec-4] c.d.controller.DPSController             : at controller getUsers:{}
+2019-09-24 13:01:52.836  INFO 13500 --- [http-nio-8080-exec-4] c.d.service.UserServiceImpl              : getting users list
+2019-09-24 13:01:52.839  INFO 13500 --- [http-nio-8080-exec-4] c.d.service.UserServiceImpl              : users list :[User [id=1, full_name=vipul hagawane, phoneNo=9503864208, age=20, email=vipul@gmail.com, password=123, country=india, state=admin, city=pune, fcm_token=null, created_date=12/12/2019, profile=null, reg_type=admin], User [id=2, full_name=anagha , phoneNo=9568642589, age=10, email=anagha@gmail.com, password=123, country=indai, state=null, city=wai, fcm_token=null, created_date=12/12/2019, profile=null, reg_type=abc]]
+2019-09-24 13:12:42.107  INFO 13500 --- [Thread-5] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-09-24 13:12:42.109  INFO 13500 --- [Thread-5] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-09-24 13:12:42.115  INFO 13500 --- [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2019-09-24 13:12:42.121  INFO 13500 --- [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2019-09-24 13:12:42.577  INFO 13500 --- [restartedMain] c.d.DhyanPraveshikaApplication           : Starting DhyanPraveshikaApplication on DESKTOP-LQ9AGEK with PID 13500 (D:\DhyanPraveShika_home\GIT_HUB_CODE\git-github\dhyan-praveshika\target\classes started by vipul in D:\DhyanPraveShika_home\GIT_HUB_CODE\git-github\dhyan-praveshika)
+2019-09-24 13:12:42.577  INFO 13500 --- [restartedMain] c.d.DhyanPraveshikaApplication           : The following profiles are active: uat
+2019-09-24 13:12:42.839  INFO 13500 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-09-24 13:12:42.848  INFO 13500 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 9ms. Found 0 repository interfaces.
+2019-09-24 13:12:42.901  INFO 13500 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$251fafd7] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-09-24 13:12:43.001  INFO 13500 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-09-24 13:12:43.002  INFO 13500 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-09-24 13:12:43.002  INFO 13500 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-09-24 13:12:43.113  INFO 13500 --- [restartedMain] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2019-09-24 13:12:43.116  INFO 13500 --- [restartedMain] o.a.c.c.C.[.[.[/dhyanpraveshika-web]     : Initializing Spring embedded WebApplicationContext
+2019-09-24 13:12:43.117  INFO 13500 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 537 ms
+2019-09-24 13:12:43.185  INFO 13500 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2019-09-24 13:12:43.201  INFO 13500 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2019-09-24 13:12:43.208  INFO 13500 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-09-24 13:12:43.219  INFO 13500 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-09-24 13:12:43.350  INFO 13500 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-09-24 13:12:43.365  INFO 13500 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-09-24 13:12:43.513  INFO 13500 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-09-24 13:12:43.522  WARN 13500 --- [restartedMain] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-09-24 13:12:43.636  INFO 13500 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path '/dhyanpraveshika-web'
+2019-09-24 13:12:43.637  INFO 13500 --- [restartedMain] c.d.DhyanPraveshikaApplication           : Started DhyanPraveshikaApplication in 1.099 seconds (JVM running for 769.578)
+2019-09-24 13:12:43.640  INFO 13500 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2019-09-24 13:13:26.359  INFO 13500 --- [Thread-10] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-09-24 13:13:26.360  INFO 13500 --- [Thread-10] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-09-24 13:13:26.361  INFO 13500 --- [Thread-10] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2019-09-24 13:13:26.384  INFO 13500 --- [Thread-10] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2019-09-24 13:13:26.724  INFO 13500 --- [restartedMain] c.d.DhyanPraveshikaApplication           : Starting DhyanPraveshikaApplication on DESKTOP-LQ9AGEK with PID 13500 (D:\DhyanPraveShika_home\GIT_HUB_CODE\git-github\dhyan-praveshika\target\classes started by vipul in D:\DhyanPraveShika_home\GIT_HUB_CODE\git-github\dhyan-praveshika)
+2019-09-24 13:13:26.725  INFO 13500 --- [restartedMain] c.d.DhyanPraveshikaApplication           : The following profiles are active: uat
+2019-09-24 13:13:27.019  INFO 13500 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-09-24 13:13:27.028  INFO 13500 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 8ms. Found 0 repository interfaces.
+2019-09-24 13:13:27.076  INFO 13500 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$251fafd7] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-09-24 13:13:27.176  INFO 13500 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-09-24 13:13:27.177  INFO 13500 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-09-24 13:13:27.178  INFO 13500 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-09-24 13:13:27.256  INFO 13500 --- [restartedMain] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2019-09-24 13:13:27.258  INFO 13500 --- [restartedMain] o.a.c.c.C.[.[.[/dhyanpraveshika-web]     : Initializing Spring embedded WebApplicationContext
+2019-09-24 13:13:27.258  INFO 13500 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 531 ms
+2019-09-24 13:13:27.305  INFO 13500 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2019-09-24 13:13:27.319  INFO 13500 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2019-09-24 13:13:27.327  INFO 13500 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-09-24 13:13:27.338  INFO 13500 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-09-24 13:13:27.447  INFO 13500 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-09-24 13:13:27.461  INFO 13500 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-09-24 13:13:27.595  INFO 13500 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-09-24 13:13:27.601  WARN 13500 --- [restartedMain] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-09-24 13:13:27.734  INFO 13500 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path '/dhyanpraveshika-web'
+2019-09-24 13:13:27.736  INFO 13500 --- [restartedMain] c.d.DhyanPraveshikaApplication           : Started DhyanPraveshikaApplication in 1.036 seconds (JVM running for 813.677)
+2019-09-24 13:13:27.739  INFO 13500 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2019-09-24 13:14:00.406  INFO 13500 --- [Thread-16] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-09-24 13:14:00.409  INFO 13500 --- [Thread-16] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-09-24 13:14:00.410  INFO 13500 --- [Thread-16] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
+2019-09-24 13:14:00.425  INFO 13500 --- [Thread-16] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.
+2019-09-24 13:14:00.706  INFO 13500 --- [restartedMain] c.d.DhyanPraveshikaApplication           : Starting DhyanPraveshikaApplication on DESKTOP-LQ9AGEK with PID 13500 (D:\DhyanPraveShika_home\GIT_HUB_CODE\git-github\dhyan-praveshika\target\classes started by vipul in D:\DhyanPraveShika_home\GIT_HUB_CODE\git-github\dhyan-praveshika)
+2019-09-24 13:14:00.706  INFO 13500 --- [restartedMain] c.d.DhyanPraveshikaApplication           : The following profiles are active: uat
+2019-09-24 13:14:00.929  INFO 13500 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-09-24 13:14:00.939  INFO 13500 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 10ms. Found 0 repository interfaces.
+2019-09-24 13:14:00.982  INFO 13500 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$251fafd7] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-09-24 13:14:01.073  INFO 13500 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-09-24 13:14:01.074  INFO 13500 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-09-24 13:14:01.074  INFO 13500 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-09-24 13:14:01.146  INFO 13500 --- [restartedMain] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2019-09-24 13:14:01.147  INFO 13500 --- [restartedMain] o.a.c.c.C.[.[.[/dhyanpraveshika-web]     : Initializing Spring embedded WebApplicationContext
+2019-09-24 13:14:01.148  INFO 13500 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 440 ms
+2019-09-24 13:14:01.193  INFO 13500 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Starting...
+2019-09-24 13:14:01.206  INFO 13500 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Start completed.
+2019-09-24 13:14:01.213  INFO 13500 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-09-24 13:14:01.223  INFO 13500 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-09-24 13:14:01.318  INFO 13500 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-09-24 13:14:01.331  INFO 13500 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-09-24 13:14:01.462  INFO 13500 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-09-24 13:14:01.468  WARN 13500 --- [restartedMain] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-09-24 13:14:01.554  INFO 13500 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path '/dhyanpraveshika-web'
+2019-09-24 13:14:01.554  INFO 13500 --- [restartedMain] c.d.DhyanPraveshikaApplication           : Started DhyanPraveshikaApplication in 0.872 seconds (JVM running for 847.496)
+2019-09-24 13:14:01.556  INFO 13500 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2019-09-24 13:15:15.512  INFO 13500 --- [Thread-22] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-09-24 13:15:15.514  INFO 13500 --- [Thread-22] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-09-24 13:15:15.516  INFO 13500 --- [Thread-22] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown initiated...
+2019-09-24 13:15:15.530  INFO 13500 --- [Thread-22] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown completed.
+2019-09-24 13:15:15.777  INFO 13500 --- [restartedMain] c.d.DhyanPraveshikaApplication           : Starting DhyanPraveshikaApplication on DESKTOP-LQ9AGEK with PID 13500 (D:\DhyanPraveShika_home\GIT_HUB_CODE\git-github\dhyan-praveshika\target\classes started by vipul in D:\DhyanPraveShika_home\GIT_HUB_CODE\git-github\dhyan-praveshika)
+2019-09-24 13:15:15.778  INFO 13500 --- [restartedMain] c.d.DhyanPraveshikaApplication           : The following profiles are active: uat
+2019-09-24 13:15:16.031  INFO 13500 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-09-24 13:15:16.041  INFO 13500 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 10ms. Found 0 repository interfaces.
+2019-09-24 13:15:16.086  INFO 13500 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$251fafd7] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-09-24 13:15:16.179  INFO 13500 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-09-24 13:15:16.180  INFO 13500 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-09-24 13:15:16.180  INFO 13500 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-09-24 13:15:16.276  INFO 13500 --- [restartedMain] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2019-09-24 13:15:16.277  INFO 13500 --- [restartedMain] o.a.c.c.C.[.[.[/dhyanpraveshika-web]     : Initializing Spring embedded WebApplicationContext
+2019-09-24 13:15:16.278  INFO 13500 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 498 ms
+2019-09-24 13:15:16.325  INFO 13500 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Starting...
+2019-09-24 13:15:16.340  INFO 13500 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Start completed.
+2019-09-24 13:15:16.346  INFO 13500 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-09-24 13:15:16.357  INFO 13500 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-09-24 13:15:16.450  INFO 13500 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-09-24 13:15:16.463  INFO 13500 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-09-24 13:15:16.605  INFO 13500 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-09-24 13:15:16.612  WARN 13500 --- [restartedMain] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-09-24 13:15:16.694  INFO 13500 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path '/dhyanpraveshika-web'
+2019-09-24 13:15:16.695  INFO 13500 --- [restartedMain] c.d.DhyanPraveshikaApplication           : Started DhyanPraveshikaApplication in 0.939 seconds (JVM running for 922.636)
+2019-09-24 13:15:16.697  INFO 13500 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2019-09-24 13:15:30.174  INFO 13500 --- [Thread-28] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-09-24 13:15:30.175  INFO 13500 --- [Thread-28] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-09-24 13:15:30.176  INFO 13500 --- [Thread-28] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Shutdown initiated...
+2019-09-24 13:15:30.183  INFO 13500 --- [Thread-28] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Shutdown completed.
+2019-09-24 13:15:30.387  INFO 13500 --- [restartedMain] c.d.DhyanPraveshikaApplication           : Starting DhyanPraveshikaApplication on DESKTOP-LQ9AGEK with PID 13500 (D:\DhyanPraveShika_home\GIT_HUB_CODE\git-github\dhyan-praveshika\target\classes started by vipul in D:\DhyanPraveShika_home\GIT_HUB_CODE\git-github\dhyan-praveshika)
+2019-09-24 13:15:30.387  INFO 13500 --- [restartedMain] c.d.DhyanPraveshikaApplication           : The following profiles are active: uat
+2019-09-24 13:15:30.630  INFO 13500 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-09-24 13:15:30.639  INFO 13500 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 8ms. Found 0 repository interfaces.
+2019-09-24 13:15:30.680  INFO 13500 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$251fafd7] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-09-24 13:15:30.771  INFO 13500 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-09-24 13:15:30.772  INFO 13500 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-09-24 13:15:30.772  INFO 13500 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-09-24 13:15:30.835  INFO 13500 --- [restartedMain] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2019-09-24 13:15:30.836  INFO 13500 --- [restartedMain] o.a.c.c.C.[.[.[/dhyanpraveshika-web]     : Initializing Spring embedded WebApplicationContext
+2019-09-24 13:15:30.836  INFO 13500 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 447 ms
+2019-09-24 13:15:30.882  INFO 13500 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Starting...
+2019-09-24 13:15:30.896  INFO 13500 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Start completed.
+2019-09-24 13:15:30.902  INFO 13500 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-09-24 13:15:30.912  INFO 13500 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-09-24 13:15:30.994  INFO 13500 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-09-24 13:15:31.007  INFO 13500 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-09-24 13:15:31.135  INFO 13500 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-09-24 13:15:31.143  WARN 13500 --- [restartedMain] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-09-24 13:15:31.222  INFO 13500 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path '/dhyanpraveshika-web'
+2019-09-24 13:15:31.222  INFO 13500 --- [restartedMain] c.d.DhyanPraveshikaApplication           : Started DhyanPraveshikaApplication in 0.862 seconds (JVM running for 937.164)
+2019-09-24 13:15:31.224  INFO 13500 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2019-09-24 13:15:53.185  INFO 13500 --- [Thread-34] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-09-24 13:15:53.186  INFO 13500 --- [Thread-34] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-09-24 13:15:53.187  INFO 13500 --- [Thread-34] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Shutdown initiated...
+2019-09-24 13:15:53.202  INFO 13500 --- [Thread-34] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Shutdown completed.
+2019-09-24 13:15:53.411  INFO 13500 --- [restartedMain] c.d.DhyanPraveshikaApplication           : Starting DhyanPraveshikaApplication on DESKTOP-LQ9AGEK with PID 13500 (D:\DhyanPraveShika_home\GIT_HUB_CODE\git-github\dhyan-praveshika\target\classes started by vipul in D:\DhyanPraveShika_home\GIT_HUB_CODE\git-github\dhyan-praveshika)
+2019-09-24 13:15:53.411  INFO 13500 --- [restartedMain] c.d.DhyanPraveshikaApplication           : The following profiles are active: uat
+2019-09-24 13:15:53.631  INFO 13500 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-09-24 13:15:53.640  INFO 13500 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 9ms. Found 0 repository interfaces.
+2019-09-24 13:15:53.682  INFO 13500 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$251fafd7] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-09-24 13:15:53.773  INFO 13500 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-09-24 13:15:53.774  INFO 13500 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-09-24 13:15:53.774  INFO 13500 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-09-24 13:15:53.840  INFO 13500 --- [restartedMain] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2019-09-24 13:15:53.842  INFO 13500 --- [restartedMain] o.a.c.c.C.[.[.[/dhyanpraveshika-web]     : Initializing Spring embedded WebApplicationContext
+2019-09-24 13:15:53.842  INFO 13500 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 429 ms
+2019-09-24 13:15:53.887  INFO 13500 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Starting...
+2019-09-24 13:15:53.902  INFO 13500 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Start completed.
+2019-09-24 13:15:53.908  INFO 13500 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-09-24 13:15:53.917  INFO 13500 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-09-24 13:15:53.998  INFO 13500 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-09-24 13:15:54.011  INFO 13500 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-09-24 13:15:54.136  INFO 13500 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-09-24 13:15:54.142  WARN 13500 --- [restartedMain] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-09-24 13:15:54.222  INFO 13500 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path '/dhyanpraveshika-web'
+2019-09-24 13:15:54.223  INFO 13500 --- [restartedMain] c.d.DhyanPraveshikaApplication           : Started DhyanPraveshikaApplication in 0.833 seconds (JVM running for 960.164)
+2019-09-24 13:15:54.225  INFO 13500 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2019-09-24 13:15:57.625  INFO 13500 --- [Thread-40] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-09-24 13:15:57.627  INFO 13500 --- [Thread-40] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-09-24 13:15:57.628  INFO 13500 --- [Thread-40] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Shutdown initiated...
+2019-09-24 13:15:57.636  INFO 13500 --- [Thread-40] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Shutdown completed.
+2019-09-24 13:15:57.815  INFO 13500 --- [restartedMain] c.d.DhyanPraveshikaApplication           : Starting DhyanPraveshikaApplication on DESKTOP-LQ9AGEK with PID 13500 (D:\DhyanPraveShika_home\GIT_HUB_CODE\git-github\dhyan-praveshika\target\classes started by vipul in D:\DhyanPraveShika_home\GIT_HUB_CODE\git-github\dhyan-praveshika)
+2019-09-24 13:15:57.815  INFO 13500 --- [restartedMain] c.d.DhyanPraveshikaApplication           : The following profiles are active: uat
+2019-09-24 13:15:58.036  INFO 13500 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-09-24 13:15:58.045  INFO 13500 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 9ms. Found 0 repository interfaces.
+2019-09-24 13:15:58.087  INFO 13500 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$251fafd7] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-09-24 13:15:58.200  INFO 13500 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-09-24 13:15:58.201  INFO 13500 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-09-24 13:15:58.201  INFO 13500 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-09-24 13:15:58.271  INFO 13500 --- [restartedMain] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2019-09-24 13:15:58.273  INFO 13500 --- [restartedMain] o.a.c.c.C.[.[.[/dhyanpraveshika-web]     : Initializing Spring embedded WebApplicationContext
+2019-09-24 13:15:58.273  INFO 13500 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 456 ms
+2019-09-24 13:15:58.317  INFO 13500 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Starting...
+2019-09-24 13:15:58.330  INFO 13500 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Start completed.
+2019-09-24 13:15:58.336  INFO 13500 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-09-24 13:15:58.345  INFO 13500 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-09-24 13:15:58.423  INFO 13500 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-09-24 13:15:58.435  INFO 13500 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-09-24 13:15:58.560  INFO 13500 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-09-24 13:15:58.565  WARN 13500 --- [restartedMain] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-09-24 13:15:58.644  INFO 13500 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path '/dhyanpraveshika-web'
+2019-09-24 13:15:58.645  INFO 13500 --- [restartedMain] c.d.DhyanPraveshikaApplication           : Started DhyanPraveshikaApplication in 0.853 seconds (JVM running for 964.586)
+2019-09-24 13:15:58.647  INFO 13500 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2019-09-24 13:16:17.165  INFO 13500 --- [Thread-46] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-09-24 13:16:17.166  INFO 13500 --- [Thread-46] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-09-24 13:16:17.167  INFO 13500 --- [Thread-46] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Shutdown initiated...
+2019-09-24 13:16:17.176  INFO 13500 --- [Thread-46] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Shutdown completed.
+2019-09-24 13:16:17.415  INFO 13500 --- [restartedMain] c.d.DhyanPraveshikaApplication           : Starting DhyanPraveshikaApplication on DESKTOP-LQ9AGEK with PID 13500 (D:\DhyanPraveShika_home\GIT_HUB_CODE\git-github\dhyan-praveshika\target\classes started by vipul in D:\DhyanPraveShika_home\GIT_HUB_CODE\git-github\dhyan-praveshika)
+2019-09-24 13:16:17.415  INFO 13500 --- [restartedMain] c.d.DhyanPraveshikaApplication           : The following profiles are active: uat
+2019-09-24 13:16:17.628  INFO 13500 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-09-24 13:16:17.636  INFO 13500 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 8ms. Found 0 repository interfaces.
+2019-09-24 13:16:17.678  INFO 13500 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$251fafd7] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-09-24 13:16:17.765  INFO 13500 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-09-24 13:16:17.765  INFO 13500 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-09-24 13:16:17.765  INFO 13500 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-09-24 13:16:17.830  INFO 13500 --- [restartedMain] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2019-09-24 13:16:17.832  INFO 13500 --- [restartedMain] o.a.c.c.C.[.[.[/dhyanpraveshika-web]     : Initializing Spring embedded WebApplicationContext
+2019-09-24 13:16:17.832  INFO 13500 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 415 ms
+2019-09-24 13:16:17.875  INFO 13500 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Starting...
+2019-09-24 13:16:17.888  INFO 13500 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Start completed.
+2019-09-24 13:16:17.895  INFO 13500 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-09-24 13:16:17.904  INFO 13500 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-09-24 13:16:17.976  INFO 13500 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-09-24 13:16:17.988  INFO 13500 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-09-24 13:16:18.116  INFO 13500 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-09-24 13:16:18.123  WARN 13500 --- [restartedMain] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-09-24 13:16:18.205  INFO 13500 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path '/dhyanpraveshika-web'
+2019-09-24 13:16:18.205  INFO 13500 --- [restartedMain] c.d.DhyanPraveshikaApplication           : Started DhyanPraveshikaApplication in 0.812 seconds (JVM running for 984.147)
+2019-09-24 13:16:18.207  INFO 13500 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2019-09-24 13:16:47.816  INFO 13500 --- [Thread-52] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-09-24 13:16:47.818  INFO 13500 --- [Thread-52] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-09-24 13:16:47.819  INFO 13500 --- [Thread-52] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Shutdown initiated...
+2019-09-24 13:16:47.833  INFO 13500 --- [Thread-52] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Shutdown completed.
+2019-09-24 13:16:48.008  INFO 13500 --- [restartedMain] c.d.DhyanPraveshikaApplication           : Starting DhyanPraveshikaApplication on DESKTOP-LQ9AGEK with PID 13500 (D:\DhyanPraveShika_home\GIT_HUB_CODE\git-github\dhyan-praveshika\target\classes started by vipul in D:\DhyanPraveShika_home\GIT_HUB_CODE\git-github\dhyan-praveshika)
+2019-09-24 13:16:48.008  INFO 13500 --- [restartedMain] c.d.DhyanPraveshikaApplication           : The following profiles are active: uat
+2019-09-24 13:16:48.224  INFO 13500 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-09-24 13:16:48.233  INFO 13500 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 9ms. Found 0 repository interfaces.
+2019-09-24 13:16:48.274  INFO 13500 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$251fafd7] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-09-24 13:16:48.362  INFO 13500 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-09-24 13:16:48.363  INFO 13500 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-09-24 13:16:48.363  INFO 13500 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-09-24 13:16:48.428  INFO 13500 --- [restartedMain] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2019-09-24 13:16:48.430  INFO 13500 --- [restartedMain] o.a.c.c.C.[.[.[/dhyanpraveshika-web]     : Initializing Spring embedded WebApplicationContext
+2019-09-24 13:16:48.430  INFO 13500 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 420 ms
+2019-09-24 13:16:48.474  INFO 13500 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-10 - Starting...
+2019-09-24 13:16:48.488  INFO 13500 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-10 - Start completed.
+2019-09-24 13:16:48.494  INFO 13500 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-09-24 13:16:48.503  INFO 13500 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-09-24 13:16:48.576  INFO 13500 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-09-24 13:16:48.588  INFO 13500 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-09-24 13:16:48.714  INFO 13500 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-09-24 13:16:48.719  WARN 13500 --- [restartedMain] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-09-24 13:16:48.797  INFO 13500 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path '/dhyanpraveshika-web'
+2019-09-24 13:16:48.797  INFO 13500 --- [restartedMain] c.d.DhyanPraveshikaApplication           : Started DhyanPraveshikaApplication in 0.811 seconds (JVM running for 1014.739)
+2019-09-24 13:16:48.799  INFO 13500 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2019-09-24 13:17:04.340  INFO 13500 --- [Thread-58] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-09-24 13:17:04.341  INFO 13500 --- [Thread-58] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-09-24 13:17:04.341  INFO 13500 --- [Thread-58] com.zaxxer.hikari.HikariDataSource       : HikariPool-10 - Shutdown initiated...
+2019-09-24 13:17:04.349  INFO 13500 --- [Thread-58] com.zaxxer.hikari.HikariDataSource       : HikariPool-10 - Shutdown completed.
+2019-09-24 13:17:04.546  INFO 13500 --- [restartedMain] c.d.DhyanPraveshikaApplication           : Starting DhyanPraveshikaApplication on DESKTOP-LQ9AGEK with PID 13500 (D:\DhyanPraveShika_home\GIT_HUB_CODE\git-github\dhyan-praveshika\target\classes started by vipul in D:\DhyanPraveShika_home\GIT_HUB_CODE\git-github\dhyan-praveshika)
+2019-09-24 13:17:04.546  INFO 13500 --- [restartedMain] c.d.DhyanPraveshikaApplication           : The following profiles are active: uat
+2019-09-24 13:17:04.769  INFO 13500 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-09-24 13:17:04.777  INFO 13500 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 8ms. Found 0 repository interfaces.
+2019-09-24 13:17:04.817  INFO 13500 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$251fafd7] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-09-24 13:17:04.908  INFO 13500 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-09-24 13:17:04.910  INFO 13500 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-09-24 13:17:04.910  INFO 13500 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-09-24 13:17:04.977  INFO 13500 --- [restartedMain] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2019-09-24 13:17:04.979  INFO 13500 --- [restartedMain] o.a.c.c.C.[.[.[/dhyanpraveshika-web]     : Initializing Spring embedded WebApplicationContext
+2019-09-24 13:17:04.979  INFO 13500 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 430 ms
+2019-09-24 13:17:05.023  INFO 13500 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-11 - Starting...
+2019-09-24 13:17:05.037  INFO 13500 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-11 - Start completed.
+2019-09-24 13:17:05.043  INFO 13500 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-09-24 13:17:05.052  INFO 13500 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-09-24 13:17:05.129  INFO 13500 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-09-24 13:17:05.143  INFO 13500 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-09-24 13:17:05.292  INFO 13500 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-09-24 13:17:05.298  WARN 13500 --- [restartedMain] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-09-24 13:17:05.377  INFO 13500 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path '/dhyanpraveshika-web'
+2019-09-24 13:17:05.378  INFO 13500 --- [restartedMain] c.d.DhyanPraveshikaApplication           : Started DhyanPraveshikaApplication in 0.856 seconds (JVM running for 1031.319)
+2019-09-24 13:17:05.380  INFO 13500 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2019-09-24 13:17:21.151  INFO 13500 --- [RMI TCP Connection(2)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2019-09-24 13:17:21.155  INFO 13500 --- [RMI TCP Connection(2)-127.0.0.1] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-09-24 13:17:21.155  INFO 13500 --- [RMI TCP Connection(2)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-09-24 13:17:21.156  INFO 13500 --- [RMI TCP Connection(2)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-11 - Shutdown initiated...
+2019-09-24 13:17:21.164  INFO 13500 --- [RMI TCP Connection(2)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-11 - Shutdown completed.
+2019-09-24 13:17:32.557  INFO 15132 --- [restartedMain] c.d.DhyanPraveshikaApplication           : Starting DhyanPraveshikaApplication on DESKTOP-LQ9AGEK with PID 15132 (D:\DhyanPraveShika_home\GIT_HUB_CODE\git-github\dhyan-praveshika\target\classes started by vipul in D:\DhyanPraveShika_home\GIT_HUB_CODE\git-github\dhyan-praveshika)
+2019-09-24 13:17:32.560  INFO 15132 --- [restartedMain] c.d.DhyanPraveshikaApplication           : The following profiles are active: uat
+2019-09-24 13:17:32.597  INFO 15132 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-09-24 13:17:32.597  INFO 15132 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-09-24 13:17:33.231  INFO 15132 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-09-24 13:17:33.260  INFO 15132 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 21ms. Found 0 repository interfaces.
+2019-09-24 13:17:33.580  INFO 15132 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$c9d57821] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-09-24 13:17:33.874  INFO 15132 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-09-24 13:17:33.896  INFO 15132 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-09-24 13:17:33.896  INFO 15132 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-09-24 13:17:34.117  INFO 15132 --- [restartedMain] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2019-09-24 13:17:34.123  INFO 15132 --- [restartedMain] o.a.c.c.C.[.[.[/dhyanpraveshika-web]     : Initializing Spring embedded WebApplicationContext
+2019-09-24 13:17:34.123  INFO 15132 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1526 ms
+2019-09-24 13:17:34.299  INFO 15132 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-09-24 13:17:34.778  INFO 15132 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-09-24 13:17:34.822  INFO 15132 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-09-24 13:17:34.874  INFO 15132 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.10.Final}
+2019-09-24 13:17:34.875  INFO 15132 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2019-09-24 13:17:34.992  INFO 15132 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-09-24 13:17:35.107  INFO 15132 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-09-24 13:17:35.751  INFO 15132 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-09-24 13:17:35.787  INFO 15132 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-09-24 13:17:36.156  INFO 15132 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-09-24 13:17:36.188  WARN 15132 --- [restartedMain] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-09-24 13:17:36.415  INFO 15132 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path '/dhyanpraveshika-web'
+2019-09-24 13:17:36.420  INFO 15132 --- [restartedMain] c.d.DhyanPraveshikaApplication           : Started DhyanPraveshikaApplication in 4.152 seconds (JVM running for 4.821)
+2019-09-24 13:18:09.730  INFO 15132 --- [http-nio-8080-exec-1] o.a.c.c.C.[.[.[/dhyanpraveshika-web]     : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-09-24 13:18:09.730  INFO 15132 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-09-24 13:18:09.738  INFO 15132 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 7 ms
+2019-09-24 13:18:14.083  INFO 15132 --- [http-nio-8080-exec-1] c.d.controller.DPSController             : fetching user details{}
+2019-09-24 13:18:14.087  INFO 15132 --- [http-nio-8080-exec-1] com.dhyanpraveshika.service.DPSService   : user details:vipul@gmail.com	123
+2019-09-24 13:18:14.101  INFO 15132 --- [http-nio-8080-exec-1] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2019-09-24 13:18:14.182  INFO 15132 --- [http-nio-8080-exec-1] c.d.controller.DPSController             : user available null
+2019-09-24 14:10:43.197  INFO 15132 --- [RMI TCP Connection(2)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2019-09-24 14:10:43.200  INFO 15132 --- [RMI TCP Connection(2)-127.0.0.1] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-09-24 14:10:43.201  INFO 15132 --- [RMI TCP Connection(2)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-09-24 14:10:43.205  INFO 15132 --- [RMI TCP Connection(2)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2019-09-24 14:10:43.216  INFO 15132 --- [RMI TCP Connection(2)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2019-09-24 14:11:10.273  INFO 18072 --- [restartedMain] c.d.DhyanPraveshikaApplication           : Starting DhyanPraveshikaApplication on DESKTOP-LQ9AGEK with PID 18072 (D:\DhyanPraveShika_home\GIT_HUB_CODE\git-github\dhyan-praveshika\target\classes started by vipul in D:\DhyanPraveShika_home\GIT_HUB_CODE\git-github\dhyan-praveshika)
+2019-09-24 14:11:10.276  INFO 18072 --- [restartedMain] c.d.DhyanPraveshikaApplication           : The following profiles are active: uat
+2019-09-24 14:11:10.323  INFO 18072 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-09-24 14:11:10.323  INFO 18072 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-09-24 14:11:11.261  INFO 18072 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-09-24 14:11:11.326  INFO 18072 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 58ms. Found 0 repository interfaces.
+2019-09-24 14:11:11.693  INFO 18072 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$abce254] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-09-24 14:11:12.032  INFO 18072 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-09-24 14:11:12.056  INFO 18072 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-09-24 14:11:12.057  INFO 18072 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-09-24 14:11:12.766  INFO 18072 --- [restartedMain] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2019-09-24 14:11:12.771  INFO 18072 --- [restartedMain] o.a.c.c.C.[.[.[/dhyanpraveshika-web]     : Initializing Spring embedded WebApplicationContext
+2019-09-24 14:11:12.772  INFO 18072 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2449 ms
+2019-09-24 14:11:12.937  INFO 18072 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-09-24 14:11:14.636  INFO 18072 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-09-24 14:11:14.685  INFO 18072 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-09-24 14:11:14.751  INFO 18072 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.10.Final}
+2019-09-24 14:11:14.753  INFO 18072 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2019-09-24 14:11:14.903  INFO 18072 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-09-24 14:11:15.045  INFO 18072 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-09-24 14:11:15.768  INFO 18072 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-09-24 14:11:15.808  INFO 18072 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-09-24 14:11:32.598  INFO 18072 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-09-24 14:11:32.637  WARN 18072 --- [restartedMain] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-09-24 14:11:32.906  INFO 18072 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path '/dhyanpraveshika-web'
+2019-09-24 14:11:32.909  INFO 18072 --- [restartedMain] c.d.DhyanPraveshikaApplication           : Started DhyanPraveshikaApplication in 22.994 seconds (JVM running for 35.591)
+2019-09-24 14:11:57.583  INFO 18072 --- [http-nio-8080-exec-1] o.a.c.c.C.[.[.[/dhyanpraveshika-web]     : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-09-24 14:11:57.583  INFO 18072 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-09-24 14:11:57.591  INFO 18072 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 8 ms
+2019-09-24 14:11:57.640  INFO 18072 --- [http-nio-8080-exec-1] c.d.controller.DPSController             : fetching user details{}
+2019-09-24 14:13:01.385  INFO 18072 --- [http-nio-8080-exec-1] com.dhyanpraveshika.service.DPSService   : user details:vipul@gmail.com	123
+2019-09-24 14:13:22.857  INFO 18072 --- [http-nio-8080-exec-1] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2019-09-24 14:14:07.222  INFO 18072 --- [http-nio-8080-exec-1] c.d.controller.DPSController             : user available null
+2019-09-24 14:18:16.729  INFO 18072 --- [Thread-5] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-09-24 14:18:16.730  INFO 18072 --- [Thread-5] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-09-24 14:18:16.736  INFO 18072 --- [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2019-09-24 14:18:16.753  INFO 18072 --- [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2019-09-24 14:18:17.134  INFO 18072 --- [restartedMain] c.d.DhyanPraveshikaApplication           : Starting DhyanPraveshikaApplication on DESKTOP-LQ9AGEK with PID 18072 (D:\DhyanPraveShika_home\GIT_HUB_CODE\git-github\dhyan-praveshika\target\classes started by vipul in D:\DhyanPraveShika_home\GIT_HUB_CODE\git-github\dhyan-praveshika)
+2019-09-24 14:18:17.134  INFO 18072 --- [restartedMain] c.d.DhyanPraveshikaApplication           : The following profiles are active: uat
+2019-09-24 14:18:17.529  INFO 18072 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-09-24 14:18:17.539  INFO 18072 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 10ms. Found 0 repository interfaces.
+2019-09-24 14:18:17.610  INFO 18072 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$abce254] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-09-24 14:18:17.727  INFO 18072 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-09-24 14:18:17.728  INFO 18072 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-09-24 14:18:17.728  INFO 18072 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-09-24 14:18:17.834  INFO 18072 --- [restartedMain] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2019-09-24 14:18:17.836  INFO 18072 --- [restartedMain] o.a.c.c.C.[.[.[/dhyanpraveshika-web]     : Initializing Spring embedded WebApplicationContext
+2019-09-24 14:18:17.836  INFO 18072 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 697 ms
+2019-09-24 14:18:17.925  INFO 18072 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2019-09-24 14:18:17.942  INFO 18072 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2019-09-24 14:18:17.951  INFO 18072 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-09-24 14:18:17.963  INFO 18072 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-09-24 14:18:18.127  INFO 18072 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-09-24 14:18:18.144  INFO 18072 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-09-24 14:18:18.381  INFO 18072 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-09-24 14:18:18.390  WARN 18072 --- [restartedMain] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-09-24 14:18:18.503  INFO 18072 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path '/dhyanpraveshika-web'
+2019-09-24 14:18:18.504  INFO 18072 --- [restartedMain] c.d.DhyanPraveshikaApplication           : Started DhyanPraveshikaApplication in 1.407 seconds (JVM running for 441.186)
+2019-09-24 14:18:18.507  INFO 18072 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2019-09-24 14:18:20.903  INFO 18072 --- [Thread-10] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-09-24 14:18:20.905  INFO 18072 --- [Thread-10] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-09-24 14:18:20.906  INFO 18072 --- [Thread-10] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2019-09-24 14:18:20.917  INFO 18072 --- [Thread-10] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2019-09-24 14:18:21.210  INFO 18072 --- [restartedMain] c.d.DhyanPraveshikaApplication           : Starting DhyanPraveshikaApplication on DESKTOP-LQ9AGEK with PID 18072 (D:\DhyanPraveShika_home\GIT_HUB_CODE\git-github\dhyan-praveshika\target\classes started by vipul in D:\DhyanPraveShika_home\GIT_HUB_CODE\git-github\dhyan-praveshika)
+2019-09-24 14:18:21.211  INFO 18072 --- [restartedMain] c.d.DhyanPraveshikaApplication           : The following profiles are active: uat
+2019-09-24 14:18:21.676  INFO 18072 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-09-24 14:18:21.685  INFO 18072 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 9ms. Found 0 repository interfaces.
+2019-09-24 14:18:21.748  INFO 18072 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$abce254] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-09-24 14:18:21.861  INFO 18072 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-09-24 14:18:21.895  INFO 18072 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-09-24 14:18:21.895  INFO 18072 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-09-24 14:18:22.064  INFO 18072 --- [restartedMain] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2019-09-24 14:18:22.066  INFO 18072 --- [restartedMain] o.a.c.c.C.[.[.[/dhyanpraveshika-web]     : Initializing Spring embedded WebApplicationContext
+2019-09-24 14:18:22.067  INFO 18072 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 853 ms
+2019-09-24 14:18:22.120  INFO 18072 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2019-09-24 14:18:22.136  INFO 18072 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2019-09-24 14:18:22.146  INFO 18072 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-09-24 14:18:22.157  INFO 18072 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-09-24 14:18:22.280  INFO 18072 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-09-24 14:18:22.297  INFO 18072 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-09-24 14:18:22.512  INFO 18072 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-09-24 14:18:22.520  WARN 18072 --- [restartedMain] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-09-24 14:18:22.620  INFO 18072 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path '/dhyanpraveshika-web'
+2019-09-24 14:18:22.621  INFO 18072 --- [restartedMain] c.d.DhyanPraveshikaApplication           : Started DhyanPraveshikaApplication in 1.446 seconds (JVM running for 445.302)
+2019-09-24 14:18:22.625  INFO 18072 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2019-09-24 14:18:33.970  INFO 18072 --- [http-nio-8080-exec-2] o.a.c.c.C.[.[.[/dhyanpraveshika-web]     : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-09-24 14:18:33.971  INFO 18072 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-09-24 14:18:33.975  INFO 18072 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
+2019-09-24 14:18:33.980  INFO 18072 --- [http-nio-8080-exec-2] c.d.controller.DPSController             : fetching user details{}
+2019-09-24 14:18:52.640  INFO 18072 --- [http-nio-8080-exec-2] com.dhyanpraveshika.service.DPSService   : user details:vipul@gmail.com	123
+2019-09-24 14:19:11.917  INFO 18072 --- [http-nio-8080-exec-2] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2019-09-24 14:20:00.850  INFO 18072 --- [http-nio-8080-exec-2] c.d.controller.DPSController             : user available User [id=1, full_name=vipul hagawane, phoneNo=9503864208, age=20, email=vipul@gmail.com, password=123, country=india, state=admin, city=pune, fcm_token=null, created_date=12/12/2019, profile=null, reg_type=admin]
+2019-09-24 14:20:17.914  INFO 18072 --- [http-nio-8080-exec-2] o.a.jsp.WEB_002dINF.jsp.session_jsp      : session validation : vipul@gmail.com
+2019-09-24 14:20:19.516  INFO 18072 --- [http-nio-8080-exec-9] c.d.controller.DPSController             : at controller isArticleAdd : null
+2019-09-24 14:20:19.535  INFO 18072 --- [http-nio-8080-exec-4] c.d.controller.DPSController             : fetching blog list at controller
+2019-09-24 14:20:19.535  INFO 18072 --- [http-nio-8080-exec-4] c.d.controller.DPSController             : at getBlogs:null
+2019-09-24 14:20:19.537  INFO 18072 --- [http-nio-8080-exec-4] c.d.service.BlogServiceImpl              : fetching blog list
+2019-09-24 14:20:19.565  INFO 18072 --- [http-nio-8080-exec-4] c.d.service.BlogServiceImpl              : total blogs :1
+2019-09-24 14:20:19.572  INFO 18072 --- [http-nio-8080-exec-1] c.d.controller.DPSController             : fetching blog list at controller
+2019-09-24 14:20:19.572  INFO 18072 --- [http-nio-8080-exec-1] c.d.controller.DPSController             : at getBlogs:null
+2019-09-24 14:20:19.591  INFO 18072 --- [http-nio-8080-exec-1] c.d.service.BlogServiceImpl              : fetching blog list
+2019-09-24 14:20:19.593  INFO 18072 --- [http-nio-8080-exec-1] c.d.service.BlogServiceImpl              : total blogs :1
+2019-09-24 14:20:35.191  INFO 18072 --- [RMI TCP Connection(2)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2019-09-24 14:20:35.194  INFO 18072 --- [RMI TCP Connection(2)-127.0.0.1] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-09-24 14:20:35.195  INFO 18072 --- [RMI TCP Connection(2)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-09-24 14:20:35.196  INFO 18072 --- [RMI TCP Connection(2)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
+2019-09-24 14:20:35.202  INFO 18072 --- [RMI TCP Connection(2)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.
+2019-09-24 14:23:50.989  INFO 18144 --- [restartedMain] c.d.DhyanPraveshikaApplication           : Starting DhyanPraveshikaApplication on DESKTOP-LQ9AGEK with PID 18144 (D:\DhyanPraveShika_home\GIT_HUB_CODE\git-github\dhyan-praveshika\target\classes started by vipul in D:\DhyanPraveShika_home\GIT_HUB_CODE\git-github\dhyan-praveshika)
+2019-09-24 14:23:50.992  INFO 18144 --- [restartedMain] c.d.DhyanPraveshikaApplication           : The following profiles are active: uat
+2019-09-24 14:23:51.027  INFO 18144 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-09-24 14:23:51.027  INFO 18144 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-09-24 14:23:51.639  INFO 18144 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-09-24 14:23:51.666  INFO 18144 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 20ms. Found 0 repository interfaces.
+2019-09-24 14:23:51.971  INFO 18144 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$daf7f410] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-09-24 14:23:52.262  INFO 18144 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-09-24 14:23:52.284  INFO 18144 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-09-24 14:23:52.284  INFO 18144 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-09-24 14:23:52.511  INFO 18144 --- [restartedMain] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2019-09-24 14:23:52.516  INFO 18144 --- [restartedMain] o.a.c.c.C.[.[.[/dhyanpraveshika-web]     : Initializing Spring embedded WebApplicationContext
+2019-09-24 14:23:52.516  INFO 18144 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1488 ms
+2019-09-24 14:23:52.691  INFO 18144 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-09-24 14:23:53.157  INFO 18144 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-09-24 14:23:53.200  INFO 18144 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-09-24 14:23:53.249  INFO 18144 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.10.Final}
+2019-09-24 14:23:53.250  INFO 18144 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2019-09-24 14:23:53.365  INFO 18144 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-09-24 14:23:53.480  INFO 18144 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-09-24 14:23:54.061  INFO 18144 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-09-24 14:23:54.096  INFO 18144 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-09-24 14:23:54.451  INFO 18144 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-09-24 14:23:54.481  WARN 18144 --- [restartedMain] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-09-24 14:23:54.714  INFO 18144 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path '/dhyanpraveshika-web'
+2019-09-24 14:23:54.719  INFO 18144 --- [restartedMain] c.d.DhyanPraveshikaApplication           : Started DhyanPraveshikaApplication in 4.01 seconds (JVM running for 4.659)
+2019-09-24 14:24:12.451  INFO 18144 --- [http-nio-8080-exec-1] o.a.c.c.C.[.[.[/dhyanpraveshika-web]     : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-09-24 14:24:12.451  INFO 18144 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-09-24 14:24:12.458  INFO 18144 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 7 ms
+2019-09-24 14:24:12.483  INFO 18144 --- [http-nio-8080-exec-1] c.d.controller.DPSController             : at getArticles
+2019-09-24 14:24:12.483  INFO 18144 --- [http-nio-8080-exec-1] c.d.controller.DPSController             : at getArticles:
+2019-09-24 14:24:13.225  INFO 18144 --- [http-nio-8080-exec-1] o.a.jsp.WEB_002dINF.jsp.session_jsp      : session validation : vipul@gmail.com
+2019-09-24 14:24:14.122  INFO 18144 --- [http-nio-8080-exec-8] c.d.controller.DPSController             : at controller isArticleAdd : null
+2019-09-24 14:24:14.155  INFO 18144 --- [http-nio-8080-exec-10] c.d.controller.DPSController             : fetching blog list at controller
+2019-09-24 14:24:14.155  INFO 18144 --- [http-nio-8080-exec-10] c.d.controller.DPSController             : at getBlogs:null
+2019-09-24 14:24:14.157  INFO 18144 --- [http-nio-8080-exec-10] c.d.service.BlogServiceImpl              : fetching blog list
+2019-09-24 14:24:14.172  INFO 18144 --- [http-nio-8080-exec-10] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2019-09-24 14:24:14.198  INFO 18144 --- [http-nio-8080-exec-7] c.d.controller.DPSController             : fetching blog list at controller
+2019-09-24 14:24:14.203  INFO 18144 --- [http-nio-8080-exec-7] c.d.controller.DPSController             : at getBlogs:null
+2019-09-24 14:24:14.204  INFO 18144 --- [http-nio-8080-exec-7] c.d.service.BlogServiceImpl              : fetching blog list
+2019-09-24 14:24:14.280  INFO 18144 --- [http-nio-8080-exec-7] c.d.service.BlogServiceImpl              : total blogs :1
+2019-09-24 14:24:14.280  INFO 18144 --- [http-nio-8080-exec-10] c.d.service.BlogServiceImpl              : total blogs :1
+2019-09-24 14:27:11.820  INFO 18144 --- [http-nio-8080-exec-9] c.d.controller.DPSController             : at getArticles
+2019-09-24 14:27:11.821  INFO 18144 --- [http-nio-8080-exec-9] c.d.controller.DPSController             : at getArticles:
+2019-09-24 14:27:11.834  INFO 18144 --- [http-nio-8080-exec-9] o.a.jsp.WEB_002dINF.jsp.session_jsp      : session validation : vipul@gmail.com
+2019-09-24 14:27:12.323  INFO 18144 --- [http-nio-8080-exec-5] c.d.controller.DPSController             : at controller isArticleAdd : null
+2019-09-24 14:27:12.359  INFO 18144 --- [http-nio-8080-exec-8] c.d.controller.DPSController             : fetching blog list at controller
+2019-09-24 14:27:12.360  INFO 18144 --- [http-nio-8080-exec-8] c.d.controller.DPSController             : at getBlogs:null
+2019-09-24 14:27:12.361  INFO 18144 --- [http-nio-8080-exec-8] c.d.service.BlogServiceImpl              : fetching blog list
+2019-09-24 14:27:12.363  INFO 18144 --- [http-nio-8080-exec-8] c.d.service.BlogServiceImpl              : total blogs :1
+2019-09-24 14:27:12.390  INFO 18144 --- [http-nio-8080-exec-10] c.d.controller.DPSController             : fetching blog list at controller
+2019-09-24 14:27:12.390  INFO 18144 --- [http-nio-8080-exec-10] c.d.controller.DPSController             : at getBlogs:null
+2019-09-24 14:27:12.391  INFO 18144 --- [http-nio-8080-exec-10] c.d.service.BlogServiceImpl              : fetching blog list
+2019-09-24 14:27:12.393  INFO 18144 --- [http-nio-8080-exec-10] c.d.service.BlogServiceImpl              : total blogs :1
+2019-09-24 14:39:09.052  INFO 18144 --- [Thread-5] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-09-24 14:39:09.053  INFO 18144 --- [Thread-5] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-09-24 14:39:09.056  INFO 18144 --- [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2019-09-24 14:39:09.062  INFO 18144 --- [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2019-09-24 14:39:09.392  INFO 18144 --- [restartedMain] c.d.DhyanPraveshikaApplication           : Starting DhyanPraveshikaApplication on DESKTOP-LQ9AGEK with PID 18144 (D:\DhyanPraveShika_home\GIT_HUB_CODE\git-github\dhyan-praveshika\target\classes started by vipul in D:\DhyanPraveShika_home\GIT_HUB_CODE\git-github\dhyan-praveshika)
+2019-09-24 14:39:09.393  INFO 18144 --- [restartedMain] c.d.DhyanPraveshikaApplication           : The following profiles are active: uat
+2019-09-24 14:39:09.707  INFO 18144 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-09-24 14:39:09.716  INFO 18144 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 9ms. Found 0 repository interfaces.
+2019-09-24 14:39:09.767  INFO 18144 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$daf7f410] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-09-24 14:39:09.868  INFO 18144 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-09-24 14:39:09.870  INFO 18144 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-09-24 14:39:09.870  INFO 18144 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-09-24 14:39:10.019  INFO 18144 --- [restartedMain] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2019-09-24 14:39:10.021  INFO 18144 --- [restartedMain] o.a.c.c.C.[.[.[/dhyanpraveshika-web]     : Initializing Spring embedded WebApplicationContext
+2019-09-24 14:39:10.021  INFO 18144 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 626 ms
+2019-09-24 14:39:10.077  INFO 18144 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2019-09-24 14:39:10.101  INFO 18144 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2019-09-24 14:39:10.110  INFO 18144 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-09-24 14:39:10.122  INFO 18144 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-09-24 14:39:10.260  INFO 18144 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-09-24 14:39:10.275  INFO 18144 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-09-24 14:39:10.439  INFO 18144 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-09-24 14:39:10.446  WARN 18144 --- [restartedMain] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-09-24 14:39:10.552  INFO 18144 --- [RMI TCP Connection(2)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2019-09-24 14:39:10.563  INFO 18144 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path '/dhyanpraveshika-web'
+2019-09-24 14:39:10.564  INFO 18144 --- [restartedMain] c.d.DhyanPraveshikaApplication           : Started DhyanPraveshikaApplication in 1.199 seconds (JVM running for 920.505)
+2019-09-24 14:39:10.566  INFO 18144 --- [RMI TCP Connection(2)-127.0.0.1] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-09-24 14:39:10.567  INFO 18144 --- [RMI TCP Connection(2)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-09-24 14:39:10.568  INFO 18144 --- [RMI TCP Connection(2)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2019-09-24 14:39:10.577  INFO 18144 --- [RMI TCP Connection(2)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2019-09-24 14:48:20.433  INFO 15356 --- [restartedMain] c.d.DhyanPraveshikaApplication           : Starting DhyanPraveshikaApplication on DESKTOP-LQ9AGEK with PID 15356 (D:\DhyanPraveShika_home\GIT_HUB_CODE\git-github\dhyan-praveshika\target\classes started by vipul in D:\DhyanPraveShika_home\GIT_HUB_CODE\git-github\dhyan-praveshika)
+2019-09-24 14:48:20.436  INFO 15356 --- [restartedMain] c.d.DhyanPraveshikaApplication           : The following profiles are active: uat
+2019-09-24 14:48:20.473  INFO 15356 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-09-24 14:48:20.474  INFO 15356 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-09-24 14:48:21.136  INFO 15356 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-09-24 14:48:21.165  INFO 15356 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 21ms. Found 0 repository interfaces.
+2019-09-24 14:48:21.498  INFO 15356 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$d1a0ad94] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-09-24 14:48:21.933  INFO 15356 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-09-24 14:48:21.967  INFO 15356 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-09-24 14:48:21.968  INFO 15356 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-09-24 14:48:22.207  INFO 15356 --- [restartedMain] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2019-09-24 14:48:22.212  INFO 15356 --- [restartedMain] o.a.c.c.C.[.[.[/dhyanpraveshika-web]     : Initializing Spring embedded WebApplicationContext
+2019-09-24 14:48:22.212  INFO 15356 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1738 ms
+2019-09-24 14:48:22.455  INFO 15356 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-09-24 14:48:23.211  INFO 15356 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-09-24 14:48:23.291  INFO 15356 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-09-24 14:48:23.467  INFO 15356 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.10.Final}
+2019-09-24 14:48:23.469  INFO 15356 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2019-09-24 14:48:23.924  INFO 15356 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-09-24 14:48:24.095  INFO 15356 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-09-24 14:48:24.992  INFO 15356 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-09-24 14:48:25.029  INFO 15356 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-09-24 14:48:25.446  INFO 15356 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-09-24 14:48:25.487  WARN 15356 --- [restartedMain] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-09-24 14:48:26.026  INFO 15356 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path '/dhyanpraveshika-web'
+2019-09-24 14:48:26.032  INFO 15356 --- [restartedMain] c.d.DhyanPraveshikaApplication           : Started DhyanPraveshikaApplication in 5.9 seconds (JVM running for 7.819)
+2019-09-24 14:48:43.379  INFO 15356 --- [http-nio-8080-exec-1] o.a.c.c.C.[.[.[/dhyanpraveshika-web]     : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-09-24 14:48:43.379  INFO 15356 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-09-24 14:48:43.386  INFO 15356 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 7 ms
+2019-09-24 14:48:50.900  INFO 15356 --- [http-nio-8080-exec-1] c.d.controller.DPSController             : fetching user details{}
+2019-09-24 14:48:50.905  INFO 15356 --- [http-nio-8080-exec-1] com.dhyanpraveshika.service.DPSService   : user details:vipul@gmail.com	123
+2019-09-24 14:48:50.986  INFO 15356 --- [http-nio-8080-exec-1] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2019-09-24 14:48:51.203  INFO 15356 --- [http-nio-8080-exec-1] c.d.controller.DPSController             : user available User [id=1, full_name=vipul hagawane, phoneNo=9503864208, age=20, email=vipul@gmail.com, password=123, country=india, state=admin, city=pune, fcm_token=null, created_date=12/12/2019, profile=null, reg_type=admin]
+2019-09-24 14:48:51.528  INFO 15356 --- [http-nio-8080-exec-1] o.a.jsp.WEB_002dINF.jsp.session_jsp      : session validation : vipul@gmail.com
+2019-09-24 14:48:53.497  INFO 15356 --- [http-nio-8080-exec-6] c.d.controller.DPSController             : fetching blog list at controller
+2019-09-24 14:48:53.497  INFO 15356 --- [http-nio-8080-exec-6] c.d.controller.DPSController             : at getBlogs:null
+2019-09-24 14:48:53.499  INFO 15356 --- [http-nio-8080-exec-6] c.d.service.BlogServiceImpl              : fetching blog list
+2019-09-24 14:48:53.559  INFO 15356 --- [http-nio-8080-exec-4] c.d.controller.DPSController             : at controller isArticleAdd : null
+2019-09-24 14:48:53.589  INFO 15356 --- [http-nio-8080-exec-6] c.d.service.BlogServiceImpl              : total blogs :1
+2019-09-24 14:48:53.664  INFO 15356 --- [http-nio-8080-exec-2] c.d.controller.DPSController             : fetching blog list at controller
+2019-09-24 14:48:53.664  INFO 15356 --- [http-nio-8080-exec-2] c.d.controller.DPSController             : at getBlogs:null
+2019-09-24 14:48:53.665  INFO 15356 --- [http-nio-8080-exec-2] c.d.service.BlogServiceImpl              : fetching blog list
+2019-09-24 14:48:53.691  INFO 15356 --- [http-nio-8080-exec-2] c.d.service.BlogServiceImpl              : total blogs :1
+2019-09-24 14:49:33.047  INFO 15356 --- [http-nio-8080-exec-7] c.d.controller.DPSController             : at getArticles
+2019-09-24 14:49:33.047  INFO 15356 --- [http-nio-8080-exec-7] c.d.controller.DPSController             : at getArticles:
+2019-09-24 14:49:33.051  INFO 15356 --- [http-nio-8080-exec-7] o.a.jsp.WEB_002dINF.jsp.session_jsp      : session validation : vipul@gmail.com
+2019-09-24 14:49:33.594  INFO 15356 --- [http-nio-8080-exec-1] c.d.controller.DPSController             : at controller isArticleAdd : null
+2019-09-24 14:49:33.629  INFO 15356 --- [http-nio-8080-exec-8] c.d.controller.DPSController             : fetching blog list at controller
+2019-09-24 14:49:33.630  INFO 15356 --- [http-nio-8080-exec-8] c.d.controller.DPSController             : at getBlogs:null
+2019-09-24 14:49:33.631  INFO 15356 --- [http-nio-8080-exec-8] c.d.service.BlogServiceImpl              : fetching blog list
+2019-09-24 14:49:33.633  INFO 15356 --- [http-nio-8080-exec-8] c.d.service.BlogServiceImpl              : total blogs :1
+2019-09-24 14:49:33.684  INFO 15356 --- [http-nio-8080-exec-4] c.d.controller.DPSController             : fetching blog list at controller
+2019-09-24 14:49:33.685  INFO 15356 --- [http-nio-8080-exec-4] c.d.controller.DPSController             : at getBlogs:null
+2019-09-24 14:49:33.685  INFO 15356 --- [http-nio-8080-exec-4] c.d.service.BlogServiceImpl              : fetching blog list
+2019-09-24 14:49:33.687  INFO 15356 --- [http-nio-8080-exec-4] c.d.service.BlogServiceImpl              : total blogs :1
+2019-09-24 14:50:07.674  INFO 15356 --- [http-nio-8080-exec-2] c.d.controller.DPSController             : at getArticles
+2019-09-24 14:50:07.675  INFO 15356 --- [http-nio-8080-exec-2] c.d.controller.DPSController             : at getArticles:
+2019-09-24 14:50:07.679  INFO 15356 --- [http-nio-8080-exec-2] o.a.jsp.WEB_002dINF.jsp.session_jsp      : session validation : vipul@gmail.com
+2019-09-24 14:50:08.198  INFO 15356 --- [http-nio-8080-exec-3] c.d.controller.DPSController             : at controller isArticleAdd : null
+2019-09-24 14:50:08.233  INFO 15356 --- [http-nio-8080-exec-9] c.d.controller.DPSController             : fetching blog list at controller
+2019-09-24 14:50:08.234  INFO 15356 --- [http-nio-8080-exec-9] c.d.controller.DPSController             : at getBlogs:null
+2019-09-24 14:50:08.235  INFO 15356 --- [http-nio-8080-exec-9] c.d.service.BlogServiceImpl              : fetching blog list
+2019-09-24 14:50:08.237  INFO 15356 --- [http-nio-8080-exec-9] c.d.service.BlogServiceImpl              : total blogs :1
+2019-09-24 14:50:08.259  INFO 15356 --- [http-nio-8080-exec-2] c.d.controller.DPSController             : fetching blog list at controller
+2019-09-24 14:50:08.260  INFO 15356 --- [http-nio-8080-exec-2] c.d.controller.DPSController             : at getBlogs:null
+2019-09-24 14:50:08.261  INFO 15356 --- [http-nio-8080-exec-2] c.d.service.BlogServiceImpl              : fetching blog list
+2019-09-24 14:50:08.263  INFO 15356 --- [http-nio-8080-exec-2] c.d.service.BlogServiceImpl              : total blogs :1
+2019-09-24 14:50:31.937  INFO 15356 --- [http-nio-8080-exec-2] c.d.service.BlogServiceImpl              : creating new blog
+2019-09-24 14:50:31.937  INFO 15356 --- [http-nio-8080-exec-2] c.d.service.BlogServiceImpl              : blog from request:Bite-Sized Literature: Take a Piece of One of These 18 Easy English Short Stories <p>.SDFASDFASDFDSF</p>
+
+<p>ASDFASDFASDFSADFWF</p>
+ Dahlia123
+2019-09-24 14:50:32.688  INFO 15356 --- [http-nio-8080-exec-2] c.d.service.BlogServiceImpl              : sucessfully uploaded at path : D:\dps\article\4_1.2.PNG
+2019-09-24 14:50:32.689  INFO 15356 --- [http-nio-8080-exec-2] c.d.service.BlogServiceImpl              : at sendNotifications :https://fcm.googleapis.com/fcm/send
+2019-09-24 14:50:32.692  INFO 15356 --- [http-nio-8080-exec-2] c.d.service.UserServiceImpl              : getting token list
+2019-09-24 14:50:32.774  INFO 15356 --- [http-nio-8080-exec-2] c.d.service.UserServiceImpl              : token list :1
+2019-09-24 14:50:32.775  INFO 15356 --- [http-nio-8080-exec-2] c.d.service.BlogServiceImpl              : tokens :1
+2019-09-24 14:50:32.775  INFO 15356 --- [http-nio-8080-exec-2] c.d.service.BlogServiceImpl              : tokens :ABC
+2019-09-24 14:50:32.940  INFO 15356 --- [http-nio-8080-exec-2] c.d.service.BlogServiceImpl              : notificationDto :NotificationDTO [title=Bite-Sized Literature: Take a Piece of One of These 18 Easy English Short Stories, body=New blog has been added., sound=default, click_action=FCM_PLUGIN_ACTIVITY, icon=fcm_push_icon]
+2019-09-24 14:50:32.941  INFO 15356 --- [http-nio-8080-exec-2] c.d.service.BlogServiceImpl              : dataDTO :DataDTO [id=4, type=Blog]
+2019-09-24 14:50:32.941  INFO 15356 --- [http-nio-8080-exec-2] c.d.service.BlogServiceImpl              : notification json: NotificationJSON [notification=NotificationDTO [title=Bite-Sized Literature: Take a Piece of One of These 18 Easy English Short Stories, body=New blog has been added., sound=default, click_action=FCM_PLUGIN_ACTIVITY, icon=fcm_push_icon], data=DataDTO [id=4, type=Blog], registration_ids=[ABC], priority=high, restricted_package_name=]
+2019-09-24 14:50:32.941  INFO 15356 --- [http-nio-8080-exec-2] c.d.service.BlogServiceImpl              : before send notification : <NotificationJSON [notification=NotificationDTO [title=Bite-Sized Literature: Take a Piece of One of These 18 Easy English Short Stories, body=New blog has been added., sound=default, click_action=FCM_PLUGIN_ACTIVITY, icon=fcm_push_icon], data=DataDTO [id=4, type=Blog], registration_ids=[ABC], priority=high, restricted_package_name=],[Content-Type:"application/json", Authorization:"key=AIzaSyAPQ99FvvvCxNf7iq-voozmiUNZq6SmaLo"]>
+2019-09-24 14:50:34.617  INFO 15356 --- [http-nio-8080-exec-2] c.d.service.BlogServiceImpl              : after send notification : {"multicast_id":7973797720639394635,"success":0,"failure":1,"canonical_ids":0,"results":[{"error":"InvalidRegistration"}]}
+2019-09-24 14:50:34.619  INFO 15356 --- [http-nio-8080-exec-2] c.d.controller.DPSController             : result:true
+2019-09-24 14:50:34.619  INFO 15356 --- [http-nio-8080-exec-2] c.d.controller.DPSController             : at getBlogs:success
+2019-09-24 14:50:34.647  INFO 15356 --- [http-nio-8080-exec-2] o.a.jsp.WEB_002dINF.jsp.session_jsp      : session validation : vipul@gmail.com
+2019-09-24 14:50:35.206  INFO 15356 --- [http-nio-8080-exec-9] c.d.controller.DPSController             : at controller isArticleAdd : success
+2019-09-24 14:50:35.238  INFO 15356 --- [http-nio-8080-exec-1] c.d.controller.DPSController             : fetching blog list at controller
+2019-09-24 14:50:35.238  INFO 15356 --- [http-nio-8080-exec-1] c.d.controller.DPSController             : at getBlogs:null
+2019-09-24 14:50:35.239  INFO 15356 --- [http-nio-8080-exec-1] c.d.service.BlogServiceImpl              : fetching blog list
+2019-09-24 14:50:35.241  INFO 15356 --- [http-nio-8080-exec-1] c.d.service.BlogServiceImpl              : total blogs :2
+2019-09-24 14:50:35.346  INFO 15356 --- [http-nio-8080-exec-2] c.d.controller.DPSController             : fetching blog list at controller
+2019-09-24 14:50:35.346  INFO 15356 --- [http-nio-8080-exec-2] c.d.controller.DPSController             : at getBlogs:null
+2019-09-24 14:50:35.347  INFO 15356 --- [http-nio-8080-exec-2] c.d.service.BlogServiceImpl              : fetching blog list
+2019-09-24 14:50:35.348  INFO 15356 --- [http-nio-8080-exec-2] c.d.service.BlogServiceImpl              : total blogs :2
+2019-09-24 14:51:24.386  INFO 15356 --- [RMI TCP Connection(2)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2019-09-24 14:51:24.393  INFO 15356 --- [RMI TCP Connection(2)-127.0.0.1] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-09-24 14:51:24.394  INFO 15356 --- [RMI TCP Connection(2)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-09-24 14:51:24.439  INFO 15356 --- [RMI TCP Connection(2)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2019-09-24 14:51:24.465  INFO 15356 --- [RMI TCP Connection(2)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

@@ -26,9 +26,11 @@ public class UserDAOImpl extends GenericDAOImpl<User, Long> implements UserDAO {
 		}
 	}
 
+	
+	
 	@Override
 	public List<String> getTokens() {
-		String hql = "select u.fcm_token from User u"; 
+		String hql = "select distinct(fcm_token) from User"; 
 		Query query = entityManager.createQuery(hql);
 		return query.getResultList();
 	}
