@@ -14,6 +14,7 @@ $('#users').DataTable({
 		  {title : 'City' , data : 'city'},
 		  {title : 'State' , data : 'state'},
 		  {title : 'Country' , data : 'country'},
+		  {title : 'User type' , data : 'reg_type'},
 	  ]
 });
 

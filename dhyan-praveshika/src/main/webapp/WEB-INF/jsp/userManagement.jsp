@@ -68,6 +68,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                   <th>City</th>
                   <th>State</th>
                   <th>Country</th>
+                  <th>User type</th>
                 </tr>
               </thead>
               

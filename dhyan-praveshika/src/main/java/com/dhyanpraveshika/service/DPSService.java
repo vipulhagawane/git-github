@@ -25,18 +25,19 @@ public class DPSService{
 	
 	
 	public User checkUser(HttpServletRequest request) {
-		boolean checkUser = false;
 		String email = request.getParameter("email");
 		String password = request.getParameter("password");
 		
 		logger.info("user details:{}",email +"\t" +password);
 		
 		User user = userDAO.getUser(email,password);
-		if(user != null)
+		
+		logger.info("user role:{}",user.getReg_type());
+		if(user != null && user.getReg_type().equalsIgnoreCase("admin"))
 		{
-			checkUser = true;
+			return user;
 		}
-		return user;
+		return null;
 	}
 	
 	

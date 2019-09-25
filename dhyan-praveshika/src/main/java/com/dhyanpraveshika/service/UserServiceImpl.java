@@ -1,5 +1,6 @@
 package com.dhyanpraveshika.service;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.slf4j.Logger;
@@ -25,10 +26,26 @@ public class UserServiceImpl implements UserService {
 		
 		logger.info("getting users list");
 		
+		/*
+		 * List<User> users = userDAO.findAll(); logger.info("users list :{}",users);
+		 * 
+		 * return users;
+		 */
 		List<User> users = userDAO.findAll();
-		logger.info("users list :{}",users);
-		
-		return users;
+		logger.info("before removing admin users list :{}",users);
+		List<User> removeAdmin = new ArrayList<User>();
+		if(!users.isEmpty())
+		{
+			for(User user:users)
+			{
+				if(user.getReg_type()!=null && !user.getReg_type().equalsIgnoreCase("admin"))
+				{
+					removeAdmin.add(user);
+				}
+			}
+		}
+		logger.info("after removing admin users list :{}",removeAdmin);
+		return removeAdmin;
 	}
 
 	@Override
