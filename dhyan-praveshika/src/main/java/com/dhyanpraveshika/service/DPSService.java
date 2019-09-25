@@ -28,16 +28,27 @@ public class DPSService{
 		String email = request.getParameter("email");
 		String password = request.getParameter("password");
 		
-		logger.info("user details:{}",email +"\t" +password);
+	
 		
+		if(!email.trim().equalsIgnoreCase("")  && !password.trim().equalsIgnoreCase("")) {
+			logger.info("user details:{}",email +"\t" +password);
 		User user = userDAO.getUser(email,password);
 		
-		logger.info("user role:{}",user.getReg_type());
-		if(user != null && user.getReg_type().equalsIgnoreCase("admin"))
+		
+		if(user != null && user.getReg_type()!=null && user.getReg_type().equalsIgnoreCase("admin"))
 		{
+			logger.info("user role admin:{}",user.getReg_type());
 			return user;
 		}
-		return null;
+		else {
+			logger.info("user role not admin:{}");
+			return null;
+		}
+		}
+		else {
+			logger.info("Email or Password Empty:{}");
+			return null;
+		}
 	}
 	
 	
