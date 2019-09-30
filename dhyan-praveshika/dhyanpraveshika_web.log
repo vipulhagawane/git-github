@@ -1,280 +1,52 @@
-2019-09-25 14:22:23.005  INFO 18704 --- [restartedMain] c.d.DhyanPraveshikaApplication           : Starting DhyanPraveshikaApplication on DESKTOP-LQ9AGEK with PID 18704 (D:\DhyanPraveShika_home\GIT_HUB_CODE\git-github\dhyan-praveshika\target\classes started by vipul in D:\DhyanPraveShika_home\GIT_HUB_CODE\git-github\dhyan-praveshika)
-2019-09-25 14:22:23.011  INFO 18704 --- [restartedMain] c.d.DhyanPraveshikaApplication           : The following profiles are active: uat
-2019-09-25 14:22:23.183  INFO 18704 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2019-09-25 14:22:23.184  INFO 18704 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2019-09-25 14:22:24.512  INFO 18704 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
-2019-09-25 14:22:24.591  INFO 18704 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 72ms. Found 0 repository interfaces.
-2019-09-25 14:22:24.913  INFO 18704 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$e2b5b31f] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-09-25 14:22:25.291  INFO 18704 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2019-09-25 14:22:25.328  INFO 18704 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2019-09-25 14:22:25.329  INFO 18704 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.21]
-2019-09-25 14:22:25.580  INFO 18704 --- [restartedMain] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
-2019-09-25 14:22:25.584  INFO 18704 --- [restartedMain] o.a.c.c.C.[.[.[/dhyanpraveshika-web]     : Initializing Spring embedded WebApplicationContext
-2019-09-25 14:22:25.584  INFO 18704 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2400 ms
-2019-09-25 14:22:25.830  INFO 18704 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2019-09-25 14:22:27.451  INFO 18704 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2019-09-25 14:22:27.536  INFO 18704 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+2019-09-30 15:25:55.114  INFO 3868 --- [restartedMain] c.d.DhyanPraveshikaApplication           : Starting DhyanPraveshikaApplication on DESKTOP-LQ9AGEK with PID 3868 (D:\DhyanPraveShika_home\GIT_HUB_CODE\git-github\dhyan-praveshika\target\classes started by vipul in D:\DhyanPraveShika_home\GIT_HUB_CODE\git-github\dhyan-praveshika)
+2019-09-30 15:25:55.120  INFO 3868 --- [restartedMain] c.d.DhyanPraveshikaApplication           : The following profiles are active: uat
+2019-09-30 15:25:55.159  INFO 3868 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-09-30 15:25:55.159  INFO 3868 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-09-30 15:25:55.955  INFO 3868 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-09-30 15:25:55.983  INFO 3868 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 21ms. Found 0 repository interfaces.
+2019-09-30 15:25:56.317  INFO 3868 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$67c18bf9] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-09-30 15:25:56.637  INFO 3868 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-09-30 15:25:56.661  INFO 3868 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-09-30 15:25:56.661  INFO 3868 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-09-30 15:25:56.901  INFO 3868 --- [restartedMain] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2019-09-30 15:25:56.906  INFO 3868 --- [restartedMain] o.a.c.c.C.[.[.[/dhyanpraveshika-web]     : Initializing Spring embedded WebApplicationContext
+2019-09-30 15:25:56.906  INFO 3868 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1747 ms
+2019-09-30 15:25:57.058  INFO 3868 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-09-30 15:25:57.924  INFO 3868 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-09-30 15:25:57.968  INFO 3868 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
 	name: default
 	...]
-2019-09-25 14:22:27.628  INFO 18704 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.10.Final}
-2019-09-25 14:22:27.630  INFO 18704 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
-2019-09-25 14:22:27.979  INFO 18704 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
-2019-09-25 14:22:28.166  INFO 18704 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
-2019-09-25 14:22:29.457  INFO 18704 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2019-09-25 14:22:29.531  INFO 18704 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2019-09-25 14:22:29.910  INFO 18704 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2019-09-25 14:22:29.942  WARN 18704 --- [restartedMain] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2019-09-25 14:22:30.201  INFO 18704 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path '/dhyanpraveshika-web'
-2019-09-25 14:22:30.204  INFO 18704 --- [restartedMain] c.d.DhyanPraveshikaApplication           : Started DhyanPraveshikaApplication in 7.54 seconds (JVM running for 20.86)
-2019-09-25 14:23:03.979  INFO 18704 --- [http-nio-8080-exec-3] o.a.c.c.C.[.[.[/dhyanpraveshika-web]     : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2019-09-25 14:23:03.979  INFO 18704 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2019-09-25 14:23:03.995  INFO 18704 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed initialization in 15 ms
-2019-09-25 14:23:34.582  INFO 18704 --- [http-nio-8080-exec-9] c.d.controller.DPSController             : fetching user details{}
-2019-09-25 14:23:34.587  INFO 18704 --- [http-nio-8080-exec-9] com.dhyanpraveshika.service.DPSService   : user details:vipul@gmail.com	123
-2019-09-25 14:23:34.661  INFO 18704 --- [http-nio-8080-exec-9] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
-2019-09-25 14:23:34.808  INFO 18704 --- [http-nio-8080-exec-9] com.dhyanpraveshika.service.DPSService   : user role:admin
-2019-09-25 14:23:34.813  INFO 18704 --- [http-nio-8080-exec-9] c.d.controller.DPSController             : user available User [id=1, full_name=vipul hagawane, phoneNo=9503864208, age=20, email=vipul@gmail.com, password=123, country=india, state=admin, city=pune, fcm_token=ABC, created_date=12/12/2019, profile=null, reg_type=admin]
-2019-09-25 14:23:35.166  INFO 18704 --- [http-nio-8080-exec-9] o.a.jsp.WEB_002dINF.jsp.session_jsp      : session validation : vipul@gmail.com
-2019-09-25 14:23:36.515  INFO 18704 --- [http-nio-8080-exec-6] c.d.controller.DPSController             : at controller isArticleAdd : null
-2019-09-25 14:23:36.538  INFO 18704 --- [http-nio-8080-exec-8] c.d.controller.DPSController             : fetching blog list at controller
-2019-09-25 14:23:36.539  INFO 18704 --- [http-nio-8080-exec-8] c.d.controller.DPSController             : at getBlogs:null
-2019-09-25 14:23:36.540  INFO 18704 --- [http-nio-8080-exec-8] c.d.service.BlogServiceImpl              : fetching blog list
-2019-09-25 14:23:36.547  INFO 18704 --- [http-nio-8080-exec-8] c.d.service.BlogServiceImpl              : total blogs :3
-2019-09-25 14:23:36.582  INFO 18704 --- [http-nio-8080-exec-3] c.d.controller.DPSController             : fetching blog list at controller
-2019-09-25 14:23:36.583  INFO 18704 --- [http-nio-8080-exec-3] c.d.controller.DPSController             : at getBlogs:null
-2019-09-25 14:23:36.585  INFO 18704 --- [http-nio-8080-exec-3] c.d.service.BlogServiceImpl              : fetching blog list
-2019-09-25 14:23:36.588  INFO 18704 --- [http-nio-8080-exec-3] c.d.service.BlogServiceImpl              : total blogs :3
-2019-09-25 14:23:40.876  INFO 18704 --- [http-nio-8080-exec-9] c.d.controller.DPSController             : at userManagementContrller
-2019-09-25 14:23:41.010  INFO 18704 --- [http-nio-8080-exec-9] o.a.jsp.WEB_002dINF.jsp.session_jsp      : session validation : vipul@gmail.com
-2019-09-25 14:23:41.250  INFO 18704 --- [http-nio-8080-exec-3] c.d.controller.DPSController             : at controller getUsers:{}
-2019-09-25 14:23:41.254  INFO 18704 --- [http-nio-8080-exec-3] c.d.service.UserServiceImpl              : getting users list
-2019-09-25 14:23:41.297  INFO 18704 --- [http-nio-8080-exec-3] c.d.service.UserServiceImpl              : users list :[User [id=1, full_name=vipul hagawane, phoneNo=9503864208, age=20, email=vipul@gmail.com, password=123, country=india, state=admin, city=pune, fcm_token=ABC, created_date=12/12/2019, profile=null, reg_type=admin], User [id=2, full_name=anagha , phoneNo=9568642589, age=10, email=anagha@gmail.com, password=123, country=indai, state=null, city=wai, fcm_token=, created_date=12/12/2019, profile=null, reg_type=abc]]
-2019-09-25 14:26:02.257  INFO 18704 --- [Thread-5] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
-2019-09-25 14:26:02.259  INFO 18704 --- [Thread-5] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2019-09-25 14:26:02.266  INFO 18704 --- [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2019-09-25 14:26:02.276  INFO 18704 --- [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2019-09-25 14:26:02.601  INFO 18704 --- [restartedMain] c.d.DhyanPraveshikaApplication           : Starting DhyanPraveshikaApplication on DESKTOP-LQ9AGEK with PID 18704 (D:\DhyanPraveShika_home\GIT_HUB_CODE\git-github\dhyan-praveshika\target\classes started by vipul in D:\DhyanPraveShika_home\GIT_HUB_CODE\git-github\dhyan-praveshika)
-2019-09-25 14:26:02.602  INFO 18704 --- [restartedMain] c.d.DhyanPraveshikaApplication           : The following profiles are active: uat
-2019-09-25 14:26:02.827  INFO 18704 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
-2019-09-25 14:26:02.837  INFO 18704 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 9ms. Found 0 repository interfaces.
-2019-09-25 14:26:02.887  INFO 18704 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$e2b5b31f] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-09-25 14:26:02.982  INFO 18704 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2019-09-25 14:26:02.983  INFO 18704 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2019-09-25 14:26:02.983  INFO 18704 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.21]
-2019-09-25 14:26:03.067  INFO 18704 --- [restartedMain] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
-2019-09-25 14:26:03.069  INFO 18704 --- [restartedMain] o.a.c.c.C.[.[.[/dhyanpraveshika-web]     : Initializing Spring embedded WebApplicationContext
-2019-09-25 14:26:03.070  INFO 18704 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 466 ms
-2019-09-25 14:26:03.117  INFO 18704 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
-2019-09-25 14:26:03.131  INFO 18704 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
-2019-09-25 14:26:03.138  INFO 18704 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
-	name: default
-	...]
-2019-09-25 14:26:03.149  INFO 18704 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
-2019-09-25 14:26:03.259  INFO 18704 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2019-09-25 14:26:03.273  INFO 18704 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2019-09-25 14:26:03.409  INFO 18704 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2019-09-25 14:26:03.415  WARN 18704 --- [restartedMain] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2019-09-25 14:26:03.501  INFO 18704 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path '/dhyanpraveshika-web'
-2019-09-25 14:26:03.502  INFO 18704 --- [restartedMain] c.d.DhyanPraveshikaApplication           : Started DhyanPraveshikaApplication in 0.927 seconds (JVM running for 234.158)
-2019-09-25 14:26:03.504  INFO 18704 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
-2019-09-25 14:26:11.351  INFO 18704 --- [Thread-10] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
-2019-09-25 14:26:11.354  INFO 18704 --- [Thread-10] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2019-09-25 14:26:11.354  INFO 18704 --- [Thread-10] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
-2019-09-25 14:26:11.364  INFO 18704 --- [Thread-10] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
-2019-09-25 14:26:11.638  INFO 18704 --- [restartedMain] c.d.DhyanPraveshikaApplication           : Starting DhyanPraveshikaApplication on DESKTOP-LQ9AGEK with PID 18704 (D:\DhyanPraveShika_home\GIT_HUB_CODE\git-github\dhyan-praveshika\target\classes started by vipul in D:\DhyanPraveShika_home\GIT_HUB_CODE\git-github\dhyan-praveshika)
-2019-09-25 14:26:11.639  INFO 18704 --- [restartedMain] c.d.DhyanPraveshikaApplication           : The following profiles are active: uat
-2019-09-25 14:26:11.879  INFO 18704 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
-2019-09-25 14:26:11.888  INFO 18704 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 9ms. Found 0 repository interfaces.
-2019-09-25 14:26:11.933  INFO 18704 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$e2b5b31f] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-09-25 14:26:12.024  INFO 18704 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2019-09-25 14:26:12.025  INFO 18704 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2019-09-25 14:26:12.026  INFO 18704 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.21]
-2019-09-25 14:26:12.105  INFO 18704 --- [restartedMain] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
-2019-09-25 14:26:12.107  INFO 18704 --- [restartedMain] o.a.c.c.C.[.[.[/dhyanpraveshika-web]     : Initializing Spring embedded WebApplicationContext
-2019-09-25 14:26:12.107  INFO 18704 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 466 ms
-2019-09-25 14:26:12.155  INFO 18704 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
-2019-09-25 14:26:12.169  INFO 18704 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
-2019-09-25 14:26:12.177  INFO 18704 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
-	name: default
-	...]
-2019-09-25 14:26:12.191  INFO 18704 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
-2019-09-25 14:26:12.300  INFO 18704 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2019-09-25 14:26:12.316  INFO 18704 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2019-09-25 14:26:12.454  INFO 18704 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2019-09-25 14:26:12.460  WARN 18704 --- [restartedMain] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2019-09-25 14:26:12.543  INFO 18704 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path '/dhyanpraveshika-web'
-2019-09-25 14:26:12.544  INFO 18704 --- [restartedMain] c.d.DhyanPraveshikaApplication           : Started DhyanPraveshikaApplication in 0.934 seconds (JVM running for 243.199)
-2019-09-25 14:26:12.546  INFO 18704 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
-2019-09-25 14:26:37.119  INFO 18704 --- [Thread-16] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
-2019-09-25 14:26:37.121  INFO 18704 --- [Thread-16] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2019-09-25 14:26:37.123  INFO 18704 --- [Thread-16] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
-2019-09-25 14:26:37.136  INFO 18704 --- [Thread-16] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.
-2019-09-25 14:26:37.397  INFO 18704 --- [restartedMain] c.d.DhyanPraveshikaApplication           : Starting DhyanPraveshikaApplication on DESKTOP-LQ9AGEK with PID 18704 (D:\DhyanPraveShika_home\GIT_HUB_CODE\git-github\dhyan-praveshika\target\classes started by vipul in D:\DhyanPraveShika_home\GIT_HUB_CODE\git-github\dhyan-praveshika)
-2019-09-25 14:26:37.397  INFO 18704 --- [restartedMain] c.d.DhyanPraveshikaApplication           : The following profiles are active: uat
-2019-09-25 14:26:37.615  INFO 18704 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
-2019-09-25 14:26:37.625  INFO 18704 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 10ms. Found 0 repository interfaces.
-2019-09-25 14:26:37.669  INFO 18704 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$e2b5b31f] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-09-25 14:26:37.758  INFO 18704 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2019-09-25 14:26:37.760  INFO 18704 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2019-09-25 14:26:37.760  INFO 18704 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.21]
-2019-09-25 14:26:37.866  INFO 18704 --- [restartedMain] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
-2019-09-25 14:26:37.868  INFO 18704 --- [restartedMain] o.a.c.c.C.[.[.[/dhyanpraveshika-web]     : Initializing Spring embedded WebApplicationContext
-2019-09-25 14:26:37.868  INFO 18704 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 469 ms
-2019-09-25 14:26:37.913  INFO 18704 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Starting...
-2019-09-25 14:26:37.935  INFO 18704 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Start completed.
-2019-09-25 14:26:37.944  INFO 18704 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
-	name: default
-	...]
-2019-09-25 14:26:37.955  INFO 18704 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
-2019-09-25 14:26:38.064  INFO 18704 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2019-09-25 14:26:38.078  INFO 18704 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2019-09-25 14:26:38.207  INFO 18704 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2019-09-25 14:26:38.213  WARN 18704 --- [restartedMain] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2019-09-25 14:26:38.295  INFO 18704 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path '/dhyanpraveshika-web'
-2019-09-25 14:26:38.296  INFO 18704 --- [restartedMain] c.d.DhyanPraveshikaApplication           : Started DhyanPraveshikaApplication in 0.924 seconds (JVM running for 268.951)
-2019-09-25 14:26:38.298  INFO 18704 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
-2019-09-25 14:27:00.883  INFO 18704 --- [http-nio-8080-exec-2] o.a.c.c.C.[.[.[/dhyanpraveshika-web]     : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2019-09-25 14:27:00.887  INFO 18704 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2019-09-25 14:27:00.892  INFO 18704 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
-2019-09-25 14:27:00.896  INFO 18704 --- [http-nio-8080-exec-2] c.d.controller.DPSController             : at donationList
-2019-09-25 14:27:01.199  INFO 18704 --- [http-nio-8080-exec-2] o.a.jsp.WEB_002dINF.jsp.session_jsp      : session validation : vipul@gmail.com
-2019-09-25 14:27:01.932  INFO 18704 --- [http-nio-8080-exec-3] c.d.controller.DPSController             : at controller getDonations
-2019-09-25 14:27:01.938  INFO 18704 --- [http-nio-8080-exec-3] c.d.service.DonationServiceImpl          : Fetching donation list
-2019-09-25 14:27:01.941  INFO 18704 --- [http-nio-8080-exec-3] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
-2019-09-25 14:27:02.080  INFO 18704 --- [http-nio-8080-exec-3] c.d.service.DonationServiceImpl          : donation list :[Donation [id=1, donar=vipul, email=vipul@gmail.com, created_date=12/09/2019, transaction_id=2000, amount=111]]
-2019-09-25 14:27:05.459  INFO 18704 --- [http-nio-8080-exec-4] c.d.controller.DPSController             : at userManagementContrller
-2019-09-25 14:27:05.609  INFO 18704 --- [http-nio-8080-exec-4] o.a.jsp.WEB_002dINF.jsp.session_jsp      : session validation : vipul@gmail.com
-2019-09-25 14:27:05.877  INFO 18704 --- [http-nio-8080-exec-2] c.d.controller.DPSController             : at controller getUsers:{}
-2019-09-25 14:27:05.881  INFO 18704 --- [http-nio-8080-exec-2] c.d.service.UserServiceImpl              : getting users list
-2019-09-25 14:27:05.886  INFO 18704 --- [http-nio-8080-exec-2] c.d.service.UserServiceImpl              : before removing admin users list :[User [id=1, full_name=vipul hagawane, phoneNo=9503864208, age=20, email=vipul@gmail.com, password=123, country=india, state=admin, city=pune, fcm_token=ABC, created_date=12/12/2019, profile=null, reg_type=admin], User [id=2, full_name=anagha , phoneNo=9568642589, age=10, email=anagha@gmail.com, password=123, country=indai, state=null, city=wai, fcm_token=, created_date=12/12/2019, profile=null, reg_type=abc]]
-2019-09-25 14:27:05.887  INFO 18704 --- [http-nio-8080-exec-2] c.d.service.UserServiceImpl              : after removing admin users list :[User [id=2, full_name=anagha , phoneNo=9568642589, age=10, email=anagha@gmail.com, password=123, country=indai, state=null, city=wai, fcm_token=, created_date=12/12/2019, profile=null, reg_type=abc]]
-2019-09-25 14:29:04.221  INFO 18704 --- [http-nio-8080-exec-10] c.d.controller.DPSController             : fetching user details{}
-2019-09-25 14:29:04.225  INFO 18704 --- [http-nio-8080-exec-10] com.dhyanpraveshika.service.DPSService   : user details:anagha@gmail.com	123
-2019-09-25 14:29:04.230  INFO 18704 --- [http-nio-8080-exec-10] com.dhyanpraveshika.service.DPSService   : user role:abc
-2019-09-25 14:29:04.231  INFO 18704 --- [http-nio-8080-exec-10] c.d.controller.DPSController             : user available null
-2019-09-25 14:29:32.798  INFO 18704 --- [http-nio-8080-exec-2] c.d.controller.DPSController             : fetching user details{}
-2019-09-25 14:29:32.799  INFO 18704 --- [http-nio-8080-exec-2] com.dhyanpraveshika.service.DPSService   : user details:anagha@gmail.com	123
-2019-09-25 14:29:32.802  INFO 18704 --- [http-nio-8080-exec-2] com.dhyanpraveshika.service.DPSService   : user role:admin
-2019-09-25 14:29:32.803  INFO 18704 --- [http-nio-8080-exec-2] c.d.controller.DPSController             : user available User [id=2, full_name=anagha , phoneNo=9568642589, age=10, email=anagha@gmail.com, password=123, country=indai, state=null, city=wai, fcm_token=, created_date=12/12/2019, profile=null, reg_type=admin]
-2019-09-25 14:29:32.923  INFO 18704 --- [http-nio-8080-exec-2] o.a.jsp.WEB_002dINF.jsp.session_jsp      : session validation : anagha@gmail.com
-2019-09-25 14:29:33.500  INFO 18704 --- [http-nio-8080-exec-7] c.d.controller.DPSController             : at controller isArticleAdd : null
-2019-09-25 14:29:33.531  INFO 18704 --- [http-nio-8080-exec-9] c.d.controller.DPSController             : fetching blog list at controller
-2019-09-25 14:29:33.532  INFO 18704 --- [http-nio-8080-exec-9] c.d.controller.DPSController             : at getBlogs:null
-2019-09-25 14:29:33.533  INFO 18704 --- [http-nio-8080-exec-9] c.d.service.BlogServiceImpl              : fetching blog list
-2019-09-25 14:29:33.538  INFO 18704 --- [http-nio-8080-exec-9] c.d.service.BlogServiceImpl              : total blogs :3
-2019-09-25 14:29:33.576  INFO 18704 --- [http-nio-8080-exec-3] c.d.controller.DPSController             : fetching blog list at controller
-2019-09-25 14:29:33.576  INFO 18704 --- [http-nio-8080-exec-3] c.d.controller.DPSController             : at getBlogs:null
-2019-09-25 14:29:33.577  INFO 18704 --- [http-nio-8080-exec-3] c.d.service.BlogServiceImpl              : fetching blog list
-2019-09-25 14:29:33.579  INFO 18704 --- [http-nio-8080-exec-3] c.d.service.BlogServiceImpl              : total blogs :3
-2019-09-25 14:29:38.490  INFO 18704 --- [http-nio-8080-exec-3] c.d.controller.DPSController             : at userManagementContrller
-2019-09-25 14:29:38.494  INFO 18704 --- [http-nio-8080-exec-3] o.a.jsp.WEB_002dINF.jsp.session_jsp      : session validation : anagha@gmail.com
-2019-09-25 14:29:38.725  INFO 18704 --- [http-nio-8080-exec-7] c.d.controller.DPSController             : at controller getUsers:{}
-2019-09-25 14:29:38.726  INFO 18704 --- [http-nio-8080-exec-7] c.d.service.UserServiceImpl              : getting users list
-2019-09-25 14:29:38.727  INFO 18704 --- [http-nio-8080-exec-7] c.d.service.UserServiceImpl              : before removing admin users list :[User [id=1, full_name=vipul hagawane, phoneNo=9503864208, age=20, email=vipul@gmail.com, password=123, country=india, state=admin, city=pune, fcm_token=ABC, created_date=12/12/2019, profile=null, reg_type=admin], User [id=2, full_name=anagha , phoneNo=9568642589, age=10, email=anagha@gmail.com, password=123, country=indai, state=null, city=wai, fcm_token=, created_date=12/12/2019, profile=null, reg_type=admin]]
-2019-09-25 14:29:38.728  INFO 18704 --- [http-nio-8080-exec-7] c.d.service.UserServiceImpl              : after removing admin users list :[]
-2019-09-25 14:30:02.744  INFO 18704 --- [http-nio-8080-exec-6] c.d.controller.DPSController             : at VideosContrller
-2019-09-25 14:30:02.894  INFO 18704 --- [http-nio-8080-exec-6] o.a.jsp.WEB_002dINF.jsp.session_jsp      : session validation : anagha@gmail.com
-2019-09-25 14:30:03.495  INFO 18704 --- [http-nio-8080-exec-5] c.d.controller.DPSController             : at controller isVideoAdd :
-2019-09-25 14:30:03.531  INFO 18704 --- [http-nio-8080-exec-4] c.d.controller.DPSController             : at controller getVideoes
-2019-09-25 14:30:03.535  INFO 18704 --- [http-nio-8080-exec-4] c.d.service.DPSVideoServiceImpl          : fetching videoes
-2019-09-25 14:30:03.559  INFO 18704 --- [http-nio-8080-exec-1] c.d.controller.DPSController             : at controller getVideoes
-2019-09-25 14:30:03.562  INFO 18704 --- [http-nio-8080-exec-1] c.d.service.DPSVideoServiceImpl          : fetching videoes
-2019-09-25 14:30:03.605  INFO 18704 --- [http-nio-8080-exec-4] c.d.service.DPSVideoServiceImpl          : List of videoes :[DPSVideo [id=1, title=vipul, category=Genaral, path=https://www.youtube.com/watch?v=l-hJMmHFDYk&feature=youtu.be, created_date=19-09-2019 12:01:19]]
-2019-09-25 14:30:03.605  INFO 18704 --- [http-nio-8080-exec-1] c.d.service.DPSVideoServiceImpl          : List of videoes :[DPSVideo [id=1, title=vipul, category=Genaral, path=https://www.youtube.com/watch?v=l-hJMmHFDYk&feature=youtu.be, created_date=19-09-2019 12:01:19]]
-2019-09-25 14:30:04.169  INFO 18704 --- [http-nio-8080-exec-6] c.d.controller.DPSController             : at userManagementContrller
-2019-09-25 14:30:04.172  INFO 18704 --- [http-nio-8080-exec-6] o.a.jsp.WEB_002dINF.jsp.session_jsp      : session validation : anagha@gmail.com
-2019-09-25 14:30:04.390  INFO 18704 --- [http-nio-8080-exec-2] c.d.controller.DPSController             : at controller getUsers:{}
-2019-09-25 14:30:04.390  INFO 18704 --- [http-nio-8080-exec-2] c.d.service.UserServiceImpl              : getting users list
-2019-09-25 14:30:04.392  INFO 18704 --- [http-nio-8080-exec-2] c.d.service.UserServiceImpl              : before removing admin users list :[User [id=1, full_name=vipul hagawane, phoneNo=9503864208, age=20, email=vipul@gmail.com, password=123, country=india, state=admin, city=pune, fcm_token=ABC, created_date=12/12/2019, profile=null, reg_type=admin], User [id=2, full_name=anagha , phoneNo=9568642589, age=10, email=anagha@gmail.com, password=123, country=indai, state=null, city=wai, fcm_token=, created_date=12/12/2019, profile=null, reg_type=Google]]
-2019-09-25 14:30:04.392  INFO 18704 --- [http-nio-8080-exec-2] c.d.service.UserServiceImpl              : after removing admin users list :[User [id=2, full_name=anagha , phoneNo=9568642589, age=10, email=anagha@gmail.com, password=123, country=indai, state=null, city=wai, fcm_token=, created_date=12/12/2019, profile=null, reg_type=Google]]
-2019-09-25 14:30:13.760  INFO 18704 --- [http-nio-8080-exec-7] c.d.controller.DPSController             : at getArticles
-2019-09-25 14:30:13.760  INFO 18704 --- [http-nio-8080-exec-7] c.d.controller.DPSController             : at getArticles:
-2019-09-25 14:30:13.765  INFO 18704 --- [http-nio-8080-exec-7] o.a.jsp.WEB_002dINF.jsp.session_jsp      : session validation : anagha@gmail.com
-2019-09-25 14:30:14.226  INFO 18704 --- [http-nio-8080-exec-1] c.d.controller.DPSController             : at controller isArticleAdd : null
-2019-09-25 14:30:14.258  INFO 18704 --- [http-nio-8080-exec-5] c.d.controller.DPSController             : fetching blog list at controller
-2019-09-25 14:30:14.258  INFO 18704 --- [http-nio-8080-exec-5] c.d.controller.DPSController             : at getBlogs:null
-2019-09-25 14:30:14.259  INFO 18704 --- [http-nio-8080-exec-5] c.d.service.BlogServiceImpl              : fetching blog list
-2019-09-25 14:30:14.261  INFO 18704 --- [http-nio-8080-exec-5] c.d.service.BlogServiceImpl              : total blogs :3
-2019-09-25 14:30:14.290  INFO 18704 --- [http-nio-8080-exec-9] c.d.controller.DPSController             : fetching blog list at controller
-2019-09-25 14:30:14.290  INFO 18704 --- [http-nio-8080-exec-9] c.d.controller.DPSController             : at getBlogs:null
-2019-09-25 14:30:14.291  INFO 18704 --- [http-nio-8080-exec-9] c.d.service.BlogServiceImpl              : fetching blog list
-2019-09-25 14:30:14.294  INFO 18704 --- [http-nio-8080-exec-9] c.d.service.BlogServiceImpl              : total blogs :3
-2019-09-25 14:30:16.105  INFO 18704 --- [http-nio-8080-exec-8] c.d.controller.DPSController             : at events
-2019-09-25 14:30:16.305  INFO 18704 --- [http-nio-8080-exec-8] o.a.jsp.WEB_002dINF.jsp.session_jsp      : session validation : anagha@gmail.com
-2019-09-25 14:30:16.658  INFO 18704 --- [http-nio-8080-exec-1] c.d.controller.DPSController             : at controller isEventAdd : 
-2019-09-25 14:30:16.691  INFO 18704 --- [http-nio-8080-exec-5] c.d.controller.DPSController             : at controller getEvents
-2019-09-25 14:30:16.695  INFO 18704 --- [http-nio-8080-exec-5] c.d.service.EventServiceImpl             : Fetching events
-2019-09-25 14:30:16.708  INFO 18704 --- [http-nio-8080-exec-7] c.d.controller.DPSController             : at controller getEvents
-2019-09-25 14:30:16.709  INFO 18704 --- [http-nio-8080-exec-7] c.d.service.EventServiceImpl             : Fetching events
-2019-09-25 14:30:16.745  INFO 18704 --- [http-nio-8080-exec-5] c.d.service.EventServiceImpl             : List of events: [DPSEvent [id=3, title=CHANDRAYAAN 2 , description=In what many might refer to as a "bummer", a NASA satellite currently orbiting the moon has reportedly failed to spot the Vikram lander near the South Polar region, where it fell silent after having lost contact with Earth in its attempt to make a soft-landing on the moon on 7 September.
-
-The 17 September attempt by NASA to spot India's first lander on the moon marks ten days since contact was lost. The Lunar Reconnaissance Orbiter's Camera instrument (LROC) imaged the landing site of the lander as planned yesterday, according to a report by Aviation Week. However, "long shadows in the area may be obscuring the silent lunar explorer," the report concludes.
-
-
-
-The 17 September LRO flyover of the landing site at dusk was "leading to poor lighting and a challenging imaging environment," NASA added in the statement.
-
-Since the landing site is in a region that is currently transitioning from prolonged dusk to a two-week-long lunar night, flat surfaces inside and near the edges of craters are likely thrown into shadows that last hours or days on end, depending on where it is located on the moon's surface.
-
-Chandrayaan 2: NASAs LRO fails to spot crashed Vikram lander due to long shadows over landing site
-NASA's Lunar Reconnaissance Orbiter spotted the crash site of Israeli SpaceIL's crashed Beresheet lander, which suffered from an engine failure seconds before a violent collision with the moon's surface on 11 April 2019. Image: NASA/LRO
-
-"Per NASA policy, all LRO data are publicly available. NASA will share any before and after flyover imagery of the area around the targeted Chandrayaan 2 Vikram Lander landing site to support analysis by the Indian Space Research Organization," the LROC lead investigator Mark Robinson from Arizona State University, said in a statement to Inside Outer Space.
-
-Now, just three days remain till the two-week lunar night washed over the South Polar region where the Vikram lander and Pragyan rover currently are. While their health and status continues to elude ISRO, there will be little hope for the ground-based missions of Chandrayaan 2 to resume after the frigid lunar night comes to an end on 5 October 2019.
-
-, path=null, created_date=2019-09-19 15:29:17, eventDate=2019-09-22, eventTime=19:00, location=Pune]]
-2019-09-25 14:30:16.745  INFO 18704 --- [http-nio-8080-exec-7] c.d.service.EventServiceImpl             : List of events: [DPSEvent [id=3, title=CHANDRAYAAN 2 , description=In what many might refer to as a "bummer", a NASA satellite currently orbiting the moon has reportedly failed to spot the Vikram lander near the South Polar region, where it fell silent after having lost contact with Earth in its attempt to make a soft-landing on the moon on 7 September.
-
-The 17 September attempt by NASA to spot India's first lander on the moon marks ten days since contact was lost. The Lunar Reconnaissance Orbiter's Camera instrument (LROC) imaged the landing site of the lander as planned yesterday, according to a report by Aviation Week. However, "long shadows in the area may be obscuring the silent lunar explorer," the report concludes.
-
-
-
-The 17 September LRO flyover of the landing site at dusk was "leading to poor lighting and a challenging imaging environment," NASA added in the statement.
-
-Since the landing site is in a region that is currently transitioning from prolonged dusk to a two-week-long lunar night, flat surfaces inside and near the edges of craters are likely thrown into shadows that last hours or days on end, depending on where it is located on the moon's surface.
-
-Chandrayaan 2: NASAs LRO fails to spot crashed Vikram lander due to long shadows over landing site
-NASA's Lunar Reconnaissance Orbiter spotted the crash site of Israeli SpaceIL's crashed Beresheet lander, which suffered from an engine failure seconds before a violent collision with the moon's surface on 11 April 2019. Image: NASA/LRO
-
-"Per NASA policy, all LRO data are publicly available. NASA will share any before and after flyover imagery of the area around the targeted Chandrayaan 2 Vikram Lander landing site to support analysis by the Indian Space Research Organization," the LROC lead investigator Mark Robinson from Arizona State University, said in a statement to Inside Outer Space.
-
-Now, just three days remain till the two-week lunar night washed over the South Polar region where the Vikram lander and Pragyan rover currently are. While their health and status continues to elude ISRO, there will be little hope for the ground-based missions of Chandrayaan 2 to resume after the frigid lunar night comes to an end on 5 October 2019.
-
-, path=null, created_date=2019-09-19 15:29:17, eventDate=2019-09-22, eventTime=19:00, location=Pune]]
-2019-09-25 14:30:17.584  INFO 18704 --- [http-nio-8080-exec-8] c.d.controller.DPSController             : at VideosContrller
-2019-09-25 14:30:17.587  INFO 18704 --- [http-nio-8080-exec-8] o.a.jsp.WEB_002dINF.jsp.session_jsp      : session validation : anagha@gmail.com
-2019-09-25 14:30:17.870  INFO 18704 --- [http-nio-8080-exec-9] c.d.controller.DPSController             : at controller isVideoAdd :
-2019-09-25 14:30:17.888  INFO 18704 --- [http-nio-8080-exec-7] c.d.controller.DPSController             : at controller getVideoes
-2019-09-25 14:30:17.888  INFO 18704 --- [http-nio-8080-exec-7] c.d.service.DPSVideoServiceImpl          : fetching videoes
-2019-09-25 14:30:17.890  INFO 18704 --- [http-nio-8080-exec-7] c.d.service.DPSVideoServiceImpl          : List of videoes :[DPSVideo [id=1, title=vipul, category=Genaral, path=https://www.youtube.com/watch?v=l-hJMmHFDYk&feature=youtu.be, created_date=19-09-2019 12:01:19]]
-2019-09-25 14:30:17.938  INFO 18704 --- [http-nio-8080-exec-10] c.d.controller.DPSController             : at controller getVideoes
-2019-09-25 14:30:17.939  INFO 18704 --- [http-nio-8080-exec-10] c.d.service.DPSVideoServiceImpl          : fetching videoes
-2019-09-25 14:30:17.940  INFO 18704 --- [http-nio-8080-exec-10] c.d.service.DPSVideoServiceImpl          : List of videoes :[DPSVideo [id=1, title=vipul, category=Genaral, path=https://www.youtube.com/watch?v=l-hJMmHFDYk&feature=youtu.be, created_date=19-09-2019 12:01:19]]
-2019-09-25 14:30:18.224  INFO 18704 --- [http-nio-8080-exec-3] c.d.controller.DPSController             : at userManagementContrller
-2019-09-25 14:30:18.227  INFO 18704 --- [http-nio-8080-exec-3] o.a.jsp.WEB_002dINF.jsp.session_jsp      : session validation : anagha@gmail.com
-2019-09-25 14:30:18.452  INFO 18704 --- [http-nio-8080-exec-2] c.d.controller.DPSController             : at controller getUsers:{}
-2019-09-25 14:30:18.453  INFO 18704 --- [http-nio-8080-exec-2] c.d.service.UserServiceImpl              : getting users list
-2019-09-25 14:30:18.454  INFO 18704 --- [http-nio-8080-exec-2] c.d.service.UserServiceImpl              : before removing admin users list :[User [id=1, full_name=vipul hagawane, phoneNo=9503864208, age=20, email=vipul@gmail.com, password=123, country=india, state=admin, city=pune, fcm_token=ABC, created_date=12/12/2019, profile=null, reg_type=admin], User [id=2, full_name=anagha , phoneNo=9568642589, age=10, email=anagha@gmail.com, password=123, country=indai, state=null, city=wai, fcm_token=, created_date=12/12/2019, profile=null, reg_type=Google]]
-2019-09-25 14:30:18.455  INFO 18704 --- [http-nio-8080-exec-2] c.d.service.UserServiceImpl              : after removing admin users list :[User [id=2, full_name=anagha , phoneNo=9568642589, age=10, email=anagha@gmail.com, password=123, country=indai, state=null, city=wai, fcm_token=, created_date=12/12/2019, profile=null, reg_type=Google]]
-2019-09-25 14:30:18.792  INFO 18704 --- [http-nio-8080-exec-9] c.d.controller.DPSController             : at donationList
-2019-09-25 14:30:18.794  INFO 18704 --- [http-nio-8080-exec-9] o.a.jsp.WEB_002dINF.jsp.session_jsp      : session validation : anagha@gmail.com
-2019-09-25 14:30:19.002  INFO 18704 --- [http-nio-8080-exec-4] c.d.controller.DPSController             : at controller getDonations
-2019-09-25 14:30:19.003  INFO 18704 --- [http-nio-8080-exec-4] c.d.service.DonationServiceImpl          : Fetching donation list
-2019-09-25 14:30:19.004  INFO 18704 --- [http-nio-8080-exec-4] c.d.service.DonationServiceImpl          : donation list :[Donation [id=1, donar=vipul, email=vipul@gmail.com, created_date=12/09/2019, transaction_id=2000, amount=111]]
-2019-09-25 14:30:19.719  INFO 18704 --- [http-nio-8080-exec-7] c.d.controller.DPSController             : at getArticles
-2019-09-25 14:30:19.720  INFO 18704 --- [http-nio-8080-exec-7] c.d.controller.DPSController             : at getArticles:
-2019-09-25 14:30:19.721  INFO 18704 --- [http-nio-8080-exec-7] o.a.jsp.WEB_002dINF.jsp.session_jsp      : session validation : anagha@gmail.com
-2019-09-25 14:30:19.982  INFO 18704 --- [http-nio-8080-exec-4] c.d.controller.DPSController             : at controller isArticleAdd : null
-2019-09-25 14:30:19.999  INFO 18704 --- [http-nio-8080-exec-8] c.d.controller.DPSController             : fetching blog list at controller
-2019-09-25 14:30:19.999  INFO 18704 --- [http-nio-8080-exec-8] c.d.controller.DPSController             : at getBlogs:null
-2019-09-25 14:30:20.000  INFO 18704 --- [http-nio-8080-exec-8] c.d.service.BlogServiceImpl              : fetching blog list
-2019-09-25 14:30:20.002  INFO 18704 --- [http-nio-8080-exec-8] c.d.service.BlogServiceImpl              : total blogs :3
-2019-09-25 14:30:20.020  INFO 18704 --- [http-nio-8080-exec-5] c.d.controller.DPSController             : fetching blog list at controller
-2019-09-25 14:30:20.020  INFO 18704 --- [http-nio-8080-exec-5] c.d.controller.DPSController             : at getBlogs:null
-2019-09-25 14:30:20.021  INFO 18704 --- [http-nio-8080-exec-5] c.d.service.BlogServiceImpl              : fetching blog list
-2019-09-25 14:30:20.023  INFO 18704 --- [http-nio-8080-exec-5] c.d.service.BlogServiceImpl              : total blogs :3
-2019-09-25 14:33:03.659  INFO 18704 --- [Thread-22] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
-2019-09-25 14:33:03.659  INFO 18704 --- [Thread-22] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2019-09-25 14:33:03.660  INFO 18704 --- [Thread-22] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown initiated...
-2019-09-25 14:33:03.669  INFO 18704 --- [Thread-22] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown completed.
+2019-09-30 15:25:58.019  INFO 3868 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.10.Final}
+2019-09-30 15:25:58.020  INFO 3868 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2019-09-30 15:25:58.142  INFO 3868 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-09-30 15:25:58.260  INFO 3868 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-09-30 15:25:59.582  INFO 3868 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-09-30 15:25:59.628  INFO 3868 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-09-30 15:26:00.029  INFO 3868 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-09-30 15:26:00.063  WARN 3868 --- [restartedMain] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-09-30 15:26:00.309  INFO 3868 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path '/dhyanpraveshika-web'
+2019-09-30 15:26:00.312  INFO 3868 --- [restartedMain] c.d.DhyanPraveshikaApplication           : Started DhyanPraveshikaApplication in 5.493 seconds (JVM running for 6.464)
+2019-09-30 15:27:08.729  INFO 3868 --- [http-nio-8080-exec-2] o.a.c.c.C.[.[.[/dhyanpraveshika-web]     : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-09-30 15:27:08.730  INFO 3868 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-09-30 15:27:08.738  INFO 3868 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 8 ms
+2019-09-30 15:27:13.149  INFO 3868 --- [http-nio-8080-exec-5] c.d.controller.DPSController             : fetching user details{}
+2019-09-30 15:27:13.154  INFO 3868 --- [http-nio-8080-exec-5] com.dhyanpraveshika.service.DPSService   : user details:vipul@gmail.com	123
+2019-09-30 15:27:13.168  INFO 3868 --- [http-nio-8080-exec-5] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2019-09-30 15:27:13.347  INFO 3868 --- [http-nio-8080-exec-5] com.dhyanpraveshika.service.DPSService   : user role admin:admin
+2019-09-30 15:27:13.352  INFO 3868 --- [http-nio-8080-exec-5] c.d.controller.DPSController             : user available User [id=1, full_name=vipul hagawane, phoneNo=9503864208, age=20, email=vipul@gmail.com, password=123, country=india, state=admin, city=pune, fcm_token=ABC, created_date=12/12/2019, profile=null, reg_type=admin]
+2019-09-30 15:27:13.662  INFO 3868 --- [http-nio-8080-exec-5] o.a.jsp.WEB_002dINF.jsp.session_jsp      : session validation : vipul@gmail.com
+2019-09-30 15:27:14.296  INFO 3868 --- [http-nio-8080-exec-10] c.d.controller.DPSController             : at controller isArticleAdd : null
+2019-09-30 15:27:14.329  INFO 3868 --- [http-nio-8080-exec-2] c.d.controller.DPSController             : fetching blog list at controller
+2019-09-30 15:27:14.330  INFO 3868 --- [http-nio-8080-exec-2] c.d.controller.DPSController             : at getBlogs:null
+2019-09-30 15:27:14.330  INFO 3868 --- [http-nio-8080-exec-2] c.d.service.BlogServiceImpl              : fetching blog list
+2019-09-30 15:27:14.356  INFO 3868 --- [http-nio-8080-exec-5] c.d.controller.DPSController             : fetching blog list at controller
+2019-09-30 15:27:14.356  INFO 3868 --- [http-nio-8080-exec-5] c.d.controller.DPSController             : at getBlogs:null
+2019-09-30 15:27:14.357  INFO 3868 --- [http-nio-8080-exec-5] c.d.service.BlogServiceImpl              : fetching blog list
+2019-09-30 15:27:14.397  INFO 3868 --- [http-nio-8080-exec-5] c.d.service.BlogServiceImpl              : total blogs :3
+2019-09-30 15:27:14.397  INFO 3868 --- [http-nio-8080-exec-2] c.d.service.BlogServiceImpl              : total blogs :3
+2019-09-30 15:27:17.032  INFO 3868 --- [http-nio-8080-exec-4] c.d.controller.DPSController             : signOut of user :vipul@gmail.com
+2019-09-30 15:27:18.416  INFO 3868 --- [http-nio-8080-exec-7] c.d.controller.DPSController             : at getArticles
+2019-09-30 15:27:18.417  INFO 3868 --- [http-nio-8080-exec-7] c.d.controller.DPSController             : at getArticles:
+2019-09-30 15:27:18.420  INFO 3868 --- [http-nio-8080-exec-7] o.a.jsp.WEB_002dINF.jsp.session_jsp      : session validation : null
+2019-09-30 15:27:18.420  INFO 3868 --- [http-nio-8080-exec-7] o.a.jsp.WEB_002dINF.jsp.session_jsp      : ...invalid session...
+2019-09-30 15:27:23.447  INFO 3868 --- [http-nio-8080-exec-2] c.d.controller.DPSController             : signOut of user :null

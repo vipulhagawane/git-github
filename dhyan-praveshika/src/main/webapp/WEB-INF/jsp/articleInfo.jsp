@@ -7,21 +7,22 @@
 
 
 <head>
-  <meta http-equiv="refresh" content="30">
-  <head>
+  
+ 
   <meta charset="UTF-8">
-  <meta name="description" content="Free Web tutorials">
-  <meta name="keywords" content="HTML,CSS,XML,JavaScript">
-  <meta name="author" content="John Doe">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
-  <%-- <meta property="og:url"           content="http://13.235.83.236:8080/dhyanpraveshika-web/viewArticle?id=${blog.id}" />
+  <meta name="description" content="Author : ${blog.author} // Category :  ${blog.category} // ${blog.created_date}. Dhyan praveshika, dhyan praveshika india, spiritual learning, spirituality, e magazine, indian philosophy, ayurvedic blog, spiritual magazine, spiritual articles, spirituality and healing, new age magazine, spiritual india">
+ 
+  <meta name="author" content="${blog.author}">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+
+  <meta property="og:url"           content="http://13.235.83.236:8080/dhyanpraveshika-web/viewArticle?id=${blog.id}" />
   <meta property="og:category"      content="${blog.category}" />
   <meta property="og:title"         content="${blog.title}" />
   <meta property="og:date"   content="${blog.created_date}" />
-  <meta property="og:image"         content="${blog.encodedString}" />
-  <meta property="og:author" content="${blog.author}" />  --%>
-  <base href="http://dhyanpraveshika.org/index.php/175-tantra-s-origins" />
+  <meta property="og:image"         content="http://13.235.83.236:8080/dhyanpraveshika-web/resources/img/dhyanPraveshika_logo.png" />
+  <meta property="og:author" content="${blog.author}" />  
+   <base href="http://dhyanpraveshika.org/index.php/175-tantra-s-origins" />
+ <%-- <base href="http://13.235.83.236:8080/dhyanpraveshika-web/viewArticle?id=${blog.id}" /> --%>
   <meta http-equiv="content-type" content="text/html; charset=utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="HandheldFriendly" content="true" />
@@ -29,17 +30,13 @@
   
   <meta name="keywords"
     content="dhyan praveshika, dhyan praveshika india, spiritual learning, spirituality, e magazine, indian philosophy, ayurvedic blog, spiritual magazine, spiritual articles, spirituality and healing, new age magazine, spiritual india" />
-  <%-- <meta name="author" content="${blog.author}" /> --%>
-  <meta name="copyright" content="Copyright © 2019 TemPlaza. All Rights Reserved." />
 
-  <%-- <meta name="description" content="${blog.description}" /> --%>
- <%--  <meta name="category" content="${blog.category}" />
-  <meta name="title" content="${blog.title}" />
-  <meta name="date" content="${blog.created_date}" />
-  <meta name="generator" content="Joomla! - Open Source Content Management" />
-  --%> <title>Dhyan Praveshika</title>
+  
 
-  <link href="http://dhyanpraveshika.org/index.php/175-tantra-s-origins" rel="canonical" />
+ 
+  
+
+  <link href="http://13.235.83.236:8080/dhyanpraveshika-web/viewArticle?id=${blog.id}" rel="canonical" />
   <link href="/templates/tz_dreame/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
   <link rel="stylesheet" href="/components/com_tz_portfolio/css/tzportfolio.css" type="text/css" />
   <link rel="stylesheet" href="/templates/system/css/system.css" type="text/css" />
@@ -365,11 +362,7 @@
   <script src="/templates/tz_dreame/js/jquery.ui.totop.js" type="text/javascript"></script>
   <script src="/media/com_acymailing/js/acymailing_module.js?v=494" type="text/javascript"></script>
 
-  <meta property="og:title" content="Tantra's Origins" />
-  <meta property="og:url" content="http://dhyanpraveshika.org/index.php/175-tantra-s-origins" />
-  <meta property="og:description"
-    content="ORIGINS In the 1st millennium AD, from the Vedic Traditions, Hinduism was developed into the long-established traditions we see today. Around the same time when..." />
-
+  
 
 
 
@@ -405,13 +398,11 @@
 
 
 
-  <div id="fb-root"></div>
 
 </head>
 
 <body>
-
-
+<img src="http://13.235.83.236:8080/dhyanpraveshika-web/resources/img/dhyanPraveshika_logo.png" style="display:none">
   <header class="tz-header">
     <div class="row-fluid">
       <div class="container-fluid">
@@ -421,7 +412,7 @@
               <h1 class="tz-logo pull-left">
 
                 <a href="/./" id="tz-logo pull-left">
-                  <img src="http://dhyanpraveshika.org//images/dhyan praveshika_logo.png"
+                  <img src="http://dhyanpraveshika.org/images/dhyan praveshika_logo.png"
                     alt="Dhyan Praveshika - The Spiritual Magazine  - " />
                 </a>
               </h1>

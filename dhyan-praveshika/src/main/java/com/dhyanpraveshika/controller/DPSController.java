@@ -377,6 +377,7 @@ public class DPSController {
 		if (blogDto != null) {
 			modelView.addObject("blog", blogDto);
 			modelView.setViewName("articleInfo");
+			//modelView.setViewName("shareLink");
 		} else {
 			modelView.setViewName("home");
 		}
@@ -387,7 +388,7 @@ public class DPSController {
 	public String signOut() {
 		logger.info("signOut of user :{}",getSessionData());
 		String loggedInUser = getSessionData();
-		session.removeAttribute(loggedInUser);
+		session.removeAttribute("loggedInUser");
 		session.invalidate();
 		return "login";
 	}

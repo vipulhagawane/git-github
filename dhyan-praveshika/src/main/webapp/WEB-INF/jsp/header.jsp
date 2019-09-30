@@ -65,7 +65,7 @@
         <div class="navbar-custom-menu">
           <ul class="nav navbar-nav">
             <li>
-              <a href="/dhyanpraveshika-web">
+              <a href="/dhyanpraveshika-web/signOut">
                 <i class="fa fa-sign-out" aria-hidden="true"></i>
                 Sign out
               </a>
