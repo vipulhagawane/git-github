@@ -1,3 +1,8 @@
+<script>
+if ( window.history.replaceState ) {
+  window.history.replaceState( null, null,'/dhyanpraveshika-web/getUsersPage' );
+}
+</script> 
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
  <jsp:include page="session.jsp"></jsp:include> 
 <!DOCTYPE html>

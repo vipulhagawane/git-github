@@ -1,6 +1,6 @@
 <script>
 if ( window.history.replaceState ) {
-  window.history.replaceState( null, null, '/dhyanpraveshika-web/getArticles' );
+  window.history.replaceState( null, null, '/dhyanpraveshika-web/getArticlesPage' );
 }
 </script>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
@@ -68,24 +68,3 @@ if ( window.history.replaceState ) {
     </div>
   </div>
   
-<!-- <script>
-CKEDITOR.replace("editor12")
-$('#event').validate({
-    rules:{
-        name:{
-            required: true
-        },  
-    },
-    messages:{
-        body:{
-            required: "event body is required"
-        }
-    },
-    errorPlacement: function(error, element){
-        $(element).each(function (){
-            $(this).parent('td').find('p.error').html(error);
-        })
-    });
- 
-</script>  --> 
- 

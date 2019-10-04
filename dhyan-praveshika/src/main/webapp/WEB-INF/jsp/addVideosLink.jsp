@@ -1,6 +1,6 @@
  <script>
 if ( window.history.replaceState ) {
-  window.history.replaceState( null, null, '/dhyanpraveshika-web/videos' );
+  window.history.replaceState( null, null, '/dhyanpraveshika-web/getVideosPage' );
 }
 </script> 
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
@@ -35,7 +35,7 @@ if ( window.history.replaceState ) {
 
             <div class="form-group">
               <label>Video Embaded URL</label>
-              <input type="text" id="path" class="form-control" name="path" required="required">
+              <input type="url" id="path" class="form-control" name="path" required >
             </div>
 
           </div>

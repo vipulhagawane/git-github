@@ -1,6 +1,6 @@
 <script>
 if ( window.history.replaceState ) {
-  window.history.replaceState( null, null, '/dhyanpraveshika-web/events' );
+  window.history.replaceState( null, null, '/dhyanpraveshika-web/getEventPage' );
 }
 </script>
 
