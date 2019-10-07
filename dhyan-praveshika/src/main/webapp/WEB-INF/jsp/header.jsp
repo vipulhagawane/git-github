@@ -6,6 +6,14 @@
     response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate");
     //response.setDateHeader("Expires", "0");
 %>
+<SCRIPT type="text/javascript">
+    window.history.forward();
+    function disableBack()
+{
+window.history.forward();
+}
+</SCRIPT>
+
 <!DOCTYPE html>
 <html>
 
@@ -43,7 +51,7 @@
 </head>
 
 
-<body class="hold-transition skin-blue fixed sidebar-mini">
+<body class="hold-transition skin-blue fixed sidebar-mini" onload="disableBack();" onpageshow="if(event.persisted) disableBack();">
   <div class="wrapper">
     <!-- Main Header -->
     <header class="main-header">
@@ -73,5 +81,7 @@
           </ul>        </div>
       </nav>
     </header>
+    
 </body>
+
 </html>

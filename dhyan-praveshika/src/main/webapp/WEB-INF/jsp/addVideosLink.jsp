@@ -1,7 +1,35 @@
- <script>
+<SCRIPT type="text/javascript">
+    window.history.forward();
+    function disableBack()
+{
+window.history.forward();
+}
+
 if ( window.history.replaceState ) {
   window.history.replaceState( null, null, '/dhyanpraveshika-web/getVideosPage' );
 }
+
+function matchYoutubeUrl(url) {
+    var p = /^(?:https?:\/\/)?(?:www\.)?(?:youtu\.be\/|youtube\.com\/(?:embed\/|v\/|watch\?v=|watch\?.+&v=))((\w|-){11})(?:\S+)?$/;
+    var matches = url.match(p);
+    if(matches){
+        return matches[1];
+    }
+    return false;
+}
+
+function check(sender){
+    var url = $('#path').val();
+    var id = matchYoutubeUrl(url);
+    if(id!=false){
+        /* alert("Succes"); */
+    }else{
+        alert('Incorrect URL');
+        $('#path').val("");
+        
+    }
+}
+
 </script> 
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
@@ -35,16 +63,19 @@ if ( window.history.replaceState ) {
 
             <div class="form-group">
               <label>Video Embaded URL</label>
-              <input type="url" id="path" class="form-control" name="path" required >
+              <input type="text" id="path" class="form-control" name="path" required >
             </div>
 
           </div>
 
           <div class="modal-footer">
-            <button type="submit" class="btn btn-primary">Save</button>
-            <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+            <button type="submit" class="btn btn-primary" onclick="check(this)">Save</button>
+            <button type="button" class="btn btn-default" data-dismiss="modal" >Cancel</button>
           </div>
         </form>
       </div>
     </div>
   </div>
+  
+  
+ 
