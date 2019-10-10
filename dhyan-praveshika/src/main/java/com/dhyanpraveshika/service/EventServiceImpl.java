@@ -7,6 +7,7 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Base64;
 import java.util.Date;
 import java.util.List;
@@ -103,13 +104,28 @@ public class EventServiceImpl implements EventService {
 	}
 
 	@Override
-	public List<DPSEvent> getEvents() {
+	public List<EventDTO> getEvents() {
 		logger.info("Fetching events");
 
 		List<DPSEvent> events = eventDAO.findAll();
-		logger.info("List of events: {}", events);
-
-		return events;
+		logger.info("List of events: {}", events.size());
+		List<EventDTO> dtos = new ArrayList<EventDTO>();
+		if(events != null)
+		{
+			
+			  for(DPSEvent event:events)
+			  { 
+			  EventDTO dto = getEvent(event.getId());
+			 
+			  dtos.add(dto);
+			  }
+			 
+			 return dtos;
+		}
+		
+		
+		return null;
+		
 	}
 
 	@Override
@@ -120,7 +136,7 @@ public class EventServiceImpl implements EventService {
 		logger.info("event from db :{}", event.toString());
 		
 		DateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy");
-		String newdate = dateFormat.format(dateFormat);
+		String newdate = dateFormat.format(event.getEventDate());
 		
 		if (event != null) {
 			EventDTO eventDTO = new EventDTO();

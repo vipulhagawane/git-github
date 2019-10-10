@@ -13,7 +13,7 @@ public interface BlogService {
 
 	boolean createBlog(HttpServletRequest request);
 
-	List<Blog> getBlogs();
+	List<BlogDTO> getBlogs();
 
 	BlogDTO getBlog(Long id);
 

@@ -7,6 +7,7 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Base64;
 import java.util.Date;
 import java.util.List;
@@ -110,14 +111,26 @@ public class BlogServiceImpl implements BlogService{
 	}
 
 	@Override
-	public List<Blog> getBlogs() {
+	public List<BlogDTO> getBlogs() {
 		logger.info("fetching blog list");
 		
 		List<Blog> blogs = blogDAO.findAll();
+		List<BlogDTO> dtos = new ArrayList<BlogDTO>();
 		logger.info("total blogs :{}",blogs.size());
 		if(blogs != null)
 		{
-			return blogs;
+			for(Blog blog : blogs)
+			{
+				BlogDTO dto = getBlog(blog.getId());
+				DateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy");
+				String newdate = dateFormat.format(blog.getCreated_date());
+				dto.setCreated_date(newdate);
+				dtos.add(dto);
+			}
+			//return blogs;
+			return dtos;
+
+			//return blogs;
 		}
 		
 		return null;
@@ -129,9 +142,12 @@ public class BlogServiceImpl implements BlogService{
 		
 		Blog blog = blogDAO.findOne(id);
 		logger.info("blog details from db:{}",blog.toString());
+		Date date = new Date();
 		
-		DateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy");
-		String newdate = dateFormat.format(dateFormat);
+		DateFormat dateFormat = new SimpleDateFormat("dd-MMMM-yyyy");
+		String newdate = dateFormat.format(date);
+		
+		
 		
 		//BlogDTO blogDto = null;
 		if(blog != null)
@@ -221,68 +237,7 @@ public class BlogServiceImpl implements BlogService{
 		return new RestTemplate();
 	}
 
-	/*@Override
-	public void sendNotifications(BlogDTO blogDTO, EventDTO eventDto, VideosDTO videoDto) {
-		logger.info("at sendNotifications :{}", fcmURL);
-
-		HttpHeaders headers = new HttpHeaders();
-		headers.set("Content-Type", "application/json");
-		headers.set("Authorization", notificationAuthKey);
-		
-		List<String> tokens = userService.getTokens();
-
-		NotificationDTO notificationDto = new NotificationDTO();
-		DataDTO dataDTO = new DataDTO();
-		NotificationJSON notificationJSON = new NotificationJSON();
-
-		if (blogDTO != null) {
-			notificationDto.setTitle(blogDTO.getTitle());
-			notificationDto.setBody("New blog has been added.");
-
-			dataDTO.setId(blogDTO.getId());
-			dataDTO.setType("Blog");
-
-			notificationJSON.setNotification(notificationDto);
-			notificationJSON.setData(dataDTO);
-			notificationJSON.setRegistration_ids(tokens);
-		}
-
-		if (eventDto != null) {
-			notificationDto.setTitle(eventDto.getTitle());
-			notificationDto.setBody("New event has been added.");
-
-			dataDTO.setId(blogDTO.getId());
-			dataDTO.setType("Event");
-
-			notificationJSON.setNotification(notificationDto);
-			notificationJSON.setData(dataDTO);
-			notificationJSON.setRegistration_ids(tokens);
-		}
-
-		if (videoDto != null) {
-			notificationDto.setTitle(videoDto.getTitle());
-			notificationDto.setBody("New video has been added.");
-
-			dataDTO.setId(blogDTO.getId());
-			dataDTO.setType("Video");
-
-			notificationJSON.setNotification(notificationDto);
-			notificationJSON.setData(dataDTO);
-			notificationJSON.setRegistration_ids(tokens);
-		}
-		logger.info("notification json: {}", notificationJSON.toString());
-		
-		HttpEntity<NotificationJSON> request = new HttpEntity<>(notificationJSON, headers);
-		logger.info("before send notification : {}", request.toString());
-
-		try {
-			String resp = restTemplate.postForObject(fcmURL, request, String.class);
-			logger.info("after send notification : {}", resp);
-		} catch (Exception e) {
-			logger.error("Error occurred while sending notification. {}", e.getMessage());
-			e.printStackTrace();
-		}
-	}*/
+	
 
 
 	private Blog saveBlog(HttpServletRequest request,Blog blog) {

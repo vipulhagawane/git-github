@@ -148,15 +148,15 @@ public class DPSController {
 	}
 
 	@GetMapping("/getBlogs")
-	public ResponseEntity<List<Blog>> getBlogs(HttpServletResponse res) {
+	public ResponseEntity<List<BlogDTO>> getBlogs(HttpServletResponse res) {
 		logger.info("fetching blog list at controller");
 
 		session.setAttribute("addArticle", null);
 		System.out.println("Blogs++++" + session.getAttribute("addArticle"));
 		// addArticle = null;
 		logger.info("at getBlogs:{}", session.getAttribute("addArticle"));
-		List<Blog> blogs = blogService.getBlogs();
-		return new ResponseEntity<List<Blog>>(blogs, HttpStatus.OK);
+		List<BlogDTO> blogs = blogService.getBlogs();
+		return new ResponseEntity<List<BlogDTO>>(blogs, HttpStatus.OK);
 	}
 
 	@PostMapping("/addArticle")
@@ -237,11 +237,11 @@ public class DPSController {
 	}
 
 	@GetMapping("/getEvents")
-	public ResponseEntity<List<DPSEvent>> getEvents(HttpServletResponse res) {
+	public ResponseEntity<List<EventDTO>> getEvents(HttpServletResponse res) {
 		logger.info("at controller getEvents");
 		addEvent = "";
-		List<DPSEvent> events = eventService.getEvents();
-		return new ResponseEntity<List<DPSEvent>>(events, HttpStatus.OK);
+		List<EventDTO> events = eventService.getEvents();
+		return new ResponseEntity<List<EventDTO>>(events, HttpStatus.OK);
 	}
 
 	@ResponseBody

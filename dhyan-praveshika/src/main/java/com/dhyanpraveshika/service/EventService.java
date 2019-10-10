@@ -11,7 +11,7 @@ public interface EventService {
 
 	boolean addEvent(HttpServletRequest request);
 
-	List<DPSEvent> getEvents();
+	List<EventDTO> getEvents();
 
 	EventDTO getEvent(Long id);
 
