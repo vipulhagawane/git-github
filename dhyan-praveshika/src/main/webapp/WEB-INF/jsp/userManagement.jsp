@@ -69,11 +69,11 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 <tr>
                   <th>Full Name</th>
                   <th>Email</th>
-                  <th>Contact Number</th>
+                  <th>Contact</th>
                   <th>City</th>
                   <th>State</th>
                   <th>Country</th>
-                  <th>User type</th>
+                  <th style="width:80px">Reg. Type</th>
                 </tr>
               </thead>
               

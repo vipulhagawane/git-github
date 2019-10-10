@@ -10,11 +10,11 @@ $('#users').DataTable({
 	  columns:[
 		  {title : 'Full Name' , data : 'full_name'},
 		  {title : 'Email' , data : 'email'},
-		  {title : 'Contact Number' , data : 'phoneNo'},
+		  {title : 'Contact' , data : 'phoneNo'},
 		  {title : 'City' , data : 'city'},
 		  {title : 'State' , data : 'state'},
 		  {title : 'Country' , data : 'country'},
-		  {title : 'User type' , data : 'reg_type'},
+		  {title : 'Reg. Type' , data : 'reg_type'},
 	  ]
 });
 

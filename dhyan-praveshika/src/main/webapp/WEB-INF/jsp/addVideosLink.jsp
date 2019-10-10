@@ -24,7 +24,9 @@ function check(sender){
     if(id!=false){
         /* alert("Succes"); */
     }else{
-        alert('Incorrect URL');
+    	swal("Invalid URL", {
+			  icon: "error",
+			});
         $('#path').val("");
         
     }

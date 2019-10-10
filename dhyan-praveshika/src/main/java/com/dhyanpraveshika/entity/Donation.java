@@ -1,5 +1,7 @@
 package com.dhyanpraveshika.entity;
 
+import java.util.Date;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -23,7 +25,7 @@ public class Donation {
 	private String email;
 	
 	@Column(name = "created_date")
-	private String created_date;
+	private Date created_date;
 	
 	@Column(name = "transaction_id")
 	private String transaction_id;
@@ -56,11 +58,13 @@ public class Donation {
 		this.email = email;
 	}
 
-	public String getCreated_date() {
+	
+
+	public Date getCreated_date() {
 		return created_date;
 	}
 
-	public void setCreated_date(String created_date) {
+	public void setCreated_date(Date created_date) {
 		this.created_date = created_date;
 	}
 
@@ -85,5 +89,7 @@ public class Donation {
 		return "Donation [id=" + id + ", donar=" + donar + ", email=" + email + ", created_date=" + created_date
 				+ ", transaction_id=" + transaction_id + ", amount=" + amount + "]";
 	}
+
+	
 
 }

@@ -71,10 +71,10 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 <tr>
                   <th>Title</th>
                   <th>Description</th>
-                  <th>Date</th>
-                  <th>Time</th>
+                  <th style="width:60px">Date</th>
+                  <th style="width:20px">Time</th>
                   <th>Location</th>
-                  <th style="width:80px">Actions</th>
+                  <th style="width:10px">Actions</th>
                 </tr>
               </thead>
               

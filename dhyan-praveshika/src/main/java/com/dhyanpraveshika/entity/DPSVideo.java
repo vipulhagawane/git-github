@@ -1,5 +1,7 @@
 package com.dhyanpraveshika.entity;
 
+import java.util.Date;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -27,7 +29,7 @@ public class DPSVideo {
 	private String path;
 	
 	@Column(name = "created_date")
-	private String created_date;
+	private Date created_date;
 
 	public Long getId() {
 		return id;
@@ -61,11 +63,11 @@ public class DPSVideo {
 		this.path = path;
 	}
 
-	public String getCreated_date() {
+	public Date getCreated_date() {
 		return created_date;
 	}
 
-	public void setCreated_date(String created_date) {
+	public void setCreated_date(Date created_date) {
 		this.created_date = created_date;
 	}
 
@@ -74,8 +76,5 @@ public class DPSVideo {
 		return "DPSVideo [id=" + id + ", title=" + title + ", category=" + category + ", path=" + path
 				+ ", created_date=" + created_date + "]";
 	}
-
-	
-
 	
 }

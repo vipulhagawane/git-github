@@ -120,12 +120,14 @@ public class DPSVideoServiceImpl implements DPSVideoService {
 		if (title != null && category != null && path != null) {
 
 			Date date = new Date();
-			DateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy kk:mm:ss");
-			String newdate = dateFormat.format(date);
+			
+			 DateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy kk:mm:ss"); String
+			 newdate = dateFormat.format(date);
+			
 			dpsVideo.setTitle(title);
 			dpsVideo.setCategory(category);
 			dpsVideo.setPath(path);
-			dpsVideo.setCreated_date(newdate);
+			dpsVideo.setCreated_date(date);
 			videoDAO.save(dpsVideo);
 		}
 		return dpsVideo;

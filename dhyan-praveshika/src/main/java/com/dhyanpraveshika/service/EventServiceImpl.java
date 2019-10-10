@@ -118,7 +118,9 @@ public class EventServiceImpl implements EventService {
 
 		DPSEvent event = eventDAO.findOne(id);
 		logger.info("event from db :{}", event.toString());
-
+		
+		DateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy");
+		String newdate = dateFormat.format(dateFormat);
 		
 		if (event != null) {
 			EventDTO eventDTO = new EventDTO();
@@ -128,7 +130,7 @@ public class EventServiceImpl implements EventService {
 			eventDTO.setId(Optional.ofNullable(event.getId()).orElse((long) 0));
 			eventDTO.setTitle(Optional.ofNullable(event.getTitle()).orElse("unavailable"));
 			eventDTO.setDescription(Optional.ofNullable(event.getDescription()).orElse("unavailable"));
-			eventDTO.setEventDate(Optional.ofNullable(event.getEventDate()).orElse("unavailable"));
+			eventDTO.setEventDate(newdate);
 			eventDTO.setEventTime(Optional.ofNullable(event.getEventTime()).orElse("unavailable"));
 			eventDTO.setLocation(Optional.ofNullable(event.getLocation()).orElse("unavailable"));
 			
@@ -205,13 +207,15 @@ public class EventServiceImpl implements EventService {
 		if (title != null && description != null) {
 			
 			Date createdDate = new Date();
-			DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd kk:mm:ss");
-			String today = dateFormat.format(createdDate);
+			/*
+			 * DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd kk:mm:ss"); String
+			 * today = dateFormat.format(createdDate);
+			 */
 			
 			event.setTitle(title);
 			event.setDescription(description);
-			event.setCreated_date(Optional.ofNullable(today).orElse("unavailable"));
-			event.setEventDate(Optional.ofNullable(date).orElse("unavailable"));
+			event.setCreated_date(createdDate);
+			event.setEventDate(createdDate);
 			event.setEventTime(Optional.ofNullable(time).orElse("unavailable"));
 			event.setLocation(Optional.ofNullable(location).orElse("unavailable"));
 			eventDAO.save(event);

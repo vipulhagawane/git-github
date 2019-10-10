@@ -1,5 +1,7 @@
 package com.dhyanpraveshika.entity;
 
+import java.util.Date;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -26,10 +28,10 @@ public class DPSEvent {
 	private String path;
 	
 	@Column(name = "created_date")
-	private String created_date;
+	private Date  created_date;
 	
 	@Column(name = "event_date")
-	private String eventDate;
+	private Date eventDate;
 	
 	@Column(name = "event_time")
 	private String eventTime;
@@ -69,13 +71,7 @@ public class DPSEvent {
 		this.path = path;
 	}
 
-	public String getCreated_date() {
-		return created_date;
-	}
-
-	public void setCreated_date(String created_date) {
-		this.created_date = created_date;
-	}
+	
 
 	public String getLocation() {
 		return location;
@@ -85,13 +81,7 @@ public class DPSEvent {
 		this.location = location;
 	}
 
-	public String getEventDate() {
-		return eventDate;
-	}
-
-	public void setEventDate(String eventDate) {
-		this.eventDate = eventDate;
-	}
+	
 
 	public String getEventTime() {
 		return eventTime;
@@ -101,12 +91,30 @@ public class DPSEvent {
 		this.eventTime = eventTime;
 	}
 
+	public Date getCreated_date() {
+		return created_date;
+	}
+
+	public void setCreated_date(Date created_date) {
+		this.created_date = created_date;
+	}
+
+	public Date getEventDate() {
+		return eventDate;
+	}
+
+	public void setEventDate(Date eventDate) {
+		this.eventDate = eventDate;
+	}
+
 	@Override
 	public String toString() {
 		return "DPSEvent [id=" + id + ", title=" + title + ", description=" + description + ", path=" + path
 				+ ", created_date=" + created_date + ", eventDate=" + eventDate + ", eventTime=" + eventTime
 				+ ", location=" + location + "]";
 	}
+	
 
+	
 
 }

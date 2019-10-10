@@ -130,6 +130,9 @@ public class BlogServiceImpl implements BlogService{
 		Blog blog = blogDAO.findOne(id);
 		logger.info("blog details from db:{}",blog.toString());
 		
+		DateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy");
+		String newdate = dateFormat.format(dateFormat);
+		
 		//BlogDTO blogDto = null;
 		if(blog != null)
 		{
@@ -142,7 +145,7 @@ public class BlogServiceImpl implements BlogService{
 			blogDto.setDescription(Optional.ofNullable(blog.getDescription()).orElse("unavailable"));
 			blogDto.setAuthor(Optional.ofNullable(blog.getAuthor()).orElse("unavailable"));
 			blogDto.setCategory(Optional.ofNullable(blog.getCategory()).orElse("unavailable"));
-			blogDto.setCreated_date(Optional.ofNullable(blog.getCreated_date()).orElse("unavailable"));
+			blogDto.setCreated_date(newdate);
 			
 			logger.info("blogDto details :{}",blogDto.toString());
 			return blogDto;
@@ -297,13 +300,15 @@ public class BlogServiceImpl implements BlogService{
 		if (!title.isEmpty() && !description.isEmpty() && !author.isEmpty()) {
 			Date date = new Date();
 			//DateFormat dateFormat = new SimpleDateFormat("dd-MMMM-yyyy kk:hh:ss");
-			DateFormat dateFormat = new SimpleDateFormat("dd-MMMM-yyyy");
-			String newdate = dateFormat.format(date);
+			/*
+			 * DateFormat dateFormat = new SimpleDateFormat("dd-MMMM-yyyy"); String newdate
+			 * = dateFormat.format(date);
+			 */
 			
 			blog.setTitle(Optional.ofNullable(title).orElse("unavailable"));
 			blog.setDescription(Optional.ofNullable(description).orElse("unavailable"));
 			blog.setAuthor(Optional.ofNullable(author).orElse("unavailable"));
-			blog.setCreated_date(Optional.ofNullable(newdate).orElse("unavailable"));
+			blog.setCreated_date(date);
 			blog.setCategory(Optional.ofNullable(category).orElse("unavailable"));
 			blogDAO.save(blog);
 			
