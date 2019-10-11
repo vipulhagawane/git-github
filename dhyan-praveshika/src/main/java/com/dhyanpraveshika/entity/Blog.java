@@ -33,8 +33,7 @@ public class Blog {
 	@Column(name = "category")
 	private String category;
 	
-	 @Column(name = "shareURL") 
-	 private String shareURL;
+	
 
 	public Long getId() {
 		return id;
@@ -84,19 +83,10 @@ public class Blog {
 		this.category = category;
 	}
 
-	public String getShareURL() {
-		return shareURL;
-	}
-
-	public void setShareURL(String shareURL) {
-		this.shareURL = shareURL;
-	}
-
 	@Override
 	public String toString() {
 		return "Blog [id=" + id + ", title=" + title + ", description=" + description + ", author=" + author
-				+ ", created_date=" + created_date + ", category=" + category + ", shareURL=" + shareURL + "]";
-	}
-	 
+				+ ", created_date=" + created_date + ", category=" + category + "]";
+	} 
 	
 }

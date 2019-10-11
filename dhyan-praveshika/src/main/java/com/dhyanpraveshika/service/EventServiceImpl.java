@@ -6,6 +6,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.text.DateFormat;
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Base64;
@@ -135,18 +136,27 @@ public class EventServiceImpl implements EventService {
 		DPSEvent event = eventDAO.findOne(id);
 		logger.info("event from db :{}", event.toString());
 		
-		DateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy");
-		String newdate = dateFormat.format(event.getEventDate());
+		
 		
 		if (event != null) {
 			EventDTO eventDTO = new EventDTO();
 			
 			eventDTO =  getEventImage(id,eventDTO);
-			
+			DateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy");
+			logger.info("getEventDate:----", event.toString());
+			if(event.getEventDate() != null)
+			{
+			String newdate = dateFormat.format(event.getEventDate());
+			eventDTO.setEventDate(newdate);
+			}
+			else
+			{
+			eventDTO.setEventDate("unavailable");
+			}
 			eventDTO.setId(Optional.ofNullable(event.getId()).orElse((long) 0));
 			eventDTO.setTitle(Optional.ofNullable(event.getTitle()).orElse("unavailable"));
 			eventDTO.setDescription(Optional.ofNullable(event.getDescription()).orElse("unavailable"));
-			eventDTO.setEventDate(newdate);
+			
 			eventDTO.setEventTime(Optional.ofNullable(event.getEventTime()).orElse("unavailable"));
 			eventDTO.setLocation(Optional.ofNullable(event.getLocation()).orElse("unavailable"));
 			
@@ -223,15 +233,22 @@ public class EventServiceImpl implements EventService {
 		if (title != null && description != null) {
 			
 			Date createdDate = new Date();
-			/*
-			 * DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd kk:mm:ss"); String
-			 * today = dateFormat.format(createdDate);
-			 */
+			logger.info("req date:{}",date);
+			try {
+				SimpleDateFormat formatter1=new SimpleDateFormat("yyyy-MM-dd");
+				Date date1=formatter1.parse(date);  
+				logger.info("mod date;{}",date1);
+				event.setEventDate(date1);
+			} catch (ParseException e) {
+				event.setEventDate(null);
+				logger.info("eorror while converting date ");
+			}  
+			
 			
 			event.setTitle(title);
 			event.setDescription(description);
 			event.setCreated_date(createdDate);
-			event.setEventDate(createdDate);
+			//event.setEventDate(eventDate);
 			event.setEventTime(Optional.ofNullable(time).orElse("unavailable"));
 			event.setLocation(Optional.ofNullable(location).orElse("unavailable"));
 			eventDAO.save(event);

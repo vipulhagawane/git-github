@@ -100,7 +100,7 @@ function getRowID(id){
          url : "/dhyanpraveshika-web/getEvent?id="+id,
          
          success : function(data,request) {
-             //alert(JSON.stringify(data));
+            // alert(JSON.stringify(data.eventDate));
              $('#id').val(data.id);
              $('#title').val(data.title);
              $('#date').val(data.eventDate);
