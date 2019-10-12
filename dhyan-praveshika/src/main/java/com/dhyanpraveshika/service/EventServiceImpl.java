@@ -156,9 +156,9 @@ public class EventServiceImpl implements EventService {
 			eventDTO.setId(Optional.ofNullable(event.getId()).orElse((long) 0));
 			eventDTO.setTitle(Optional.ofNullable(event.getTitle()).orElse("unavailable"));
 			eventDTO.setDescription(Optional.ofNullable(event.getDescription()).orElse("unavailable"));
-			
 			eventDTO.setEventTime(Optional.ofNullable(event.getEventTime()).orElse("unavailable"));
 			eventDTO.setLocation(Optional.ofNullable(event.getLocation()).orElse("unavailable"));
+			eventDTO.setEvDate(Optional.ofNullable(event.getEvDate()).orElse("unavailable"));
 			
 			logger.info("event dto :{}", eventDTO.toString());
 			return eventDTO;
@@ -251,6 +251,7 @@ public class EventServiceImpl implements EventService {
 			//event.setEventDate(eventDate);
 			event.setEventTime(Optional.ofNullable(time).orElse("unavailable"));
 			event.setLocation(Optional.ofNullable(location).orElse("unavailable"));
+			event.setEvDate(Optional.ofNullable(date).orElse("unavailable"));
 			eventDAO.save(event);
 
 		}
@@ -292,6 +293,26 @@ public class EventServiceImpl implements EventService {
 		return false;
 	}
 
+		@Override
+		public List<EventDTO> getEventsByDesc() {
+			logger.info("at getEventsByDesc");
+			List<DPSEvent> events = eventDAO.getEventsByDesc();
+			logger.info("total events:{}",events.size());
+			List<EventDTO> dtos = new ArrayList<EventDTO>();
+			if(events != null)
+			{
+				
+				  for(DPSEvent event:events)
+				  { 
+				  EventDTO dto = getEvent(event.getId());
+				 
+				  dtos.add(dto);
+				  }
+				 
+				 return dtos;
+			}
+			return null;
+		}
 
 
 }

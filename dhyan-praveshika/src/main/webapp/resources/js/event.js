@@ -49,7 +49,8 @@ $(document).ready(function () {
 	  columns:[
 		  {title : 'Title' , data : 'title'},
 		  {title : 'Description' , data : 'description'},
-		  {title : 'Date' , data : 'eventDate'},
+		  /*{title : 'Date' , data : 'eventDate'},*/
+		  {title : 'Date' , data : 'evDate',type: 'date-dd-mm-yyyy', targets: 0},
 		  {title : 'Time' , data : 'eventTime'},
 		  {title : 'Location' , data : 'location'},
 		  {title : 'Actions' , data : 'id', "render": function (data) {
@@ -103,7 +104,7 @@ function getRowID(id){
             // alert(JSON.stringify(data.eventDate));
              $('#id').val(data.id);
              $('#title').val(data.title);
-             $('#date').val(data.eventDate);
+             $('#date').val(data.evDate);
              $('#time').val(data.eventTime);
              $('#location').val(data.location);
              $('#description').val(data.description);

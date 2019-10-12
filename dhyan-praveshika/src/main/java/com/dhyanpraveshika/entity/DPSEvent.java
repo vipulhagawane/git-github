@@ -38,6 +38,9 @@ public class DPSEvent {
 
 	@Column(name = "location")
 	private String location;
+	
+	@Column(name="ev_date")
+	private String evDate;
 
 	public Long getId() {
 		return id;
@@ -105,6 +108,14 @@ public class DPSEvent {
 
 	public void setEventDate(Date eventDate) {
 		this.eventDate = eventDate;
+	}
+	
+	public String getEvDate() {
+		return evDate;
+	}
+
+	public void setEvDate(String evDate) {
+		this.evDate = evDate;
 	}
 
 	@Override

@@ -14,6 +14,7 @@ public class EventDTO {
 	private byte[] eventFile;
 	private String encodedString;
 	private String extension;
+	private String evDate;
 	public Long getId() {
 		return id;
 	}
@@ -71,6 +72,12 @@ public class EventDTO {
 	}
 	public void setEventTime(String eventTime) {
 		this.eventTime = eventTime;
+	}
+	public String getEvDate() {
+		return evDate;
+	}
+	public void setEvDate(String evDate) {
+		this.evDate = evDate;
 	}
 	@Override
 	public String toString() {

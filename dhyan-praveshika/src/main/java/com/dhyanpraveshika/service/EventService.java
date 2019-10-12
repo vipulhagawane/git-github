@@ -17,4 +17,6 @@ public interface EventService {
 
 	boolean deleteEvent(Long id);
 
+	List<EventDTO> getEventsByDesc();
+
 }

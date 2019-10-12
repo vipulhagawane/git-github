@@ -240,7 +240,8 @@ public class DPSController {
 	public ResponseEntity<List<EventDTO>> getEvents(HttpServletResponse res) {
 		logger.info("at controller getEvents");
 		addEvent = "";
-		List<EventDTO> events = eventService.getEvents();
+		//List<EventDTO> events = eventService.getEvents();
+		List<EventDTO> events = eventService.getEventsByDesc();
 		return new ResponseEntity<List<EventDTO>>(events, HttpStatus.OK);
 	}
 
